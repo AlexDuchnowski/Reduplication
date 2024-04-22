@@ -1,4 +1,3 @@
-# from typing import Tuple
 import nltk
 import pandas as pd
 import spacy
@@ -24,7 +23,7 @@ def get_nltk_pos(text: str) -> str:
 
 
 df = pd.read_csv(
-    "../data/example.txt", sep="|", names=["Reduplicated Material", "Context"]
+    "data/example.txt", sep="|", names=["Reduplicated Material", "Context"]
 )
 
 df["Spacy POS"] = df["Reduplicated Material"].apply(get_spacy_pos)

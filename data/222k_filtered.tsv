@@ -1,0 +1,372 @@
+	Word	Context	Spacy POS
+0	easy	easy easy...	JJ
+1	meng	general meng meng jie?	NN
+2	anything	i haven' t done anything anything like this... happened...	NN
+3	kitty	over there is here kitty kitty.	NN
+4	theta	encrypt, this is diana 1716 theta theta 6.	NN
+5	theta	encrypt, this is diana 1 716 theta theta 6.	NN
+6	voice	what? sorry? that voice voice? didn' t you hear it? what are you talking about?	NN
+7	voice	harry! did you hear it? hear what? that voice voice? what voice?	NN
+8	justin	justin justin must' ve seen the basilisk through nearly headless nick!	JJ
+9	certain	i sense that something is troubling you am i right, harry? it' s just you see, sir, i couldn' t help but notice certain thing, certain certain similarities between tom riddle and me	JJ
+10	whoop	can i get a whoop whoop?	NN
+11	whoop	can i get a whoop whoop?	NN
+12	montgomery	i am looking for dr. montgomery montgomery.	NN
+13	nothing	nothing nothing	NN
+14	montgomery	i am looking for dr. montgomery montgomery.	NN
+15	nothing	nothing nothing	NN
+16	laba	- laba laba batu.	NN
+17	mat	- mat mat mat - l- l- lum	NN
+18	mat	- mat mat mat - lip la	NN
+19	mat	- mat mat mat - l- l- lum	NN
+20	shoop	shoop shoop shooby doo wah	NN
+21	mat	- mat mat mat - l- l- lum	NN
+22	mat	- mat mat mat - lip la	NN
+23	mat	- mat mat mat - l- l- lum	NN
+24	shoop	shoop shoop shooby doo wah	NN
+25	thing	it' s a thing thing.	NN
+26	mirror	mirror mirror on the wall..	NN
+27	shimmy	shimmy shimmy.	NN
+28	kitty	here, kitty kitty kitty.	NN
+29	kitty	come here, kitty kitty.	NN
+30	love	i love love connection.	NN
+31	love	you love love connection, send your picture in there.	NN
+32	boomm	"i got it to fneddy ""boomm boomm"" cannon... tlnougl mmy fniendslip witl dick clank."	NN
+33	gene	that means... it' s gene gene, the dancing machine... and just in time:	NN
+34	game	"the game game, ""dream girl of 1968""..."	NN
+35	big	when i was iittle i thought for sure 1 day, i could be a big big star...	JJ
+36	bla	you write shit down, bla bla bla	NN
+37	bla	and talking to people, bla bla bla, builshit	NN
+38	big	when i was iittle i thought for sure 1 day, i could be a big big star...	JJ
+39	bla	you write shit down, bla bla bla	NN
+40	bla	and talking to people, bla bla bla, builshit	NN
+41	big	when i was iittle i thought for sure 1 day, i could be a big big star...	JJ
+42	bla	you write shit down, bla bla bla	NN
+43	bla	and talking to people, bla bla bla, builshit	NN
+44	city	"foster city city limits, which meant also just outside of foster city police jurisdiction, which meant any, any incidents that happened at the meeting point happened in the jurisdiction of san mateo, and if they told us they get lost, we' d say, ""fine, we are going to foster city."	NN
+45	fuck	fuck fuck.	NN
+46	good	oh yes good good good good.	JJ
+47	bent	i know that but this one' s bent bent.	JJ
+48	tin	rin tin tin.	NN
+49	tin	rin tin tin...	NN
+50	hip	hip hip hip...	NN
+51	hip	hip hip hip...	NN
+52	hip	hip hip hip... hurrah...	NN
+53	omega	i' m panos patakos, president of the lambda omega omega fraternity.	NN
+54	omega	mad props for this pimpin 'good time... go out to those hung and handsome bad boys... of lambda omega omega.	NN
+55	happy	i can see how a happy happy- birthday basket...... might seem ironic and cruel, but it was an honest mistake.	JJ
+56	faith	* i gotta have faith, faith faith. *	NN
+57	hope	they believe he can give them hope hope of a new life, a new world, a better future!	NN
+58	ninetyf	i make it ninetyf ninetyf ninetyf ninetysix, sir.	NN
+59	temptation	temptation, temptation temptation	NN
+60	digi	bom digi digi digi bom digi bom	NN
+61	many	we had rehearsed many many times	JJ
+62	air	air air air air air o plane?	NN
+63	gold	gold, gold gold, gold	NN
+64	circus	in front of circus circus!	NN
+65	ray	my name is ray ray and i' m here to... service you.	NN
+66	ray	ray ray is a sexual healer.	NN
+67	ray	ray ray' s service center, 6630 harford road.	NN
+68	ray	ray ray?	NN
+69	ray	ray ray has helped me understand my hypersexuality.	NN
+70	ray	uh, i would, but i' m supposed to help ray ray think up a new sex act.	NN
+71	ray	ray ray is a sex saint,	NN
+72	ray	oh, and i' ve got hot pants, ray ray.	NN
+73	ray	you have met ray ray.	NN
+74	ray	no, there' s this guy named ray ray and he is their leader and he ate me out.	NN
+75	ray	ray ray is gonna be all better, right?	NN
+76	ray	we don' t serve ray ray' s people here.	NN
+77	ray	- ray ray!	NN
+78	ray	do it for us one more time, ray ray.	NN
+79	ray	now, ray ray, now!	NN
+80	walterl	walterl walterl and why did everyone just automatically listen to that mike person?	NN
+81	anything	anything anything?	NN
+82	plan	you' re on the non- plan plan.	NN
+83	plan	i am not on a non- plan plan!	NN
+84	haw	haw haw... you baby, you going down!	NN
+85	urt	yes, somehow you seem urt urt, really?	JJ
+86	thing	sexy thing, miss thing thing.	NN
+87	gus	oh, hi, gus gus.	JJ
+88	gus	gus gus.	JJ
+89	gus	- i think i' m gonna go talk to gus gus.	JJ
+90	gunther	i can see myself in the mountains, raising children...... little hans hans and gunther gunther.	NN
+91	gus	i' d hate to see you with gus gus.	JJ
+92	plan	you' re on the non- plan plan.	NN
+93	plan	i am not on a non- plan plan!	NN
+94	bright	 ~ gonna be a bright bright sunshiny day	JJ
+95	bright	whoo! ~ gonna be a bright bright sunshiny day	JJ
+96	campagin	sally, i have to run a campagin campagin£¿ you make a fool yourself.	NN
+97	haw	haw haw... you baby, you going down!	NN
+98	urt	yes, somehow you seem urt urt£¬really?	JJ
+99	chltty	"avn best plcture 1999 ""chltty chltty gang bang"""	JJ
+100	gus	oh, hi, gus gus.	JJ
+101	gus	gus gus.	JJ
+102	gus	- i think i' m gonna go talk to gus gus.	JJ
+103	gunther	l can see myself in the mountains, raising children...... little hans hans and gunther gunther.	NN
+104	gus	l' d hate to see you with gus gus.	JJ
+105	thing	sexy thing, miss thing thing.	NN
+106	plan	you' re on the non- plan plan.	NN
+107	plan	i am not on a non- plan plan!	NN
+108	anything	anything anything?	NN
+109	dirty	dirty dirty!	JJ
+110	dirty	you called my daughter a dirty dirty!	JJ
+111	dirty	nobody calls my girl a dirty dirty.	JJ
+112	weird	i like walking on the beach and sharing pop corns with someone and also the sound of back street boys you' re weird weird?	JJ
+113	hot	it' s a hot hot dog.	JJ
+114	something	i knew i had to do something something drastic to salvage what little i had left	NN
+115	something	i knew i had to do something something drastic to salvage what little i had left	NN
+116	party	oh, you mean a party party?	NN
+117	something	- somebody from something something.	NN
+118	friend	i mean, i like to consider myself her best friend...... but andrew is her best friend friend, if that makes any sense.	NN
+119	friend	i mean, i like to consider myself her best friend...... but andrew is her best friend friend, if that makes any sense.	NN
+120	something	- somebody from something something.	NN
+121	friend	i mean, i like to consider myself her best friend...... but andrew is her best friend friend, if that makes any sense.	NN
+122	business	listen, why don' t i give you a lift and then we can talk about this state business business in the car.	NN
+123	cher	- cher cher?	NN
+124	hunka	- i can' t see.... a newly smitten hunka hunka burning love.	NN
+125	weird	normal weird, or weird weird?	JJ
+126	electricity	but isn' t electricity electricity?	NN
+127	night	aii right, pumpkin, night night.	NN
+128	hunka	a newly smitten hunka hunka burning love.	NN
+129	something	- somebody from something something.	NN
+130	lambda	lambda lambda lambda.	NN
+131	lambda	 lambda lambda lambda?	NN
+132	lambda	# lambda lambda lambda boys	NN
+133	lambda	the sisters of pi welcome our newest fraternity, lambda lambda lambda.	NN
+134	lambda	you know, if we get into lambda lambda lambda, we could be partners in the homecoming carnival.	NN
+135	lambda	we' il never get into lambda lambda lambda now.	NN
+136	lambda	 well, i' d like to propose a toast to un jefferson, who, in his ultimate wisdom, chose to accept us into our new fraternity, lambda lambda lambda.	NN
+137	lambda	 lambda lambda lambda.	NN
+138	lambda	# we' re lambda lambda lambda and omega mu	NN
+139	lambda	lambda lambda lambda and omega mu.	NN
+140	lambda	# we' re lambda lambda lambda and omega mu  nerds!	NN
+141	oogie	* boogie- oogie- oogie oogie- oogie *	NN
+142	tricky	* it' s tricky tricky, tricky, tricky *	JJ
+143	tricky	* it' s tricky tricky, tricky, tricky *	JJ
+144	tricky	* tricky, tricky tricky, tricky **	JJ
+145	anything	* i' il give you anything anything, anything *	NN
+146	anything	* i' il give you anything anything, anything *	NN
+147	anything	* i' il give you anything anything, anything *	NN
+148	love	ofwhat is it to love love	NN
+149	zoo	# we' re going to the zoo zoo, zoo #	NN
+150	whoa	~~~nutty, nutty, nutty my love foryou~~~ ~~~lcan' t believe my dreams come true~~~ ~~~l' ve finally foundsomebody whose heart is true~~~ ~~~andbest ofallisyou' re nutty, nutty, nutty forme~~~ ~~~ whoa, whoa whoa, whoa, whoa, whoa~~~~~~	NN
+151	whoa	- ~~~andbest ofallisyou' re nutty, nutty, nutty forme~~~ - ~~~sing~~~ ~~~ whoa, whoa~~~ ~~~ whoa, whoa, whoa, whoa~~~ ~~~ whoa, whoa, whoa, whoa whoa, whoa, whoa, whoa~~~ ~~~nutty, nutty, nutty my love foryou~~~ ~~~lcan' t believe my dreams come true~~~ 	NN
+152	oogie	* boogie- oogie- oogie oogie- oogie *	NN
+153	tricky	* it' s tricky tricky, tricky, tricky *	JJ
+154	tricky	* it' s tricky tricky, tricky, tricky *	JJ
+155	tricky	* tricky, tricky tricky, tricky **	JJ
+156	anything	* i' il give you anything anything, anything *	NN
+157	anything	* i' il give you anything anything, anything *	NN
+158	anything	* i' il give you anything anything, anything *	NN
+159	class	class class class.	NN
+160	great	it' s my great great grandfather.	JJ
+161	wha	err... wha wha what does that mean?	NN
+162	anything	# i can do anything anything	NN
+163	special	i think you' re a special special man.	JJ
+164	whoa	- whoa whoa!	NN
+165	good	good good!	JJ
+166	whoa	whoa whoa, hey!	NN
+167	wop	# shoo be do be do be do be do wop wop, shoo be do be do be do be do wop wop #	NN
+168	wop	# you' re gonna want me for your girl # shoo be do be do be do be do wop wop #	NN
+169	wop	# one fine day, we' il meet once more # shoo be do be do be do be do wop wop #	NN
+170	wha	err... wha wha what does that mean?	NN
+171	tin	i took rin tin tin out f or a shit, f or christ' s sakes.	NN
+172	wah	wah wah wah!	NN
+173	whoa	# whoa whoa whoa	NN
+174	hip	a desert holiday hip hip hip hip hooray!	NN
+175	gobble	gobble gobble.	NN
+176	real	well, my agent would be real real miffed with me if i --	JJ
+177	chim	chim chiminy, chim chiminy chim chim cheree	NN
+178	chim	chim chiminy, chim chiminy chim chim cheroo	NN
+179	chim	chim chiminy chim chim cheree, chim cheroo	NN
+180	chim	chim chiminy, chim chiminy chim chim cheroo	NN
+181	chim	chim chiminy, chim chiminy chim chim cheroo	NN
+182	diddle	um diddle diddle diddle, um diddle ay um diddle diddle diddle, um diddle ay	NN
+183	diddle	um diddle diddle diddle, um diddle ay um diddle diddle diddle, um diddle ay	NN
+184	diddle	um diddle diddle diddle, um diddle ay um diddle diddle diddle, um diddle ay	NN
+185	diddle	um diddle diddle diddle, um diddle ay um diddle diddle diddle, um diddle ay	NN
+186	diddle	um diddle diddle diddle, um diddle ay um diddle diddle diddle, um diddle ay	NN
+187	chim	chim chiminy, chim chiminy chim chim cheroo	NN
+188	chim	chim chiminy, chim chiminy chim chim cheree	NN
+189	chim	chim chiminy, chim chiminy chim chim cheroo	NN
+190	chim	chim chiminy, chim chiminy chim chim cheree	NN
+191	chim	chim chiminy, chim chiminy chim chim cheroo	NN
+192	chim	chim chiminy, chim chiminy chim chim cheree	NN
+193	chim	chim chiminy, chim chiminy chim chim cheroo	NN
+194	chim	chim chiminy, chim chiminy chim chim cheree	NN
+195	chim	then them what sings chim chim cheree, chim cheroo	NN
+196	chim	chim chiminy chim chim	NN
+197	piu	lau piu piu.	NN
+198	piu	i' m lau piu piu.	NN
+199	piu	piu piu.	NN
+200	piu	piu piu, i love you.	NN
+201	freshy	* who got the love who got the freshy freshy *	JJ
+202	love	old black magic called love love	NN
+203	lopo	subtitles ripped 6. nov. 2002 by lopo lopo@ losys. sk	NN
+204	boom	match in the gas tank, boom boom	NN
+205	boom	match in the gas tank, boom boom	NN
+206	boom	match in the gas tank, boom boom	NN
+207	boom	match in the gas tank, boom boom	NN
+208	boom	boom boom boom boom	NN
+209	boom	match in the gas tank, boom boom {y: i} good boy.	NN
+210	sweet	# i used to be such a sweet sweet thing 'til they #	JJ
+211	food	- not food food.	NN
+212	ole	- ole, ole ole ole!	JJ
+213	blerp	"one thing i could never stand...... was to see a filthy, dirty old drunkie...... howling away at the filthy songs of his fathers...... and going ""blerp blerp"" in between...... as it might be a filthy old orchestra in his stinking guts."	NN
+214	light	she came towards me...... with the light, like it was the light light of heavenly grace.	JJ
+215	blerp	"one thing i could never stand...... was to see a filthy, dirty old drunkie...... howling away at the filthy songs of his fathers...... and going ""blerp blerp"" in between...... as it might be a filthy, old orchestra in his stinking guts."	NN
+216	light	she came towards me...... with the light like it was the light light of heavenly grace.	JJ
+217	black	i came back to life after a long, black black gap...... of what might have been a million years.	JJ
+218	baby	- oh... okay. - ÷ and l`m doing this and l`m trying that ÷ ÷ and l`m trying to make some dough ÷ ÷ baby, baby, baby baby, baby, baby ÷	NN
+219	baby	- ÷ baby, baby, baby, baby, baby baby, baby, baby, baby ÷ - hello? - ÷ baby, baby, baby, baby, baby baby, baby, baby, baby ÷÷ - hello?	NN
+220	denial	- that' s a non- denial denial.	NN
+221	denial	my non- denial denial.	NN
+222	ying	ying ying	NN
+223	ying	ying ying	NN
+224	ying	i' m ying ying	NN
+225	ying	ying ying, is that you?	NN
+226	ying	where' s ying ying?	NN
+227	ying	ying ying!	NN
+228	ying	ying ying, what are you doing here?	NN
+229	ying	ying ying...	NN
+230	ying	ying ying!	NN
+231	ying	ying ying has already...	NN
+232	ying	ying ying	NN
+233	ying	ying ying made this for you	NN
+234	baby	don`t such strong strength! you will hurt baby baby`s head is out.. so dangouse	NN
+235	ryu	ryu ryu ryu	JJ
+236	night	my liege, and madam... to expostulate what majesty should be, what duty is... why day is day, night night, and time is time... were nothing but to waste night, day, and time.	NN
+237	bam	my name is dangerous dillard fighting flipo bam bam... out of broward county texas.	NN
+238	good	alright, now you dont want to hit him when he' s coming toward ya cause what he' s gonna do is just push you back and is gonna smuggle your punches take you by , so you watch him real carefully, keep rotating, that keeps your head moving and keep one shoulder back so you' re always ready to fire power shot, alright now go ahead now, good good, keep rotating, keep moving, that' s it, good good, keep that chin tucked in, come around keep moving, keep moving, good... yeah?	JJ
+239	good	good good.	JJ
+240	bum	bum bum	NN
+241	bum	bum bum bum	NN
+242	bum	bum bum	NN
+243	bum	bum bum bum bum bum.	NN
+244	ally	- ally ally ally ooh - ally ally ally ooh	NN
+245	ambulance	ambulance ambulance	NN
+246	dad	dad dad!	NN
+247	bum	# bum bum #	NN
+248	bum	# bum bum bum #	NN
+249	bum	# bum bum #	NN
+250	bum	# bum bum bum bum bum. #	NN
+251	ally	- # oh bop sha bam, shi bimmy bop # - you say it! - # ally ally ally ooh # - # ally ally ally ooh #	NN
+252	thing	the thing thing.	NN
+253	bridge	- bridge, bridge bridge, bridge.	NN
+254	spectacular	a play, something very modern called spectacular spectacular.	JJ
+255	spectacular	once satine heard my modern poetry, she would be astounded... and insist to zidler that i write spectacular spectacular.	JJ
+256	spectacular	it' s from spectacular spectacular.	JJ
+257	spectacular	spectacular spectacular!	JJ
+258	spectacular	spectacular spectacular no words in the vernacular	JJ
+259	hungry	hungry hungry hippos.	JJ
+260	hungry	how did you feel, being denied these hungry hungry hippos?	JJ
+261	hip	hip hip hurrah!	NN
+262	hip	hip hip hurrah!	NN
+263	hip	hip hip hurrah!	NN
+264	gooble	gooble gooble, gooble gooble.	JJ
+265	whoa	whoa, whoa whoa --	NN
+266	wise	thank you for your words, your wise wise words.	JJ
+267	gooble	gooble gooble, gooble gooble.	JJ
+268	hip	hip hip hurrah!	NN
+269	hip	hip hip hurrah!	NN
+270	hip	hip hip hurrah!	NN
+271	proud	cretinous moron a man ought to be proud proud of such an appendix.	JJ
+272	exciting	that' s exciting exciting!	JJ
+273	tin	you' re interviewing rin tin tin!	NN
+274	karol	a businessman from poland, karol karol.	NN
+275	karol	a businessman from poland, karol karol.	NN
+276	sex	and then this non- sex sex thing.	NN
+277	sweetheart	sweetheart sweetheart	NN
+278	boom	boom boom.	NN
+279	something	something something something he has	NN
+280	timmy	timmy, oh timmy timmy come over and sit on grandma' s lap timmy, timmy, what?	JJ
+281	doctor	where is elizeberth we must help the baby, call the doctor doctor calrs please, plese come to room 6 the baby cant come out, how?	NN
+282	home	# home, sweet home home, sweet home	NN
+283	home	# home, sweet home home, sweet home	NN
+284	sugar	"i' m starting to get diabetes from all this ""sugar sugar"" over here."	NN
+285	boom	boom boom has got him now!	NN
+286	boom	boom boom has got him.	NN
+287	crap	the dead are leaving their tombs that' s a load of crap crap or not i' m taking my money i' m closing my doors until tomorrow morning and i' m not opening it for anybody	NN
+288	jar	jar jar.	NN
+289	jar	you' re a good friend, jar jar.	NN
+290	fucky	fucky fucky?	JJ
+291	good	this good good night	JJ
+292	jar	- good to see you again, jar jar.	NN
+293	jar	she hardly even recognized me, jar jar.	NN
+294	jar	jar jar, i don' t wish to hold you up.	NN
+295	sweet	- gladly my sweet sweet ladies.	JJ
+296	boom	boom boom.	NN
+297	anal	anal anal get in.	JJ
+298	small	- ¤everybody, now - ¤it' s a small world after all ¤it' s a small, small small, small world ¤oh, yeah ¤there is just one moon and one golden sun ¤and a smile means friendship to everyone ¤though the mountains divide and the oceans are wide ¤it' s a small world after all ¤come on, come on everybody, now	JJ
+299	small	- ¤it' s a small world after all - ¤can you hear me now ¤it' s a small world after all ¤it' s a small, small small, small world ¤come on, everybody, now	JJ
+300	small	- ¤it' s a small world after all - ¤can you hear me now ¤it' s a small world after all ¤it' s a small, small small, small world ¤come on, come on	JJ
+301	small	- ¤it' s a small world after all - ¤come on, come on ¤it' s a small world after all ¤it' s a small, small small, small world ¤it' s a small world after all ¤it' s a small world after all ¤it' s a small world after all ¤it' s a small, small small, small world	JJ
+302	boc	no, the entire chicken the chicken that i see there. boc boc boc.	NN
+303	crazy	i don' t know much in this crazy crazy world... but i do know... that if you don' t let us fuck this asshole, we are going to have our dicks and pussies all covered in shit.	JJ
+304	takeoff	just a little pre- takeoff takeoff.	NN
+305	nothing	master, monks have nothing nothing to requite	NN
+306	takeoff	just a little pre- takeoff takeoff.	NN
+307	yea	oh yea yea yea.	JJ
+308	yea	oh yea yea yea.	JJ
+309	number	number number haha	NN
+310	car	car car	NN
+311	coastal	i guess a little a few little in coastal coastal area.	JJ
+312	dream	# dream, dream, dream, dream, dream, dream dream about me next, max.	NN
+313	pathetic	you' re pathetic pathetic	JJ
+314	pathetic	you' re pathetic pathetic	JJ
+315	easy	easy easy...	JJ
+316	hula	so where are all the surfers and hula hula dancers, smart guy?	NN
+317	shame	shame shame	NN
+318	tin	- fuck you, tin tin.	NN
+319	tin	oh, what is this, tin tin?	NN
+320	tin	it was pawned here a year ago by a customer of yours named tin tin.	NN
+321	tin	that' s tin tin, one of t- bird' s little helpers.	NN
+322	tin	now you' re going to tell me where to find... the rest of tin tin' s little party pals.	NN
+323	tin	you' re the guy that murdered tin tin.	NN
+324	tin	- tin tin.	NN
+325	tin	gentlemen, by all means, i think we ought to have... an introspective moment of silence for poor, old tin tin.	NN
+326	tin	that piece of ratshit made tin tin into a fuckin 'voodoo doll!	NN
+327	tin	tin tin was a dick.	NN
+328	tin	tin tin.	NN
+329	tin	you did tin tin.	NN
+330	brother	he' s your brother brother?	NN
+331	time	it' s good- time time.	NN
+332	high	we gonna get a high high.	JJ
+333	rrr	rrr rrr!	NN
+334	squeak	squeak squeak!	NN
+335	rrr	rrr rrr!	NN
+336	hubba	hubba hubba hubba.	NN
+337	hubba	hubba hubba hubba.	NN
+338	hubba	hubba hubba hubba.	NN
+339	hubba	hubba hubba hubba.	NN
+340	fire	it all seems so long ago young and happy don' t you know down by the creek i would show fireflies to that girl but that was back when he was nice before my warm heart turned to ice my sister' s wig once had lice but that was long ago the schoolyard' s where we were the first time i kissed her he thought he got some tongue but it was only retainer eleanore' s bra is a trainer well, over there' s my family home and the woods we used to roam the only time i had sex was on the phone but that was long ago i carved our names upon that tree i loved him and he loved me my darling wife was once a he but that was long ago he' d always whisper in my ear but then i started drinking beer my jewels got licked by six frisky deer now he' s just a loner and a liar and my trailer' s caught on fire fire?!	NN
+341	sorry	sorry. sorry sorry	JJ
+342	whoa	- workin 'at the car wash - whoa whoa yeah yeah	NN
+343	tut	now, tut tut.	JJ
+344	whoa	- # workin 'at the car wash - # whoa whoa yeah yeah	NN
+345	busy	busy busy busy!	JJ
+346	square	left circle double left square right to the down square square.	JJ
+347	whoa	- workin 'at the car wash - whoa whoa yeah yeah	NN
+348	doot	hoo doot doo doot doot doo doot	NN
+349	doot	* hoo doot doo doot doot doo doot *	NN
+350	bom	# bom bom bom- bom... #	NN
+351	hunka	a super- duper, extra- looper, hunka hunka heffatrap.	NN
+352	sugar	# sugar sugar 	NN
+353	whoa	oh whoa whoa whoa	NN
+354	many	many many friends	JJ
+355	many	many many friends	JJ
+356	new	by the power vested in me by the state of new new york	JJ
+357	deadly	it don' t take more than deadly deadly bees to keep us from doing our job.	JJ
+358	deadly	it' il take more than a few deadly deadly bees to... »	JJ
+359	boo	that' s a boo boo tops!	NN
+360	true	¡ó be true true, true, true, true ¡ó	JJ
+361	true	¡ó be true true, true, true, true ¡ó	JJ
+362	hip	hip hip!	NN
+363	hip	- hip hip!	NN
+364	hip	hip hip!	NN
+365	mwah	mwah mwah mwah!	NN
+366	cluck	* cluck cluck, said the little red hen let' s boogie in the barnyard *	NN
+367	circus	well, that' s a change of pace... our accidental tourist took his family backstage at circus circus.	NN
+368	circus	backstage at circus circus.	NN
+369	wild	- i got a wild wild life - don' tyou ever stop?	JJ
+370	widow	i mean, i' ve always been a black widow... but now i' m a black widow widow.	NN
