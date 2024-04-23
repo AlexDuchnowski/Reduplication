@@ -6,7 +6,7 @@ import spacy
 
 nlp = spacy.load("en_core_web_sm")
 
-relevant_pos_list = ["NN", "JJ"]
+relevant_pos_list = ["NN", "JJ", "RB", "VB"]
 
 
 def get_spacy_pos(word: str) -> str:
