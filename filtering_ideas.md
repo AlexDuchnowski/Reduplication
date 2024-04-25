@@ -1,5 +1,7 @@
 # Filtering Ideas
 - Filtering out proper nouns & names (automatically using parsers)
-- Filtering out words shorter than 3 letters
+- Filtering out words shorter than 3 letters (can increase this threshold)
 - Only looking at reduplication of single words/lexems
 - Filter by part of speech and only keep words whose POS we're interested in (automated with spacy/NLTK)
+- Remove triplication (or more than two instances in a row)
+- If the same example shows up at least three times in a row (in the table), remove it (probably a song/chant)
