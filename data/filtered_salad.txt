@@ -275,13 +275,12 @@
 275: truth	Rosanna:   TRUTH-truth, or convenient-in-the-moment truth?
 276: tub	So what are you looking for? A Jacuzzi-type thing? Or a TUB-tub?
 277: ugly	B:   Marianne-of-Gilligan's-Island ugly, not Cornelius-of-Planet-of-the-Apes ugly. TV ugly, not UGLY-ugly.
-278: ugly	[The actor in question, overhearing this, says afterwards something like "I've been called ugly before, but I've never been called UGLY-ugly!"]
-279: van	Look at all the yellow vans on the road. Not vans like ours [i.e., minivans], but VAN-vans.
-280: war	Henry Blake:  Look, folks. You've picked a very busy spot. The war comes through here. Well, not war in your war-fighting sense, but rather in your aftermath sense, which is still WAR-war.
-281: white	Dressmaker:   Here's the skinny. We dressmakers have a very strict code, so I need to know, do you deserve to wear virginal white? Because if you don't, you'll have to wear an off-white, what we call a hussy white. So which will it be, WHITE-white?
-282: wife	She's a WIFE-wife.
-283: woody	Oh, WOODY-Woody. Oh well, listeners, this is an old friend of mine from back in Boston. Well, how you doin' there, you old cowpoke?
-284: work	Wednesday is my WORK-work day.
-285: work	Paige:   Well, between witch work and WORK-work, I just don't have any time any more.
-286: work	Marina:   No, I mean, I don't mind, like, giving you a hand if you need one. I mean, it could be different from the whole punishment thing. You know, like actual WORK-work.
-287: wrong	Grams:   Oh, well, I--I don't mean WRONG-wrong, it's just that we've always had... girls.
+278: van	Look at all the yellow vans on the road. Not vans like ours [i.e., minivans], but VAN-vans.
+279: war	Henry Blake:  Look, folks. You've picked a very busy spot. The war comes through here. Well, not war in your war-fighting sense, but rather in your aftermath sense, which is still WAR-war.
+280: white	Dressmaker:   Here's the skinny. We dressmakers have a very strict code, so I need to know, do you deserve to wear virginal white? Because if you don't, you'll have to wear an off-white, what we call a hussy white. So which will it be, WHITE-white?
+281: wife	She's a WIFE-wife.
+282: woody	Oh, WOODY-Woody. Oh well, listeners, this is an old friend of mine from back in Boston. Well, how you doin' there, you old cowpoke?
+283: work	Wednesday is my WORK-work day.
+284: work	Paige:   Well, between witch work and WORK-work, I just don't have any time any more.
+285: work	Marina:   No, I mean, I don't mind, like, giving you a hand if you need one. I mean, it could be different from the whole punishment thing. You know, like actual WORK-work.
+286: wrong	Grams:   Oh, well, I--I don't mean WRONG-wrong, it's just that we've always had... girls.

@@ -15,7 +15,9 @@ with open("data/salad-salad_corpus.txt", "r") as f:
         for line in lines:
             lowered = line.lower()
             for double in doubled:
-                if double[1] in lowered:
+                if (
+                    double[1] in lowered and lowered[0] + lowered[-2] != "[]"
+                ):  # Second condition for removing linguistic annotations
                     count += 1
                     f.write(f"{count}: {double[0]}\t{line}")
                     continue
