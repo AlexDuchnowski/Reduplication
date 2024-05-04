@@ -11,9 +11,11 @@ doubled = [(word.lower(), f"{word.lower()}-{word.lower()}") for word in words]
 with open("data/salad-salad_corpus.txt", "r") as f:
     lines = f.readlines()
     with open("data/filtered_salad.txt", "w") as f:
+        count = 0
         for line in lines:
             lowered = line.lower()
             for double in doubled:
                 if double[1] in lowered:
-                    f.write(double[0] + "\t" + line)
+                    count += 1
+                    f.write(f"{count}: {double[0]}\t{line}")
                     continue

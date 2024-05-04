@@ -1,4 +1,5 @@
 # Filtering Ideas
+
 - Filtering out proper nouns & names (automatically using parsers)
 - Filtering out words shorter than 3 letters (can increase this threshold)
 - Only looking at reduplication of single words/lexems
@@ -8,8 +9,8 @@
 - Keeping casing in mind
 - Reducing repeated lines
 - Specific items:
-    - Onomatopoeia
-    - Greek Letters
-    - "That"
-    - "There"
-    - "like like"
+  - Onomatopoeia
+  - Greek Letters
+  - "That"
+  - "There"
+  - "like like"
