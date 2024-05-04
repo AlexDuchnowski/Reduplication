@@ -5,3 +5,11 @@
 - Filter by part of speech and only keep words whose POS we're interested in (automated with spacy/NLTK)
 - Remove triplication (or more than two instances in a row)
 - If the same example shows up at least three times in a row (in the table), remove it (probably a song/chant)
+- Keeping casing in mind
+- Reducing repeated lines
+- Specific items:
+    - Onomatopoeia
+    - Greek Letters
+    - "That"
+    - "There"
+    - "like like"
