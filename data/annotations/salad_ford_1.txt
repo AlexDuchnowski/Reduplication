@@ -34,7 +34,7 @@ E
 P
 S
 P
-→ annotation
+N
 P
 E (would accept P)
 E (would accept P)
