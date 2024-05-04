@@ -1,3 +1,5 @@
+import random
+
 import numpy as np
 
 words = np.unique(
@@ -8,16 +10,23 @@ words = np.unique(
 
 doubled = [(word.lower(), f"{word.lower()}-{word.lower()}") for word in words]
 
+examples = []
+
 with open("data/salad-salad_corpus.txt", "r") as f:
     lines = f.readlines()
-    with open("data/filtered_salad.txt", "w") as f:
-        count = 0
-        for line in lines:
-            lowered = line.lower()
-            for double in doubled:
-                if (
-                    double[1] in lowered and lowered[0] + lowered[-2] != "[]"
-                ):  # Second condition for removing linguistic annotations
-                    count += 1
-                    f.write(f"{count}: {double[0]}\t{line}")
-                    continue
+    for line in lines:
+        lowered = line.lower()
+        for double in doubled:
+            if (
+                double[1] in lowered and lowered[0] + lowered[-2] != "[]"
+            ):  # Second condition for removing linguistic annotations
+                examples.append((double[0], line))
+                continue
+
+indices = random.sample(range(len(examples)), 100)
+random_sample = [examples[i] for i in indices]
+
+with open("data/salad_sample.txt", "w") as f:
+    for i, (word, line) in enumerate(random_sample):
+        f.write(f"{i+1}: {word}\t{line}")
+    f.write(str(indices))
