@@ -1,0 +1,100 @@
+S
+P
+P
+P
+P
+P
+P
+P
+P
+E
+P
+E
+P (would accept E)
+P
+P
+S (double-meaning?)
+P
+P (*quoting)
+P (would accept E)
+P
+P
+P
+P
+P (would accept S)
+P
+P
+P
+E (would accept P)
+P
+P (would accept S)
+E (would accept P)
+P
+E
+P
+S
+P
+→ annotation
+P
+E (would accept P)
+E (would accept P)
+P
+S 
+→ repetition not reduplication
+S (would accept P) (conventionalized)
+S (would accept P) (conventionalized)
+S (would accept P) (conventionalized)
+P
+P 
+P 
+S (would accept P) (conventionalized)
+P 
+P
+P
+P
+P
+P
+P (would accept E)
+P
+S
+P
+P
+P
+P (would accept S)
+P (would accept E)
+P
+S
+S
+S
+S (would accept E)
+P
+E (would accept S)
+P
+S
+S
+S
+E (would accept P)
+E
+S
+P
+S (would accept E)
+S (would accept E) (*is echoing prev.)
+S
+P (would accept E)
+P (would accept E)
+P
+P
+P
+P
+P (would accept S)
+P
+P (*is echoing prev.)
+P
+S (and also P?)
+P
+P (would accept E)
+P (would accept E)
+E
+P
+S
+S
