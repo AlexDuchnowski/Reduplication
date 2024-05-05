@@ -1,0 +1,186 @@
+P (E?)
+S
+P
+P
+P
+P (S?)
+P (S?)
+P
+S
+P (E?)
+P
+P
+P
+P
+P
+E
+S
+S
+S
+E
+P
+E
+P
+E (S?)
+E
+P
+E
+P
+P
+P
+P
+S
+P
+P
+P
+P
+E
+P
+P (E?)
+P
+P (E?)
+E (P?)
+S
+P
+P (E?)
+E (*quoteback)
+P
+P
+S
+P
+P
+P
+P (E?)
+S
+P
+E
+P (E?)
+P (E?)
+P (E?)
+S
+E (P?)
+P
+P
+P
+P (E?)
+E (P?)
+P
+S (P?)
+P (E?)
+P
+E
+P (E?)
+P (E?)
+P
+E (P?)
+P (S?)
+S
+S
+P (S?)
+P
+P
+P
+P 
+P 
+S
+S
+P (E?)
+P
+S
+E
+P (E?)
+P
+P (E?)
+P
+P
+E
+E
+E (S?)
+E
+S
+P
+S
+P
+P (E?)
+P
+P
+S
+S
+S
+S (P?)
+P (S?)
+E
+P
+P
+P
+P (E?)
+E
+E
+S
+P
+P (E?)
+P
+P
+E
+P
+E (S?)
+S
+E
+E
+E
+P (E?)
+P
+S
+E (P?)
+P
+S
+S (E?)
+P
+P
+P
+E (P?)
+E (P?)
+E (P?)
+S
+P
+P (E?)
+S
+E (S?)
+P
+P
+E
+P
+P (S?)
+P (E?)
+P (?)
+S
+S
+S
+S
+S
+S
+P
+S
+S
+S
+S
+S
+S
+S
+P (E?)
+P 
+E (P?)
+S
+P
+P
+P
+E (P?)
+P
+P
+P (E?)
+P (E?)
+S
+S (P?)
+P
+P
+P 
