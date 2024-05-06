@@ -13,12 +13,12 @@ head(data)
 ```
 
 ```{r}
-toy.data <- data.frame(
-  part.of.speech = sample(c("noun", "verb", "adjective"), 100, replace = TRUE),
-  semantic.contribution = sample(c("prototypical", "extreme", "salient"), 100, replace = TRUE)
-)
+#toy.data <- data.frame(
+#  part.of.speech = sample(c("noun", "verb", "adjective"), 100, replace = TRUE),
+#  semantic.contribution = sample(c("prototypical", "extreme", "salient"), 100, #replace = TRUE)
+#)
 
-head(toy.data)
+#head(toy.data)
 
 ```
 
