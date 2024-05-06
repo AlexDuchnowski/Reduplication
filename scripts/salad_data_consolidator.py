@@ -5,7 +5,7 @@ nouns = "Adam, Air-Canada, Amherst, artist, Auckland, bacon, bag, bank, beach, B
 
 adjectives = "aggressive, aggressive, alone, bad, bad, better, clear, dead, dead, dead, dead, dead, dead, done, evil, familiar, favorite, final, free, French, French, funny, funny, gay, geeky, gone, good, hardest, high, hot, Indian, instant, intense, interested, invisible, jealous, late, late, late, long, married, medium, nervous, next, nuts, okay, older, orange, personal, red, regular, retarded, rich, rich, serious, sick, smart, sorry, special, surprising, ugly, white, wrong"
 
-verbs = " be, bowling, cried, decided, die, dying, enjoy, go, going, handle, happened, help, hustle, know, leave, leave, leave, leaving, leaving, leaving, listen, lose, move, promise, rape, rob, robbed, seeing, split, steal, strip, surf, talk, talk, thinking"
+verbs = "be, bowling, cried, decided, die, dying, enjoy, go, going, handle, happened, help, hustle, know, leave, leave, leave, leaving, leaving, leaving, listen, lose, move, promise, rape, rob, robbed, seeing, split, steal, strip, surf, talk, talk, thinking"
 
 adverbs = "again, anywhere, back, here, here, home, now, out, out, out-there, over, over, really, there, together, together, together, together, together, together, together, tonight"
 
