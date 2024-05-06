@@ -1,0 +1,66 @@
+---
+title: "ReduplicationFinal"
+format: html
+editor: visual
+---
+
+## Data
+
+```{r}
+data <- read.csv("../data/salad_consolidated.csv")
+
+head(data)
+```
+
+```{r}
+toy.data <- data.frame(
+  part.of.speech = sample(c("noun", "verb", "adjective"), 100, replace = TRUE),
+  semantic.contribution = sample(c("prototypical", "extreme", "salient"), 100, replace = TRUE)
+)
+
+head(toy.data)
+
+```
+
+```{r}
+library(ggplot2)
+
+ggplot(data, aes(x = POS, fill = POS)) +
+  geom_bar() +
+  geom_text(stat='count', aes(label= after_stat(count)), vjust=-0.5) + 
+  labs(title = "Distribution of Parts of Speech",
+       x = "Part of Speech",
+       y = "Count")
+
+```
+
+```{r}
+library(ggplot2)
+
+ggplot(data, aes(x = Label, fill = Label)) +
+  geom_bar() +
+  geom_text(stat='count', aes(label= after_stat(count)), vjust=-0.5) + 
+  labs(title = "Distribution of Semantic Contributions",
+       x = "Semantic Contribution",
+       y = "Count")
+
+```
+
+```{r}
+library(ggplot2)
+library(nnet)
+
+summary(data)
+ggplot(data, aes(x = POS, fill = Label)) +
+  geom_bar()
+
+
+```
+
+## Model
+
+```{r}
+model <- multinom(Label ~ POS, data = data)
+
+summary(model)
+```
