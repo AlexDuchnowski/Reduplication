@@ -7,7 +7,7 @@ editor: visual
 ## Data
 
 ```{r}
-data <- read.csv("../data/salad_consolidated.csv")
+data <- read.csv("../data/salad_consolidated_refined.csv")
 
 head(data)
 ```
@@ -52,7 +52,10 @@ library(nnet)
 
 summary(data)
 ggplot(data, aes(x = POS, fill = Label)) +
-  geom_bar()
+  geom_bar() + 
+  labs(title = "Distribution of Semantic Contributions by POS",
+       x = "POS",
+       y = "Count")
 
 
 ```
@@ -64,3 +67,33 @@ model <- multinom(Label ~ POS, data = data)
 
 summary(model)
 ```
+```{r}
+z <- summary(model)$coefficients/summary(model)$standard.errors
+z
+```
+```{r}
+p <- (1 - pnorm(abs(z), 0, 1)) * 2
+p
+```
+
+```{r}
+head(pp <- fitted(model), n=20)
+
+```
+Values repeat by POS, so extracting one example of each will give us the probability of having a certain semantic contribution given POS.
+
+Example 1: NN, Example 2: JJ, Example 6: RB, Example 15: VB
+
+```{r}
+library(tibble)
+
+(my_tibble <- tibble(
+  Part.of.Speech = c("NN", "JJ", "RB", "VB"),
+  E = c(0.07946939, 0.42028842, 0.19230901, 0.14705943),
+  P = c(0.7019874, 0.5072467, 0.3461578, 0.6176449),
+  S = c(0.21854326, 0.07246485, 0.46153322, 0.23529567)
+))
+
+```
+
+
