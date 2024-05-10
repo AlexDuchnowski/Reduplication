@@ -1,277 +1,532 @@
-Word,Label,POS,Length,count
-adam,S,NN,4,21694386
-aggressive,P,JJ,10,7345918
-aggressive,P,JJ,10,7345918
-alone,E,JJ,5,39326417
-amherst,P,NN,7,2846723
-anywhere,E,RB,8,23947583
-artist,P,NN,6,67421654
-auckland,S,NN,8,7960929
-back,E,RB,4,488024109
-bacon,P,NN,5,5385205
-bad,E,JJ,3,95096787
-bad,P,JJ,3,95096787
-bag,P,NN,3,40671821
-bank,P,NN,4,91559349
-be,S,VB,2,2398724162
-beach,P,NN,5,105642682
-beach,P,NN,5,105642682
-better,P,JJ,6,157079378
-bitches,S,NN,7,2773319
-boat,P,NN,4,34104031
-bone,P,NN,4,17581312
-bowling,P,VB,7,9997649
-boyfriend,P,NN,9,4849182
-brother,P,NN,7,34273892
-businessman,P,NN,11,1765391
-car,P,NN,3,264720374
-celebrity,E,NN,9,23500942
-change,P,NN,6,210601244
-chicago,P,NN,7,63754684
-christian,E,NN,9,61873074
-class,P,NN,5,191087771
-clear,E,JJ,5,88447610
-coffee,P,NN,6,42086828
-couple,P,NN,6,43578199
-cow,P,NN,3,8267976
-cred,P,NN,4,549898
-cried,P,VB,5,4352198
-crime,P,NN,5,40361756
-crime,P,NN,5,40361756
-dad,P,NN,3,15136055
-date,P,NN,4,488967374
-date,P,NN,4,488967374
-date,P,NN,4,488967374
-date,P,NN,4,488967374
-date,P,NN,4,488967374
-date,P,NN,4,488967374
-date,P,NN,4,488967374
-dead,P,JJ,4,48384167
-dead,P,JJ,4,48384167
-dead,P,JJ,4,48384167
-dead,P,JJ,4,48384167
-dead,P,JJ,4,48384167
-dead,P,JJ,4,48384167
-decided,P,VB,7,33030803
-die,P,VB,3,46745446
-dinner,S,NN,6,25974858
-dive,P,NN,4,8254655
-doctor,P,NN,6,39845710
-dog,P,NN,3,77271631
-doll,P,NN,4,12047864
-done,P,JJ,4,102812628
-door,P,NN,4,56638839
-drink,S,NN,5,29254937
-drink,S,NN,5,29254937
-drink,S,NN,5,29254937
-drink,S,NN,5,29254937
-dying,P,VB,5,9123557
-economist,E,NN,9,3718338
-egg,P,NN,3,12766528
-end,P,NN,3,220812328
-enjoy,S,VB,5,50141455
-escort,S,NN,6,9226628
-evil,E,JJ,4,25704669
-evil,E,JJ,4,25704669
-familiar,S,JJ,8,16390724
-fans,P,NN,4,29290170
-favorite,E,JJ,8,61781016
-favorite,E,JJ,8,61781016
-feelings,P,NN,8,11299333
-fight,P,NN,5,30784313
-final,P,JJ,5,97649084
-fireplace,P,NN,9,5345450
-flute,P,NN,5,4090740
-food,P,NN,4,180144029
-free,P,JJ,4,1014107316
-french,P,JJ,6,81396759
-french,P,JJ,6,81396759
-french,P,JJ,6,81396759
-friend,P,NN,6,154527125
-friend,S,NN,6,154527125
-friend,P,NN,6,154527125
-friends,E,NN,7,110732827
-friends,P,NN,7,110732827
-funny,P,JJ,5,34281806
-funny,P,JJ,5,34281806
-garth,S,NN,5,2176273
-gay,S,JJ,3,167587791
-geeky,P,JJ,5,987806
-girl,P,NN,4,89139125
-girl,P,NN,4,89139125
-glove,P,NN,5,4714578
-go,S,VB,2,421086358
-god,P,NN,3,113624357
-god,P,NN,3,113624357
-going,S,VB,5,155284081
-go,S,VB,2,421086358
-gone,E,JJ,4,34511028
-good,P,JJ,4,365796396
-guitar,P,NN,6,37106331
-gun,P,NN,3,22834049
-gun,P,NN,3,22834049
-guy,E,NN,3,45286019
-guy,S,NN,3,45286019
-guys,S,NN,4,37603892
-guys,S,NN,4,37603892
-happened,P,VB,8,24951096
-hardest,E,JJ,7,2489739
-hat,P,NN,3,24383742
-help,P,VB,4,611054034
-here,E,RB,4,639711198
-here,P,RB,4,639711198
-high,E,JJ,4,345413157
-highway,P,NN,7,23623260
-hint,P,NN,4,6001895
-history,P,NN,7,215000515
-hive,P,NN,4,975507
-home,S,RB,4,1276852170
-home,S,RB,4,1276852170
-home,P,RB,4,1276852170
-home,P,RB,4,1276852170
-home,P,RB,4,1276852170
-hot,E,JJ,3,159287179
-house,P,NN,5,231310420
-hustle,E,VB,6,1754467
-indian,P,JJ,6,54646045
-instant,E,JJ,7,28599930
-intense,E,JJ,7,8202396
-interested,S,JJ,10,51282170
-invisible,P,JJ,9,6699963
-jealous,E,JJ,7,2229501
-jealous,E,JJ,7,2229501
-job,P,NN,3,177706929
-job,P,NN,3,177706929
-kid,P,NN,3,22011943
-kids,P,NN,4,96602880
-kilt,P,NN,4,795500
-kiss,P,NN,4,14790481
-know,P,VB,4,306100813
-language,P,NN,8,138517992
-late,E,JJ,4,65574606
-late,S,JJ,4,65574606
-late,E,JJ,4,65574606
-late,E,JJ,4,65574606
-leak,S,NN,4,4914623
-leave,S,VB,5,70957750
-leave,P,VB,5,70957750
-leaving,P,VB,7,23848479
-leaving,P,VB,7,23848479
-leaving,E,VB,7,23848479
-letter,P,NN,6,67339854
-letter,P,NN,6,67339854
-listen,P,VB,6,43252527
-logic,P,NN,5,23989892
-long,E,JJ,4,252519588
-lose,E,VB,4,24136984
-loser,E,NN,5,2529180
-love,P,NN,4,201063526
-madness,E,NN,7,5698238
-madonna,S,NN,7,10044163
-marcus,S,NN,6,6825770
-mark,S,NN,4,95606752
-marriage,P,NN,8,30592140
-married,P,JJ,7,30202662
-medium,P,JJ,6,51330557
-money,P,NN,5,190205072
-mother,P,NN,6,57432704
-mother,P,NN,6,57432704
-move,E,VB,4,70113140
-movie,S,NN,5,158421100
-movie,P,NN,5,158421100
-movie,P,NN,5,158421100
-murray,S,NN,6,11607168
-nervous,E,JJ,7,7908601
-next,P,JJ,4,425903347
-novel,P,NN,5,21821189
-now,P,RB,3,611387736
-nuts,P,JJ,4,9053763
-okay,P,JJ,4,15368116
-older,E,JJ,5,44222089
-orange,E,JJ,6,37316112
-out,S,RB,3,741601852
-out,S,RB,3,741601852
-out,S,RB,3,741601852
-over,P,RB,4,459222855
-over,E,RB,4,459222855
-over,E,RB,4,459222855
-pain,P,NN,4,42182798
-paper,P,NN,5,134939426
-party,P,NN,5,144707500
-party,P,NN,5,144707500
-party,P,NN,5,144707500
-party,P,NN,5,144707500
-people,P,NN,6,480303376
-personal,E,JJ,8,214671907
-pin,P,NN,3,25080458
-play,P,NN,4,150748333
-poker,P,NN,5,129054826
-problem,E,NN,7,141012024
-problem,E,NN,7,141012024
-problem,E,NN,7,141012024
-prof,P,NN,4,4282231
-promise,P,VB,7,16019259
-rape,P,VB,4,51454053
-really,P,RB,6,162033390
-red,P,JJ,3,140799532
-regular,P,JJ,7,62308697
-relationship,P,NN,12,47959756
-relationships,S,NN,13,29850322
-retarded,E,JJ,8,1500950
-rich,E,JJ,4,37200952
-rich,E,JJ,4,37200952
-rob,P,VB,3,17016018
-robbed,P,VB,6,1183375
-roz,S,NN,3,295717
-rush,E,NN,4,14684452
-salad,P,NN,5,8923706
-seeing,S,VB,6,26322092
-serious,E,JJ,7,38316678
-shock,P,NN,5,14850388
-sick,P,JJ,4,15965297
-slave,P,NN,5,10692715
-smart,E,JJ,5,36636558
-sorry,P,JJ,5,35595812
-sorry,P,JJ,5,35595812
-special,S,JJ,7,244311841
-split,S,VB,5,19998411
-steal,P,VB,5,6257493
-steve,S,NN,5,41997245
-strip,P,VB,5,18711440
-stuff,P,NN,5,81444510
-surf,P,VB,4,11402999
-surprising,E,JJ,10,5510793
-talk,P,VB,4,97850837
-talk,P,VB,4,97850837
-temple,P,NN,6,16052337
-there,P,RB,5,701170205
-thing,S,NN,5,97451660
-thing,S,NN,5,97451660
-thing,S,NN,5,97451660
-thing,S,NN,5,97451660
-thing,S,NN,5,97451660
-thing,S,NN,5,97451660
-thinking,E,VB,8,41333371
-together,S,RB,8,94113765
-together,S,RB,8,94113765
-together,S,RB,8,94113765
-together,S,RB,8,94113765
-together,S,RB,8,94113765
-together,S,RB,8,94113765
-together,S,RB,8,94113765
-tonight,P,RB,7,20612955
-top,E,NN,3,484213771
-tre,S,NN,3,1301732
-truth,P,NN,5,35345925
-truth,P,NN,5,35345925
-tub,P,NN,3,8990811
-ugly,P,JJ,4,7430462
-van,P,NN,3,55147325
-war,P,NN,3,126517399
-white,P,JJ,5,209863729
-wife,P,NN,4,46946408
-woody,S,NN,5,4355633
-work,S,NN,4,419483948
-work,P,NN,4,419483948
-work,P,NN,4,419483948
-wrong,P,JJ,5,49156828
+...1,Word,Context,Spacy POS,Length,count
+0,easy,easy easy...,JJ,4,125548527
+1,meng,general meng meng jie?,NN,4,689565
+2,anything,i haven' t done anything anything like this... happened...,NN,8,75985266
+3,out,out out get out of here,RB,3,741601852
+4,kitty,over there is here kitty kitty.,NN,5,6414935
+5,theta,"encrypt, this is diana 1716 theta theta 6.",NN,5,5070673
+6,theta,"encrypt, this is diana 1 716 theta theta 6.",NN,5,5070673
+7,very,"you see? it' s quite easy don' t be afraid come come on and you go, let' s bow your head that' s fine take your floo powder that' s it, very good don' t forget to speak very very clearly",RB,4,334923368
+8,voice,what? sorry? that voice voice? didn' t you hear it? what are you talking about?,NN,5,64600528
+9,voice,harry! did you hear it? hear what? that voice voice? what voice?,NN,5,64600528
+10,kill,i think it' s gonna kill kill?,VB,4,24850951
+11,come,"harry, i don' t who did it, but you' d be better come come on",VB,4,154326119
+12,justin,justin justin must' ve seen the basilisk through nearly headless nick!,JJ,6,10029711
+13,certain,"i sense that something is troubling you am i right, harry? it' s just you see, sir, i couldn' t help but notice certain thing, certain certain similarities between tom riddle and me",JJ,7,73108213
+14,goo,"- and i' m the ego man, goo goo, g' joob.",VB,3,3878783
+15,whoop,can i get a whoop whoop?,NN,5,331753
+16,whoop,can i get a whoop whoop?,NN,5,331753
+17,here,here here.,RB,4,639711198
+18,montgomery,i am looking for dr. montgomery montgomery.,NN,10,10230206
+19,nothing,nothing nothing,NN,7,73183983
+20,montgomery,i am looking for dr. montgomery montgomery.,NN,10,10230206
+21,nothing,nothing nothing,NN,7,73183983
+22,laba,- laba laba batu.,NN,4,39052
+23,mat,"- mat mat meal - ma ma ma, ma ma- ma ma",NN,3,9937738
+24,shoop,shoop shoop shooby doo wah,NN,5,142537
+25,mat,"- mat mat meal - ma ma ma, ma ma- ma ma",NN,3,9937738
+26,shoop,shoop shoop shooby doo wah,NN,5,142537
+27,thing,it' s a thing thing.,NN,5,97451660
+28,really,"i love her, i really really love her.",RB,6,162033390
+29,now,"now now, calm down.",RB,3,611387736
+30,mirror,mirror mirror on the wall..,NN,6,21539161
+31,anytime,you' re welcome here anytime anytime at all,RB,7,16192486
+32,then,"- then then, demuéstralo. - the match is not going away to cancel.",RB,4,369928941
+33,miss,"miss miss phoenix black, i' m sorry",VB,4,39897915
+34,later,see you later later,RB,5,84857974
+35,shimmy,shimmy shimmy.,NN,6,188186
+36,kitty,"come here, kitty kitty.",NN,5,6414935
+37,really,they' re really really mad at us.,RB,6,162033390
+38,really,"people always read the labels of their favourite brands really really carefully just to see how many chemicals they have, and then they just sigh and they put them in their cartanyway,",RB,6,162033390
+39,love,i love love connection.,NN,4,201063526
+40,love,"you love love connection, send your picture in there.",NN,4,201063526
+42,gene,"that means... it' s gene gene, the dancing machine... and just in time:",NN,4,34266155
+43,game,"the game game, ""dream girl of 1968""...",NN,4,227111505
+44,very,it' s is very very sad.,RB,4,334923368
+45,very,this is very very sad.,RB,4,334923368
+46,wait,wait wait.,VB,4,39001376
+47,wait,wait wait.,VB,4,39001376
+48,big,"when i was iittle i thought for sure 1 day, i could be a big big star...",JJ,3,216690546
+49,far,"i mean, we come back here and we go far far away",RB,3,93061804
+50,big,"when i was iittle i thought for sure 1 day, i could be a big big star...",JJ,3,216690546
+51,far,"i mean, we come back here and we go far far away",RB,3,93061804
+52,big,"when i was iittle i thought for sure 1 day, i could be a big big star...",JJ,3,216690546
+53,far,"i mean, we come back here and we go far far away",RB,3,93061804
+54,yum,big yum yum book.,VB,3,2362952
+55,yum,big yum yum book.,VB,3,2362952
+56,back,"well i showered, i mean i guess i didn' t cool, i wanted to get back back down here and check on you, it was a tour de stad.",RB,4,488024109
+57,very,"he founded an oil company, a drilling company, out of west texas called arbusto, which was very very good at drilling dry holes that nothing came out of.",RB,4,334923368
+58,very,"it was really very very skillfully and, and ugly in what they did.",RB,4,334923368
+59,very,"the benefits of free software were tremendous but the cost of supporting it internally uh, and made managers very very nervous and so the fundamental idea i had was if we can build a model that could deliver two to four times the support and uh, and uh, and hand holding capability that an internal engineer could provide.",RB,4,334923368
+60,city,"foster city city limits, which meant also just outside of foster city police jurisdiction, which meant any, any incidents that happened at the meeting point happened in the jurisdiction of san mateo, and if they told us they get lost, we' d say, ""fine, we are going to foster city.",NN,4,390564835
+61,very,but i was very very open with him.,RB,4,334923368
+62,very,"if something goes wrong, it can be very very serious.",RB,4,334923368
+63,very,"i' ve never been that high before, and it' s very very strenuous to climb ice like that.",RB,4,334923368
+64,very,i was very very cold.,RB,4,334923368
+65,very,"i felt very unnerved, very very vulnerable.",RB,4,334923368
+66,very,"crossing a glacier is very very dangerous on your own, because there are crevices in the ice, and the snow covers them.",RB,4,334923368
+67,attack,someone knocks on the door and accuses you for a crime you didn' t commit you gotta attack attack your attackers and do what you can.,VB,6,35599513
+68,fuck,fuck fuck.,NN,4,39099536
+69,bent,i know that but this one' s bent bent.,JJ,4,5070333
+70,tin,rin tin tin.,NN,3,10695557
+71,tin,rin tin tin...,NN,3,10695557
+72,mmm,# mmm mmm... #,VB,3,1705485
+73,mmm,# mmm mmm... #,VB,3,1705485
+74,sing,because we monitor all his phone calls from sing sing.,VB,4,11114001
+75,sing,"and dr. kassam, the psychiatrist at sing sing, concurs with the diagnosis.",VB,4,11114001
+76,sing,you said it' s either here or sing sing.,VB,4,11114001
+77,sing,do you just go back to sing sing?,VB,4,11114001
+78,sing,because we monitor all his phone calls from sing sing.,VB,4,11114001
+79,sing,"and dr. kassam, the psychiatrist at sing sing, concurs with the diagnosis.",VB,4,11114001
+80,sing,you said it' s either here or sing sing.,VB,4,11114001
+81,sing,do you just go back to sing sing?,VB,4,11114001
+82,really,"the other day... that... all the really really knock- out acts have something a little different going on, you know?",RB,6,162033390
+83,maybe,"once i get a name for myself, maybe maybe we can open up a club of our own, you know?",RB,5,51895609
+84,omega,"i' m panos patakos, president of the lambda omega omega fraternity.",NN,5,10289113
+85,omega,mad props for this pimpin 'good time... go out to those hung and handsome bad boys... of lambda omega omega.,NN,5,10289113
+86,happy,"i can see how a happy happy- birthday basket...... might seem ironic and cruel, but it was an honest mistake.",JJ,5,63471922
+87,hope,"they believe he can give them hope hope of a new life, a new world, a better future!",NN,4,74145758
+88,very,"well, you' ve all done very very well for your first lesson,",RB,4,334923368
+89,very,"well, you' ve all done very very well for your first lesson.",RB,4,334923368
+90,many,we had rehearsed many many times,JJ,4,318966441
+91,very,"well, you' ve all done very very well for your first lesson,",RB,4,334923368
+92,circus,in front of circus circus!,NN,6,5377139
+93,ray,my name is ray ray and i' m here to... service you.,NN,3,32113994
+94,ray,ray ray is a sexual healer.,NN,3,32113994
+95,ray,"ray ray' s service center, 6630 harford road.",NN,3,32113994
+96,ray,ray ray?,NN,3,32113994
+97,ray,ray ray has helped me understand my hypersexuality.,NN,3,32113994
+98,ray,"uh, i would, but i' m supposed to help ray ray think up a new sex act.",NN,3,32113994
+99,ray,"ray ray is a sex saint,",NN,3,32113994
+100,ray,"oh, and i' ve got hot pants, ray ray.",NN,3,32113994
+101,ray,you have met ray ray.,NN,3,32113994
+102,ray,"no, there' s this guy named ray ray and he is their leader and he ate me out.",NN,3,32113994
+103,ray,"ray ray is gonna be all better, right?",NN,3,32113994
+104,ray,we don' t serve ray ray' s people here.,NN,3,32113994
+105,ray,- ray ray!,NN,3,32113994
+106,ray,"do it for us one more time, ray ray.",NN,3,32113994
+107,ray,"now, ray ray, now!",NN,3,32113994
+109,anything,anything anything?,NN,8,75985266
+110,plan,you' re on the non- plan plan.,NN,4,160746244
+111,plan,i am not on a non- plan plan!,NN,4,160746244
+112,very,i' m pretty sure you could make the iadies very very happy 1 slice of cake for her...,RB,4,334923368
+113,alone,it' s alone alone.,RB,5,39326417
+114,haw,"haw haw... you baby, you going down!",NN,3,740732
+115,urt,"yes, somehow you seem urt urt, really?",JJ,3,165302
+116,sally,"sally sally, right",RB,5,5933047
+117,sing,"and sing sing, xixi' s mother.",VB,4,11114001
+118,sing,- sing sing.,VB,4,11114001
+119,thing,"sexy thing, miss thing thing.",NN,5,97451660
+120,sing,sing sing!,VB,4,11114001
+121,sing,sing sing.,VB,4,11114001
+122,sing,sing sing.,VB,4,11114001
+123,sing,"sing sing, these peking duck feet is the shit!",VB,4,11114001
+124,sing,"the shit is real good, sing sing.",VB,4,11114001
+125,gus,"oh, hi, gus gus.",JJ,3,1795932
+126,gus,gus gus.,JJ,3,1795932
+127,gus,- i think i' m gonna go talk to gus gus.,JJ,3,1795932
+128,gunther,"i can see myself in the mountains, raising children...... little hans hans and gunther gunther.",NN,7,585995
+129,gus,i' d hate to see you with gus gus.,JJ,3,1795932
+130,plan,you' re on the non- plan plan.,NN,4,160746244
+131,plan,i am not on a non- plan plan!,NN,4,160746244
+132,bright,~ gonna be a bright bright sunshiny day,JJ,6,19446368
+133,bright,whoo! ~ gonna be a bright bright sunshiny day,JJ,6,19446368
+135,haw,"haw haw... you baby, you going down!",NN,3,740732
+136,urt,"yes, somehow you seem urt urt£¬really?",JJ,3,165302
+137,sally,sally sally£¬right,RB,5,5933047
+138,pum,"# a new born king to see, # par um pa pum pum",VB,3,171373
+140,gus,"oh, hi, gus gus.",JJ,3,1795932
+141,gus,gus gus.,JJ,3,1795932
+142,gus,- i think i' m gonna go talk to gus gus.,JJ,3,1795932
+143,gunther,"l can see myself in the mountains, raising children...... little hans hans and gunther gunther.",NN,7,585995
+144,gus,l' d hate to see you with gus gus.,JJ,3,1795932
+145,sing,"and sing sing, xixi' s mother.",VB,4,11114001
+146,sing,- sing sing.,VB,4,11114001
+147,thing,"sexy thing, miss thing thing.",NN,5,97451660
+148,sing,sing sing!,VB,4,11114001
+149,sing,sing sing.,VB,4,11114001
+150,sing,sing sing.,VB,4,11114001
+151,sing,"sing sing, these peking duck feet is the shit!",VB,4,11114001
+152,sing,"the shit is real good, sing sing.",VB,4,11114001
+153,plan,you' re on the non- plan plan.,NN,4,160746244
+154,plan,i am not on a non- plan plan!,NN,4,160746244
+155,anything,anything anything?,NN,8,75985266
+156,smack,i know she oughta give his face a smack smack.,VB,5,1451860
+157,very,very very.,RB,4,334923368
+158,dirty,dirty dirty!,JJ,5,16101662
+159,dirty,you called my daughter a dirty dirty!,JJ,5,16101662
+160,dirty,nobody calls my girl a dirty dirty.,JJ,5,16101662
+161,get,lets get get' em out.,VB,3,605984508
+162,there,let the lawyer of the logging company argue this since she is the only up there there' s no chance for survival anyway there had to be a male too so we get a male up there and let them together,RB,5,701170205
+163,weird,i like walking on the beach and sharing pop corns with someone and also the sound of back street boys you' re weird weird?,JJ,5,11556427
+164,out,the let the sources drie out out of revenge.,RB,3,741601852
+165,sing,now he' s a houseguest in sing sing.,VB,4,11114001
+166,hot,it' s a hot hot dog.,JJ,3,159287179
+167,louie,louie louie,VB,5,1252710
+168,something,i knew i had to do something something drastic to salvage what little i had left,NN,9,131836210
+169,squash,"- oh, squash squash!",VB,6,3985349
+170,something,i knew i had to do something something drastic to salvage what little i had left,NN,9,131836210
+171,woo,woo woo.,VB,3,2718146
+172,woo,woo woo.,VB,3,2718146
+173,party,"oh, you mean a party party?",NN,5,144707500
+174,ever,now pull the sides of your mouth ever ever closer to the ears...,RB,4,100264634
+175,something,- somebody from something something.,NN,9,131836210
+176,friend,"i mean, i like to consider myself her best friend...... but andrew is her best friend friend, if that makes any sense.",NN,6,154527125
+177,friend,"i mean, i like to consider myself her best friend...... but andrew is her best friend friend, if that makes any sense.",NN,6,154527125
+178,something,- somebody from something something.,NN,9,131836210
+179,friend,"i mean, i like to consider myself her best friend...... but andrew is her best friend friend, if that makes any sense.",NN,6,154527125
+180,business,"listen, why don' t i give you a lift and then we can talk about this state business business in the car.",NN,8,637134177
+181,cher,- cher cher?,NN,4,1720213
+182,hunka,- i can' t see.... a newly smitten hunka hunka burning love.,NN,5,38692
+183,weird,"normal weird, or weird weird?",JJ,5,11556427
+184,electricity,but isn' t electricity electricity?,NN,11,15377549
+185,have,"i must have have known, of course, but i was too scared to see the truth.",VB,4,1564202750
+186,night,"aii right, pumpkin, night night.",NN,5,130531484
+187,zip,"<i>can i get a little zip zip</ i> <i>looky, looky </ i>",VB,3,70551270
+188,hunka,a newly smitten hunka hunka burning love.,NN,5,38692
+189,something,- somebody from something something.,NN,9,131836210
+191,kiss,- kiss kiss.,VB,4,14790481
+192,love,ofwhat is it to love love,NN,4,201063526
+193,very,she was a very very family- oriented girl.,RB,4,334923368
+194,very,a very very big raise.,RB,4,334923368
+195,great,it' s my great great grandfather.,JJ,5,301487430
+196,lop,nescobar a lop lop.,VB,3,455673
+197,wha,err... wha wha what does that mean?,NN,3,673618
+198,lie,but if you must lie lie in the arms of the one you love.,VB,3,13533542
+199,steal,if you have to steal steal away from bad company.,VB,5,6257493
+200,cheat,if you must cheat cheat death.,VB,5,9903572
+201,drink,and if you must drink drink in the moments that take your breath away.,VB,5,29254937
+202,very,"mrs. cole, thanks very very much for seeing me.",RB,4,334923368
+203,anything,# i can do anything anything,NN,8,75985266
+204,sing,sing sing?,VB,4,11114001
+205,long,"ok. ""i got a long long day ahead of me""  yeah!",RB,4,252519588
+206,special,i think you' re a special special man.,JJ,7,244311841
+207,whoa,- whoa whoa!,NN,4,1286431
+208,good,good good!,JJ,4,365796396
+209,whoa,"whoa whoa, hey!",NN,4,1286431
+210,deeply,i deeply deeply love,RB,6,7641115
+211,shake,"give me some shake shake your base, you know",VB,5,6839319
+212,wop,"# shoo be do be do be do be do wop wop, shoo be do be do be do be do wop wop #",NN,3,558906
+213,wop,# you' re gonna want me for your girl # shoo be do be do be do be do wop wop,NN,3,558906
+214,wop,# the arms i long for will open wide # shoo be do be do be do be do wop wop,NN,3,558906
+215,wop,# and you' il be proud to have me # shoo be do be do be do be do wop wop,NN,3,558906
+216,wop,# right by your side # shoo be do be do be do be do wop wop,NN,3,558906
+217,wop,# you' re gonna want me for your girl # shoo be do be do be do be do wop wop #,NN,3,558906
+218,wop,"# one fine day, we' il meet once more # shoo be do be do be do be do wop wop #",NN,3,558906
+219,wha,err... wha wha what does that mean?,NN,3,673618
+220,lie,but if you must lie lie in the arms of the one you love.,VB,3,13533542
+221,steal,if you have to steal steal away from bad company.,VB,5,6257493
+222,cheat,if you must cheat cheat death.,VB,5,9903572
+223,drink,and if you must drink drink in the moments that take your breath away.,VB,5,29254937
+224,very,"mrs. cole, thanks very very much for seeing me.",RB,4,334923368
+225,sing,sing sing?,VB,4,11114001
+226,long,i got a long long day ahead of me  yeah!,RB,4,252519588
+227,smoke,"not smoke smoke, but she used to... once in a while.",VB,5,16567733
+228,long,# i got a long long day ahead of me #  yeah!,RB,4,252519588
+229,liar,"i`m going to. `cause i watched this movie called liar liar... and the message was, ``don`t lie. ``",VB,4,1819814
+230,tin,"i took rin tin tin out f or a shit, f or christ' s sakes.",NN,3,10695557
+231,very,- because he' s a very very bright kid.,RB,4,334923368
+232,ever,"never, ever ever.",RB,4,100264634
+233,ever,"never, ever ever.",RB,4,100264634
+234,gobble,gobble gobble.,NN,6,322005
+235,real,"well, my agent would be real real miffed with me if i --",JJ,4,297674493
+236,very,loss and redemption is very very good.,RB,4,334923368
+237,chim,"chim chiminy, chim chiminy chim chim cheree",NN,4,282620
+238,chim,"chim chiminy, chim chiminy chim chim cheroo",NN,4,282620
+239,chim,"chim chiminy chim chim cheree, chim cheroo",NN,4,282620
+240,chim,"chim chiminy, chim chiminy chim chim cheroo",NN,4,282620
+241,chim,"chim chiminy, chim chiminy chim chim cheroo",NN,4,282620
+242,chim,"chim chiminy, chim chiminy chim chim cheroo",NN,4,282620
+243,chim,"chim chiminy, chim chiminy chim chim cheree",NN,4,282620
+244,chim,"chim chiminy, chim chiminy chim chim cheroo",NN,4,282620
+245,chim,"chim chiminy, chim chiminy chim chim cheree",NN,4,282620
+246,chim,"chim chiminy, chim chiminy chim chim cheroo",NN,4,282620
+247,chim,"chim chiminy, chim chiminy chim chim cheree",NN,4,282620
+248,chim,"chim chiminy, chim chiminy chim chim cheroo",NN,4,282620
+249,chim,"chim chiminy, chim chiminy chim chim cheree",NN,4,282620
+250,chim,"then them what sings chim chim cheree, chim cheroo",NN,4,282620
+251,chim,chim chiminy chim chim,NN,4,282620
+252,piu,lau piu piu.,NN,3,361747
+253,piu,i' m lau piu piu.,NN,3,361747
+254,piu,piu piu.,NN,3,361747
+255,piu,"piu piu, i love you.",NN,3,361747
+257,love,old black magic called love love,NN,4,201063526
+258,lopo,subtitles ripped 6. nov. 2002 by lopo lopo@ losys. sk,NN,4,24780
+259,boom,"match in the gas tank, boom boom",NN,4,7869145
+260,boom,"match in the gas tank, boom boom",NN,4,7869145
+261,boom,"match in the gas tank, boom boom",NN,4,7869145
+262,boom,"match in the gas tank, boom boom",NN,4,7869145
+263,boom,"match in the gas tank, boom boom {y: i} good boy.",NN,4,7869145
+264,sweet,# i used to be such a sweet sweet thing 'til they #,JJ,5,32311923
+265,sing,my old man was executed at sing sing in '59...... for murder.,VB,4,11114001
+266,never,ding don' t you never never say that we' re through ding,RB,5,149556758
+267,totally,the whole thing was just totally totally extreme.,RB,7,24276857
+268,food,- not food food.,NN,4,180144029
+269,very,and that' s looking very very good.,RB,4,334923368
+270,very,and that' s looking very very good.,RB,4,334923368
+272,light,"she came towards me...... with the light, like it was the light light of heavenly grace.",JJ,5,126699632
+274,light,she came towards me...... with the light like it was the light light of heavenly grace.,JJ,5,126699632
+275,black,"i came back to life after a long, black black gap...... of what might have been a million years.",JJ,5,244690155
+276,sing,when they finally nailed him for fraud he spent five years in sing sing.,VB,4,11114001
+277,sure,# but if they get a chance they' il end it for sure sure they would #,RB,4,110528740
+278,sure,but if they get a chance they' il end it for sure sure they would,RB,4,110528740
+279,there,look over there there' s some dvds.,RB,5,701170205
+280,denial,- that' s a non- denial denial.,NN,6,6157847
+281,denial,my non- denial denial.,NN,6,6157847
+282,ying,ying ying,NN,4,1280737
+283,ying,ying ying,NN,4,1280737
+284,ying,i' m ying ying,NN,4,1280737
+285,ying,"ying ying, is that you?",NN,4,1280737
+286,ying,where' s ying ying?,NN,4,1280737
+287,ying,ying ying!,NN,4,1280737
+288,then,but even then then you didn' t isolate yourself here,RB,4,369928941
+289,ying,"ying ying, what are you doing here?",NN,4,1280737
+290,ying,ying ying...,NN,4,1280737
+291,ying,ying ying!,NN,4,1280737
+292,ying,ying ying has already...,NN,4,1280737
+293,ying,ying ying,NN,4,1280737
+294,ying,ying ying made this for you,NN,4,1280737
+295,very,it' s very very dark.,RB,4,334923368
+296,really,i' m really really trying to understand.,RB,6,162033390
+297,baby,don`t such strong strength! you will hurt baby baby`s head is out.. so dangouse,NN,4,117696064
+298,pop,-- pop pop i wanna... shasta -- i' il take it.,VB,3,54140138
+299,there,# there' s a party over there there' s a party over here #,RB,5,701170205
+300,sing,i oan' t go to sing sing with a green faoe.,VB,4,11114001
+301,sing,sing sing?,VB,4,11114001
+302,sing,"as i understand it, you' re going to visit somebody at sing sing.",VB,4,11114001
+303,sing,miss golightly' s on her way to sing sing.,VB,4,11114001
+304,sing,"well, how was sing sing?",VB,4,11114001
+305,out,"you' re not out out for queen of the pampas, anyway.",RB,3,741601852
+307,mow,what am i asking for? papa oom mow mow.,VB,3,517690
+308,mow,o. k. papa oom mow mow.,VB,3,517690
+309,mow,* papa oom mow mow,VB,3,517690
+310,mow,* papa oom mow mow,VB,3,517690
+311,mow,sorry. * papa oom mow mow...,VB,3,517690
+312,toot,"toot toot, america...",VB,4,335690
+313,too,that this too too solid flesh would melt... thaw and resolve itself into a dew.,RB,3,176093255
+314,night,"my liege, and madam... to expostulate what majesty should be, what duty is... why day is day, night night, and time is time... were nothing but to waste night, day, and time.",NN,5,130531484
+315,bam,my name is dangerous dillard fighting flipo bam bam... out of broward county texas.,NN,3,1994832
+316,good,"alright, now you dont want to hit him when he' s coming toward ya cause what he' s gonna do is just push you back and is gonna smuggle your punches take you by , so you watch him real carefully, keep rotating, that keeps your head moving and keep one shoulder back so you' re always ready to fire power shot, alright now go ahead now, good good, keep rotating, keep moving, that' s it, good good, keep that chin tucked in, come around keep moving, keep moving, good... yeah?",JJ,4,365796396
+317,mmm,god this is a mistake already. mmm mmm i' m listening boss.,VB,3,1705485
+318,good,good good.,JJ,4,365796396
+319,about,i have to tell about about a meeting i have had which gave me a fright.,RB,5,1226734006
+320,mathilde,manech loves mathilde mathilde loves manech,RB,8,149882
+321,bum,bum bum,NN,3,1523602
+322,bum,bum bum,NN,3,1523602
+323,ambulance,ambulance ambulance,NN,9,4363682
+324,dad,dad dad!,NN,3,15136055
+325,mathilde,manech but mathilde mathilde but manech,RB,8,149882
+326,bum,# bum bum #,NN,3,1523602
+327,bum,# bum bum #,NN,3,1523602
+328,now,"i bought how mad, there now now... nothing.",RB,3,611387736
+329,thing,the thing thing.,NN,5,97451660
+330,think,- # think - # think think,VB,5,217856550
+331,think,- jed gave it to me. - # think think - # let your mind go...,VB,5,217856550
+332,cowardly,"you' re a cowardly custard... cowardly, cowardly custard, cowardly cowardly custard",RB,8,513225
+334,spectacular,"a play, something very modern called spectacular spectacular.",JJ,11,10602657
+335,spectacular,"once satine heard my modern poetry, she would be astounded... and insist to zidler that i write spectacular spectacular.",JJ,11,10602657
+336,spectacular,it' s from spectacular spectacular.,JJ,11,10602657
+337,spectacular,spectacular spectacular!,JJ,11,10602657
+338,spectacular,spectacular spectacular no words in the vernacular,JJ,11,10602657
+339,hungry,hungry hungry hippos.,JJ,6,6217455
+340,hungry,"how did you feel, being denied these hungry hungry hippos?",JJ,6,6217455
+341,hip,hip hip hurrah!,NN,3,26826008
+342,hip,hip hip hurrah!,NN,3,26826008
+343,hip,hip hip hurrah!,NN,3,26826008
+344,long,this game started long long ago.,RB,4,252519588
+345,long,this game started long long ago.,RB,4,252519588
+346,wise,"thank you for your words, your wise wise words.",JJ,4,13299902
+347,truly,truly truly),RB,5,21693553
+348,truly,"¶ you' ve got a way of spinning ¶ i guess you' d call it art ¶ doesn' t matter what the outcome is ¶ i' m sure you played your part ¶ well, you come on like an earthquake ¶ even though you float on through ¶ give me just a moment' s notice ¶ i' il make due ¶ only a fool would not believe it ¶ only a blind man couldn' t see ¶ if you' re concerned about my heart ¶ truly truly ¶ i' ve seen this movie a thousand times ¶ i won' t give the ending away ¶ i' ve bought a ticket so i' m entitled to stay ¶ i' ve seen this movie a thousand times ¶ and i' m not giving the ending away ¶ i' ve bought a ticket so i' m entitled to stay",RB,5,21693553
+349,truly,"¶ truly truly ¶ yeah, truly truly ¶ truly truly ¶ yeah, truly truly ¶ truly truly ¶ yeah, truly truly ¶ truly truly ¶ yeah, truly truly ¶",RB,5,21693553
+350,hip,hip hip hurrah!,NN,3,26826008
+351,hip,hip hip hurrah!,NN,3,26826008
+352,hip,hip hip hurrah!,NN,3,26826008
+353,truly,truly truly),RB,5,21693553
+354,truly,truly truly,RB,5,21693553
+355,truly,truly truly,RB,5,21693553
+356,truly,"yeah, truly truly",RB,5,21693553
+357,truly,truly truly,RB,5,21693553
+358,truly,"yeah, truly truly",RB,5,21693553
+359,truly,truly truly,RB,5,21693553
+360,truly,"yeah, truly truly",RB,5,21693553
+361,truly,truly truly,RB,5,21693553
+362,truly,"yeah, truly truly",RB,5,21693553
+363,proud,cretinous moron a man ought to be proud proud of such an appendix.,JJ,5,17167504
+364,too,"o that this too too... ""solid nose would melt.""",RB,3,176093255
+365,exciting,that' s exciting exciting!,JJ,8,16900145
+367,there,thus there there yet five must be killed.,RB,5,701170205
+368,tin,you' re interviewing rin tin tin!,NN,3,10695557
+369,there,thus there there yet five must be killed.,RB,5,701170205
+370,there,"see, look over there there' s someone",RB,5,701170205
+371,have,- we' iljust have have to deal with them.,VB,4,1564202750
+372,karol,"a businessman from poland, karol karol.",NN,5,390229
+373,never,so there' s never never a trace of red,RB,5,149556758
+374,karol,"a businessman from poland, karol karol.",NN,5,390229
+375,sex,and then this non- sex sex thing.,NN,3,320105999
+376,sweetheart,sweetheart sweetheart,NN,10,1767766
+377,there,"hey, there there...",RB,5,701170205
+378,boom,boom boom.,NN,4,7869145
+379,timmy,"timmy, oh timmy timmy come over and sit on grandma' s lap timmy, timmy, what?",JJ,5,726546
+380,oink,don' t take any oink oink off that pretty pig.,VB,4,214048
+381,just,just just go out to the next stall,RB,4,462836169
+382,just,iet' s just just wait for help,RB,4,462836169
+383,very,that' s very very sweet,RB,4,334923368
+384,really,"no, what' d you really really see?",RB,6,162033390
+385,call,and if you go chasing rabbits and you know you' re going to fall tell him i' il hook her smoking caterpillar has given you the call call alice... when she was just small when the men on the chess board get up and tell you where to go and you just have some kind of mushroom and your mind is moving on go ask alice,VB,4,199608869
+386,run,run run,VB,3,117213565
+387,very,i' m a very very busy man.,RB,4,334923368
+388,mighty,"# she' s mighty mighty, #",RB,6,7268735
+389,mighty,"# yeah, she' s mighty mighty, just lettin 'it all hang out #",RB,6,7268735
+390,mighty,"# yeah, she' s mighty mighty, just lettin 'it all hang out #",RB,6,7268735
+391,mighty,"# yeah, she' s mighty mighty just lettin 'it all hang out #",RB,6,7268735
+392,doctor,"where is elizeberth we must help the baby, call the doctor doctor calrs please, plese come to room 6 the baby cant come out, how?",NN,6,39845710
+393,home,"# home, sweet home home, sweet home",NN,4,1276852170
+394,home,"# home, sweet home home, sweet home",NN,4,1276852170
+395,wait,wait wait.,VB,4,39001376
+396,sugar,"i' m starting to get diabetes from all this ""sugar sugar"" over here.",NN,5,22450333
+397,hurry,hurry hurry!,VB,5,3536968
+398,sing,do you remember that artist in sing sing who painted the last supper on his cell?,VB,4,11114001
+399,sing,by the time this guy gets out of sing sing... this head will grow a long beard.,VB,4,11114001
+400,boom,boom boom has got him now!,NN,4,7869145
+401,boom,boom boom has got him.,NN,4,7869145
+402,very,either i' m going out of my mind or something very very strange is happening.,RB,4,334923368
+403,crap,the dead are leaving their tombs that' s a load of crap crap or not i' m taking my money i' m closing my doors until tomorrow morning and i' m not opening it for anybody,NN,4,7169097
+404,doo,ooh dee la doo doo ho ho ho ho,VB,3,4102101
+405,listen,"- come on, listen listen to me",VB,6,43252527
+406,listen,"- come on, listen listen to me",VB,6,43252527
+407,very,"probably look like i' m a terrible housekeeper, which i sometimes am...... but i can also be very very, you know, organised and neat.",RB,4,334923368
+408,sure,we analyze a situation to make sure sure that the truth is on our side.,RB,4,110528740
+409,jar,jar jar.,NN,3,6549211
+410,jar,"you' re a good friend, jar jar.",NN,3,6549211
+411,have,time may have have distorted the history of your memory.,VB,4,1564202750
+412,fucky,fucky fucky?,JJ,5,19915
+413,good,this good good night,JJ,4,365796396
+414,jar,"- good to see you again, jar jar.",NN,3,6549211
+415,jar,"she hardly even recognized me, jar jar.",NN,3,6549211
+416,jar,"jar jar, i don' t wish to hold you up.",NN,3,6549211
+417,aha,"and ""that' s the way aha aha i like it"", ""kc and the sunshine band"".",RB,3,1504696
+418,sweet,- gladly my sweet sweet ladies.,JJ,5,32311923
+419,move,move move....,VB,4,70113140
+420,move,move move..,VB,4,70113140
+421,boom,boom boom.,NN,4,7869145
+423,anal,anal anal get in.,JJ,4,59776241
+424,excersize,we just wanted to excersize excersize?,VB,9,28257
+425,crazy,"i don' t know much in this crazy crazy world... but i do know... that if you don' t let us fuck this asshole, we are going to have our dicks and pussies all covered in shit.",JJ,5,23032837
+426,takeoff,just a little pre- takeoff takeoff.,NN,7,646648
+427,nothing,"master, monks have nothing nothing to requite",NN,7,73183983
+428,lock,# boom sha lock lock boom!,VB,4,22253866
+429,lock,# boom sha lock lock boom!,VB,4,22253866
+430,lock,# boom sha lock lock boom!,VB,4,22253866
+431,lock,# the cartoon boom sha lock lock,VB,4,22253866
+432,lock,# boom sha lock lock boom!,VB,4,22253866
+433,lock,# boom sha lock lock boom!,VB,4,22253866
+434,lock,# boom sha lock lock boom!,VB,4,22253866
+435,lock,boom sha lock lock boom!,VB,4,22253866
+436,takeoff,just a little pre- takeoff takeoff.,NN,7,646648
+437,lock,boom sha lock lock boom!,VB,4,22253866
+438,lock,boom sha lock lock boom!,VB,4,22253866
+439,lock,boom sha lock lock boom!,VB,4,22253866
+440,lock,the cartoon boom sha lock lock,VB,4,22253866
+441,lock,boom sha lock lock boom!,VB,4,22253866
+442,lock,boom sha lock lock boom!,VB,4,22253866
+443,lock,boom sha lock lock boom!,VB,4,22253866
+444,lock,boom sha lock lock boom!,VB,4,22253866
+445,sure,"oh sure sure, please, sit.",RB,4,110528740
+446,long,i was soon relieved of my position where i have a long long forest of tendencies to tell the truth... in a country where they never say what they need.,RB,4,252519588
+447,sure,"oh sure sure, please, sit.",RB,4,110528740
+448,number,number number haha,NN,6,383787805
+449,damn,damn damn haha the day kills of,RB,4,11016467
+450,car,car car,NN,3,264720374
+451,here,leave to leave here here,RB,4,639711198
+452,walk,walk walk,VB,4,39129365
+453,long,i was soon relieved of my position where i have a long long forest of tendencies to tell the truth... in a country where they never say what they need.,RB,4,252519588
+454,away,"it' s a crime share it fairly, but don' t take a slice of my pie money, so they say is the root of all evil today but if you ask for a raise it' s no surprise they' re giving none away away... away... away... away... away... away... away... away... away... away... away... away... away... away... away... away... away... away... away... away... away... away... away... away... away... away... away... away... away...",RB,4,112837472
+455,wait,"wait wait, captain.",VB,4,39001376
+456,then,then then only thing you need to learn is to obey!,RB,4,369928941
+457,sing,released from sing sing prison friday.,VB,4,11114001
+458,far,that i' il save her from whatever she' s scared of and take her far far away,RB,3,93061804
+459,very,"that is either the best of wives, or the very very worst.",RB,4,334923368
+460,coastal,i guess a little a few little in coastal coastal area.,JJ,7,14153912
+461,sing,two hundred souls passed through this wood and steel at sing sing.,VB,4,11114001
+462,far,that i' il save her from whatever she' s scared of and take her far far away.,RB,3,93061804
+463,sing,two hundred souls passed through this wood and steel at sing sing.,VB,4,11114001
+464,pathetic,you' re pathetic pathetic,JJ,8,1892242
+465,far,that i' il save her from whatever she' s scared of and take her far far away,RB,3,93061804
+466,fix,they fix fix me a pretty decent steak for my last meal,VB,3,32334055
+467,pathetic,you' re pathetic pathetic,JJ,8,1892242
+468,easy,easy easy...,JJ,4,125548527
+469,hula,"so where are all the surfers and hula hula dancers, smart guy?",NN,4,921011
+470,shame,shame shame,NN,5,6785296
+471,tin,"- fuck you, tin tin.",NN,3,10695557
+472,tin,"oh, what is this, tin tin?",NN,3,10695557
+473,tin,it was pawned here a year ago by a customer of yours named tin tin.,NN,3,10695557
+474,tin,"that' s tin tin, one of t- bird' s little helpers.",NN,3,10695557
+475,tin,now you' re going to tell me where to find... the rest of tin tin' s little party pals.,NN,3,10695557
+476,tin,you' re the guy that murdered tin tin.,NN,3,10695557
+477,tin,- tin tin.,NN,3,10695557
+478,tin,"gentlemen, by all means, i think we ought to have... an introspective moment of silence for poor, old tin tin.",NN,3,10695557
+479,tin,that piece of ratshit made tin tin into a fuckin 'voodoo doll!,NN,3,10695557
+480,tin,tin tin was a dick.,NN,3,10695557
+481,tin,tin tin.,NN,3,10695557
+482,tin,you did tin tin.,NN,3,10695557
+483,brother,he' s your brother brother?,NN,7,34273892
+484,time,it' s good- time time.,NN,4,908705570
+485,high,we gonna get a high high.,JJ,4,345413157
+486,rrr,rrr rrr!,NN,3,877113
+487,squeak,squeak squeak!,NN,6,871207
+488,rrr,rrr rrr!,NN,3,877113
+489,again,we' re hit again again!,RB,5,150781416
+490,fire,"it all seems so long ago young and happy don' t you know down by the creek i would show fireflies to that girl but that was back when he was nice before my warm heart turned to ice my sister' s wig once had lice but that was long ago the schoolyard' s where we were the first time i kissed her he thought he got some tongue but it was only retainer eleanore' s bra is a trainer well, over there' s my family home and the woods we used to roam the only time i had sex was on the phone but that was long ago i carved our names upon that tree i loved him and he loved me my darling wife was once a he but that was long ago he' d always whisper in my ear but then i started drinking beer my jewels got licked by six frisky deer now he' s just a loner and a liar and my trailer' s caught on fire fire?!",NN,4,83845349
+491,sorry,sorry. sorry sorry,JJ,5,35595812
+492,abra,hockety pockety wockety whack abra abra dabra nack,VB,4,437363
+493,wait,"wait wait, you can' t...",VB,4,39001376
+494,wait,"wait wait, i' m not part of this!",VB,4,39001376
+495,look,look look,VB,4,173043002
+496,whoa,- workin 'at the car wash - whoa whoa yeah yeah,NN,4,1286431
+497,tut,"now, tut tut.",JJ,3,945899
+498,whoa,- # workin 'at the car wash - # whoa whoa yeah yeah,NN,4,1286431
+499,now,"now now there sissyboy, don' t cry you little animal tormentor",RB,3,611387736
+500,square,left circle double left square right to the down square square.,JJ,6,44784448
+501,very,and the price is... very very low.,RB,4,334923368
+502,whoa,- workin 'at the car wash - whoa whoa yeah yeah,NN,4,1286431
+503,really,- really really.,RB,6,162033390
+504,really,- really really.,RB,6,162033390
+505,toot,toot toot!,VB,4,335690
+506,really,"listen, you were really really something, back there.",RB,6,162033390
+507,really,- really really.,RB,6,162033390
+508,far,batch leeret number one is a mostly abuse shading from a kindom far far away.,RB,3,93061804
+509,really,- really really.,RB,6,162033390
+510,really,really really.,RB,6,162033390
+511,there,come on please be there there it is just like randall said,RB,5,701170205
+512,very,very very far!,RB,4,334923368
+513,very,very very far!,RB,4,334923368
+514,doot,hoo doot doo doot doot doo doot,NN,4,52085
+515,doot,* hoo doot doo doot doot doo doot *,NN,4,52085
+516,ever,don' t you ever ever do this again!,RB,4,100264634
+517,hunka,"a super- duper, extra- looper, hunka hunka heffatrap.",NN,5,38692
+518,sugar,# sugar sugar,NN,5,22450333
+519,not,"i meant, no, i do not not wish to be married.",RB,3,2633487141
+520,here,the bride is here here comes the bride,RB,4,639711198
+521,not,"i meant, no, i do not not wish to be married.",RB,3,2633487141
+522,here,the bride is here here comes the bride,RB,4,639711198
+523,not,"i meant, no, i do not not wish to be married.",RB,3,2633487141
+524,here,the bride is here here comes the bride,RB,4,639711198
+525,not,"i meant, no, i do not not wish to be married.",RB,3,2633487141
+526,here,the bride is here here comes the bride,RB,4,639711198
+527,many,many many friends,JJ,4,318966441
+528,many,many many friends,JJ,4,318966441
+529,new,by the power vested in me by the state of new new york,JJ,3,1551258643
+530,deadly,it don' t take more than deadly deadly bees to keep us from doing our job.,JJ,6,5740299
+531,deadly,it' il take more than a few deadly deadly bees to... »,JJ,6,5740299
+532,boo,that' s a boo boo tops!,NN,3,2884230
+533,late,it' s the late late show with craig kilborn.,RB,4,65574606
+534,hip,hip hip!,NN,3,26826008
+535,hip,- hip hip!,NN,3,26826008
+536,hip,hip hip!,NN,3,26826008
+537,else,anybody else else?,RB,4,96020036
+538,cluck,"* cluck cluck, said the little red hen let' s boogie in the barnyard *",NN,5,134048
+539,circus,"well, that' s a change of pace... our accidental tourist took his family backstage at circus circus.",NN,6,5377139
+540,circus,backstage at circus circus.,NN,6,5377139
+541,wild,- i got a wild wild life - don' tyou ever stop?,JJ,4,39937252
+542,widow,"i mean, i' ve always been a black widow... but now i' m a black widow widow.",NN,5,3804620
