@@ -1,0 +1,58 @@
+---
+title: "Salad Length and Frequency"
+format: html
+editor: visual
+---
+
+## Loading Packages
+
+```{r Loading Packages}
+
+library(tidyverse)
+library(dplyr)
+
+```
+
+## Word Length
+
+```{r}
+
+salad <- read_csv("salad_consolidated_refined.csv")
+salad$Length <- nchar(salad$Word)
+
+```
+
+## Frequency
+
+```{r}
+
+freq_list <- read_csv("unigram_freq.csv") 
+freq_list$Word <- freq_list$word #Making it so that both tables have a "Word" column
+freq_list <- freq_list[, -1] #Preventing the "word" column from sticking around
+
+salad_counts <- inner_join(salad, freq_list, by="Word")
+
+```
+
+## Saving
+
+```{r}
+
+salad_counts
+
+write_csv(salad_counts, "salad_consolidated_refined_counted.csv")
+
+```
+
+## Trying on 222k Data
+
+```{r}
+
+opus222k <- read_tsv("222k_filtered.tsv")
+opus222k$Length <- nchar(opus222k$Word)
+
+opus222k_counts <- inner_join(opus222k, freq_list, by="Word")
+
+write_csv(opus222k_counts, "222k_filtered_counted.csv")
+
+```

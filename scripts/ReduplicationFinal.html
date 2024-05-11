@@ -97,17 +97,17 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="data" class="level2">
 <h2 class="anchored" data-anchor-id="data">Data</h2>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>data <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="st">"../data/salad_consolidated.csv"</span>)</span>
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>data <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="st">"../data/salad_consolidated_refined.csv"</span>)</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(data)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>        Word Label POS
 1       adam     S  NN
-2      again     N  RB
+2 aggressive     P  JJ
 3 aggressive     P  JJ
-4 aggressive     P  JJ
-5      alone     E  JJ
-6    amherst     P  NN</code></pre>
+4      alone     E  JJ
+5    amherst     P  NN
+6   anywhere     E  RB</code></pre>
 </div>
 </div>
 <div class="cell">
@@ -151,12 +151,15 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(data)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>     Word              Label               POS           
- Length:286         Length:286         Length:286        
+ Length:280         Length:280         Length:280        
  Class :character   Class :character   Class :character  
  Mode  :character   Mode  :character   Mode  :character  </code></pre>
 </div>
 <div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(data, <span class="fu">aes</span>(<span class="at">x =</span> POS, <span class="at">fill =</span> Label)) <span class="sc">+</span></span>
-<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_bar</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_bar</span>() <span class="sc">+</span> </span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">"Distribution of Semantic Contributions by POS"</span>,</span>
+<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a>       <span class="at">x =</span> <span class="st">"POS"</span>,</span>
+<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a>       <span class="at">y =</span> <span class="st">"Count"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <p><img src="ReduplicationFinal_files/figure-html/unnamed-chunk-5-1.png" class="img-fluid" width="672"></p>
 </div>
@@ -167,12 +170,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div class="cell">
 <div class="sourceCode cell-code" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>model <span class="ot">&lt;-</span> <span class="fu">multinom</span>(Label <span class="sc">~</span> POS, <span class="at">data =</span> data)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code># weights:  25 (16 variable)
-initial  value 460.299243 
-iter  10 value 272.450224
-iter  20 value 266.662545
-iter  30 value 266.619641
-final  value 266.619586 
+<pre><code># weights:  15 (8 variable)
+initial  value 307.611441 
+iter  10 value 238.451445
+final  value 238.446464 
 converged</code></pre>
 </div>
 <div class="sourceCode cell-code" id="cb11"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(model)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -181,21 +182,82 @@ converged</code></pre>
 multinom(formula = Label ~ POS, data = data)
 
 Coefficients:
-  (Intercept)     POSNN      POSRB     POSVB
-N -18.6967722 17.310567 17.0874910 17.087369
-P   0.1880767  1.990486  0.3997534  1.247070
-S  -1.7579044  2.769484  2.6334065  2.227932
-U -17.4119989  1.150131  2.6829862 15.802574
+  (Intercept)    POSNN     POSRB    POSVB
+P   0.1880563 1.990487 0.3997348 1.247021
+S  -1.7578396 2.769452 2.6332902 2.227846
 
 Std. Errors:
-  (Intercept)       POSNN       POSRB       POSVB
-N   0.4195643   0.6199648   0.8808955   0.8809328
-P   0.2511057   0.3947439   0.6116954   0.5573874
-S   0.4842460   0.5900282   0.7196073   0.7480007
-U 267.5999250 113.3650305 360.9085057 267.6010466
+  (Intercept)     POSNN     POSRB     POSVB
+P   0.2511061 0.3947435 0.6116885 0.5573802
+S   0.4842312 0.5900145 0.7195921 0.7479828
 
-Residual Deviance: 533.2392 
-AIC: 565.2392 </code></pre>
+Residual Deviance: 476.8929 
+AIC: 492.8929 </code></pre>
+</div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a>z <span class="ot">&lt;-</span> <span class="fu">summary</span>(model)<span class="sc">$</span>coefficients<span class="sc">/</span><span class="fu">summary</span>(model)<span class="sc">$</span>standard.errors</span>
+<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a>z</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>  (Intercept)    POSNN     POSRB    POSVB
+P   0.7489118 5.042483 0.6534942 2.237289
+S  -3.6301656 4.693871 3.6594206 2.978472</code></pre>
+</div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a>p <span class="ot">&lt;-</span> (<span class="dv">1</span> <span class="sc">-</span> <span class="fu">pnorm</span>(<span class="fu">abs</span>(z), <span class="dv">0</span>, <span class="dv">1</span>)) <span class="sc">*</span> <span class="dv">2</span></span>
+<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a>p</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>   (Intercept)        POSNN        POSRB       POSVB
+P 0.4539103580 4.595306e-07 0.5134377591 0.025267459
+S 0.0002832394 2.680833e-06 0.0002527862 0.002896896</code></pre>
+</div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb17"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(pp <span class="ot">&lt;-</span> <span class="fu">fitted</span>(model), <span class="at">n=</span><span class="dv">20</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>            E         P          S
+1  0.07946939 0.7019874 0.21854326
+2  0.42028842 0.5072467 0.07246485
+3  0.42028842 0.5072467 0.07246485
+4  0.42028842 0.5072467 0.07246485
+5  0.07946939 0.7019874 0.21854326
+6  0.19230901 0.3461578 0.46153322
+7  0.07946939 0.7019874 0.21854326
+8  0.07946939 0.7019874 0.21854326
+9  0.19230901 0.3461578 0.46153322
+10 0.07946939 0.7019874 0.21854326
+11 0.42028842 0.5072467 0.07246485
+12 0.42028842 0.5072467 0.07246485
+13 0.07946939 0.7019874 0.21854326
+14 0.07946939 0.7019874 0.21854326
+15 0.14705943 0.6176449 0.23529567
+16 0.07946939 0.7019874 0.21854326
+17 0.07946939 0.7019874 0.21854326
+18 0.42028842 0.5072467 0.07246485
+19 0.07946939 0.7019874 0.21854326
+20 0.07946939 0.7019874 0.21854326</code></pre>
+</div>
+</div>
+<p>Values repeat by POS, so extracting one example of each will give us the probability of having a certain semantic contribution given POS.</p>
+<p>Example 1: NN, Example 2: JJ, Example 6: RB, Example 15: VB</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb19"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tibble)</span>
+<span id="cb19-2"><a href="#cb19-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb19-3"><a href="#cb19-3" aria-hidden="true" tabindex="-1"></a>(my_tibble <span class="ot">&lt;-</span> <span class="fu">tibble</span>(</span>
+<span id="cb19-4"><a href="#cb19-4" aria-hidden="true" tabindex="-1"></a>  <span class="at">Part.of.Speech =</span> <span class="fu">c</span>(<span class="st">"NN"</span>, <span class="st">"JJ"</span>, <span class="st">"RB"</span>, <span class="st">"VB"</span>),</span>
+<span id="cb19-5"><a href="#cb19-5" aria-hidden="true" tabindex="-1"></a>  <span class="at">E =</span> <span class="fu">c</span>(<span class="fl">0.07946939</span>, <span class="fl">0.42028842</span>, <span class="fl">0.19230901</span>, <span class="fl">0.14705943</span>),</span>
+<span id="cb19-6"><a href="#cb19-6" aria-hidden="true" tabindex="-1"></a>  <span class="at">P =</span> <span class="fu">c</span>(<span class="fl">0.7019874</span>, <span class="fl">0.5072467</span>, <span class="fl">0.3461578</span>, <span class="fl">0.6176449</span>),</span>
+<span id="cb19-7"><a href="#cb19-7" aria-hidden="true" tabindex="-1"></a>  <span class="at">S =</span> <span class="fu">c</span>(<span class="fl">0.21854326</span>, <span class="fl">0.07246485</span>, <span class="fl">0.46153322</span>, <span class="fl">0.23529567</span>)</span>
+<span id="cb19-8"><a href="#cb19-8" aria-hidden="true" tabindex="-1"></a>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 4 × 4
+  Part.of.Speech      E     P      S
+  &lt;chr&gt;           &lt;dbl&gt; &lt;dbl&gt;  &lt;dbl&gt;
+1 NN             0.0795 0.702 0.219 
+2 JJ             0.420  0.507 0.0725
+3 RB             0.192  0.346 0.462 
+4 VB             0.147  0.618 0.235 </code></pre>
 </div>
 </div>
 </section>
