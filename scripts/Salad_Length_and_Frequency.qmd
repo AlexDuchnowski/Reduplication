@@ -56,3 +56,19 @@ opus222k_counts <- inner_join(opus222k, freq_list, by="Word")
 write_csv(opus222k_counts, "222k_filtered_counted.csv")
 
 ```
+
+## 222k Filtered
+
+```{r}
+
+new222k <- read_tsv("en_v1_222k_examples.tsv", col_names=FALSE)
+
+colnames(new222k) <- c("Num", "Word", "C2", "C1", "C", "C-1")
+
+new222k$Length <- nchar(new222k$Word)
+
+new222k_counts <- inner_join(new222k, freq_list, by="Word")
+
+write_csv(new222k_counts, "222k_examples_counted.csv")
+
+```
