@@ -1,0 +1,73 @@
+---
+title: "PostProcessing Length and Frequency"
+format: html
+editor: visual
+---
+
+## Loading Packages
+
+```{r Loading Packages}
+
+library(tidyverse)
+library(dplyr)
+
+```
+
+## Word Length
+
+```{r}
+
+salad <- read_csv("salad_consolidated_refined.csv")      # Reading the File
+salad$Length <- nchar(salad$Word)      # Creating a Length Column
+
+```
+
+## Frequency
+
+```{r}
+
+freq_list <- read_csv("unigram_freq.csv")     # Reading the Frequency Counter File
+freq_list$Word <- freq_list$word              # Making it so that both tables have a "Word" column
+freq_list <- freq_list[, -1]                  # Preventing the "word" column from sticking around
+
+salad_counts <- inner_join(salad, freq_list, by="Word")               # Adding the frequency list to the main tibble
+write_csv(salad_counts, "salad_consolidated_refined_counted.csv")     # Writing the Salad-Salad File
+
+```
+
+## Trying on 222k Data
+
+```{r}
+
+opus222k <- read_tsv("222k_filtered.tsv")     # Load the File
+opus222k$Length <- nchar(opus222k$Word)       # Doing Character Counts
+opus222k_counts <- inner_join(opus222k, freq_list, by="Word")     # Doing Freqs
+
+write_csv(opus222k_counts, "222k_filtered_counted.csv")           # Writing the test file
+
+```
+
+## 222k Filtered
+
+```{r}
+
+new222k <- read_tsv("en_v1_222k_examples.tsv", col_names=FALSE)     # Reading the File, adjusting for having no headers
+colnames(new222k) <- c("Num", "Word", "C2", "C1", "C", "C-1")       # Adding headers
+new222k$Length <- nchar(new222k$Word)                               # Doing Character Counts
+new222k_counts <- inner_join(new222k, freq_list, by="Word")         # Doing Freqs
+
+write_csv(new222k_counts, "222k_examples_counted.csv")              # Writing the file
+
+```
+
+## 222k Full
+
+```{r}
+
+full_222k <- read_delim("en_v1_222k_full.csv", delim="\t")          # Reading the File, adjusting for it being .csv
+full_222k$Length <- nchar(full_222k$Word)                           # Doing the Character Counts
+full_222k_counts <- inner_join(full_222k, freq_list, by="Word")     # Doing Freqs
+
+write_csv(full_222k_counts, "full_222k_counted.csv")                # Writing the File
+
+```
