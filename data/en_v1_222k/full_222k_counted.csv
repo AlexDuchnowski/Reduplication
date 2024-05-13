@@ -1,0 +1,602 @@
+...1,Word,C1,C2,C3,C4,Spacy POS,Length,count
+0,easy,Lakchume.,Pick up the body.,Easy easy...,Be careful be careful.,JJ,4,125548527
+1,meng,Attack!,Xu Gui!,General Meng Meng Jie?,The Chancellor wants you dead.,NN,4,689565
+2,anything,I' m hot,Maybe I should get you a cool cloth,I haven' t done anything anything like this... happened...,It' s OK... this doesn' t have to mean anything,NN,8,75985266
+3,out,- [Gasps],- I found you.,Out Out Get out of here,And close the goddamn door,RB,3,741601852
+4,kitty,- [People Chattering],- [Person Over Loudspeaker Indistinct],Over there is Here Kitty Kitty.,That' s where the agency held my tryouts when I was made new.,NN,5,6414935
+5,theta,- Trusted associates working for a man who had created a food substitute.,Anton Reich.,"EnCrypt, this is Diana 1716 theta theta 6.",- Rook activation override.,NN,5,5070673
+6,theta,- Trusted associates working for a man who had created a food substitute.,Anton Reich.,"EnCrypt, this is Diana 1 716 theta theta 6.",- Rook activation override.,NN,5,5070673
+7,very,"here we are, Harry you go first, Dear but Harry' s never traveled by Floo powder, Mom Floo powder? oh, you go first, Ron, then Harry can see how it' s done and you go",Diagon Alley!,"you see? it' s quite easy don' t be afraid come come on and you go, let' s bow your head that' s fine take your Floo powder that' s it, very good don' t forget to speak very very clearly",D- Dia- gon Alley,RB,4,334923368
+8,voice,Let me rip you.... |Let me tear you....,Let me kill you..],what? sorry? that voice voice? didn' t you hear it? what are you talking about?,Harry are you getting a lit bit drowsy?,NN,5,64600528
+9,voice,spooky,"[I smell blood, let me rip you, let me kill you, kill....]",Harry! did you hear it? hear what? that voice voice? what voice?,"I heard it first at Lockhart office, then again, it just it' s moving",NN,5,64600528
+10,kill,Harry! did you hear it? hear what? that voice voice? what voice?,"I heard it first at Lockhart office, then again, it just it' s moving",I think it' s gonna kill kill?,"Harry, wait, don' t be so fast",VB,4,24850951
+11,come,"what' s that you got, Hagrid? oh, it' s Flesh- Eatin 'Slug Repellent for the mandrake, you know according to proffessor Sprout, they still gonna need bit grown- up to do, |but once their acne' s been cleared up, we' il be able to chop them up, |stew them, and then we' il get those people down at hospital unpetrified in meantime, you know, you three, best look after yourselves all right?","hello, Nevill","Harry, I don' t who did it, but you' d be better come come on","it has to be a Gryffindor nobody else know our password unless he wasn' t a student whoever he was, he must be looking something he found it",VB,4,154326119
+12,justin,because no one did look in the eye not directly at least,Colin saw it through his camera,Justin Justin must' ve seen the basilisk through Nearly Headless Nick!,"Nick got the full blast of it, | but he is a ghost, he couldn' t die again and Hermione had the mirror",JJ,6,10029711
+13,certain,Harry,"First, I want to thank you, Harry you must' ve shown me the real loyalty down the chamber nothing but that could have called Fawkes to you and second","I sense that something is troubling you am I right, Harry? it' s just you see, sir, I couldn' t help but notice certain thing, certain certain similarities between Tom Riddle and me","I see, well you can speak Parseltongue,?",JJ,7,73108213
+14,goo,I' m led to believe that you' re an extension of my personality.,"- Yes, I' m the alter- ego man.","- And I' m the ego man, goo goo, g' joob.",I' m glad you asked me that.,VB,3,3878783
+15,whoop,It' s the Fairy Godmother!,"Hello, Far, Far Away!",Can I get a whoop whoop?,May all your endings be happy and...,NN,5,331753
+16,whoop,It' s the Fairy Godmother!,"Hello, Far, Far Away!",Can I get a whoop whoop?,May all your endings be happy and...,NN,5,331753
+17,here,"Where, ""here""?",The ground?,Here here.,In the building.,RB,4,639711198
+18,montgomery,And it did so with two musical notes.,Hello.,I am looking for Dr. Montgomery Montgomery.,I am Stephano.,NN,10,10230206
+19,nothing,Nothing in the world will keep The count from his beloved bride,Nothing in the world Nothing in the world,Nothing Nothing,What a marvelous day for a marriage.,NN,7,73183983
+20,montgomery,And it did so with two musical notes.,Hello.,I am looking for Dr. Montgomery Montgomery.,I am Stephano.,NN,10,10230206
+21,nothing,Nothing in the world will keep The count from his beloved bride,Nothing in the world Nothing in the world,Nothing Nothing,What a marvelous day for a marriage.,NN,7,73183983
+22,laba,"Paralyzed, like stone, for two days.",- What do you call this fella?,- Laba laba batu.,Stone spider.,NN,4,39052
+23,mat,We gots to get paid.,"And on that note, we cue the music.",- Mat mat mat - L- L- lum,- Mat mat mat - Lip la,NN,3,9937738
+24,mat,"And on that note, we cue the music.",- Mat mat mat - L- L- lum,- Mat mat mat - Lip la,- Mat mat mat - L- L- lum,NN,3,9937738
+25,mat,- Mat mat mat - L- L- lum,- Mat mat mat - Lip la,- Mat mat mat - L- L- lum,"- Mat mat meal - Ma ma ma, ma ma- ma ma",NN,3,9937738
+26,mat,- Mat mat mat - Lip la,- Mat mat mat - L- L- lum,"- Mat mat meal - Ma ma ma, ma ma- ma ma",Well...,NN,3,9937738
+27,shoop,La da da da da da,"He really is high, man",Shoop shoop shooby doo wah,Get jiggy with it,NN,5,142537
+28,mat,We gots to get paid.,"And on that note, we cue the music.",- Mat mat mat - L- L- lum,- Mat mat mat - Lip la,NN,3,9937738
+29,mat,"And on that note, we cue the music.",- Mat mat mat - L- L- lum,- Mat mat mat - Lip la,- Mat mat mat - L- L- lum,NN,3,9937738
+30,mat,- Mat mat mat - L- L- lum,- Mat mat mat - Lip la,- Mat mat mat - L- L- lum,"- Mat mat meal - Ma ma ma, ma ma- ma ma",NN,3,9937738
+31,mat,- Mat mat mat - Lip la,- Mat mat mat - L- L- lum,"- Mat mat meal - Ma ma ma, ma ma- ma ma",Well...,NN,3,9937738
+32,shoop,"Are you really high now, man?","La da da da da da he really is high, man",Shoop shoop shooby doo wah,Getjiggy with it,NN,5,142537
+33,thing,<i>[ Thing OneJabbering] </ i>,"Thing One says he' s Thing One for a reason, and some people should just get used to it.",It' s a Thing thing.,You wouldn' t understand.,NN,5,97451660
+34,really,"I' d like to sing, a song for you.","Ok, I' il restart again.","I love her, I really really love her.","Make me smile, all the time.",RB,6,162033390
+35,now,I won' t!,I won' t.,"Now now, calm down.",Listen to Uncle Michael.,RB,3,611387736
+36,mirror,I' il help you,"Complete the spell, my sweet new prince..",Mirror mirror on the wall..,Say it,NN,6,21539161
+37,anytime,"As a consolation, I never believed in you either","See, you' re brothers",You' re welcome here anytime Anytime at all,Cos this is your home,RB,7,16192486
+38,then,- We must do something. - nothing will become.,"At moments thus, the Magical world he hopes that their leaders are strong.","- Then then, demuéstralo. - the Match is not going away to cancel.",I will not stay as a cowardly one.,RB,4,369928941
+39,miss,Sorry,Do you know who I am?,"Miss Miss Phoenix Black, I' m sorry",Do you know how often I shop here...,VB,4,39897915
+40,later,I just have to be patient,Excuse me a sec,See you later Later,David?,RB,5,84857974
+41,shimmy,The swelling should help them fit better.,"Hey, get a load of this guy.",Shimmy shimmy.,"Hey, hey, hey.",NN,6,188186
+42,kitty,"Power, my boy, means never having to say you' re sorry.","Here, kitty kitty kitty.","Come here, kitty kitty.",Yes.,NN,5,6414935
+43,really,- ls that a shark?,It is a shark.,They' re really really mad at us.,They thought that this river was the ocean.,RB,6,162033390
+44,really,I don' t want to ruin my diet.,"It' s cold in the supermarket, and you like it like that.","People always read the labels of their favourite brands really really carefully just to see how many chemicals they have, and then they just sigh and they put them in their cartanyway,","like they' re saying sure it' s bad for me, it' s bad for my family but we like it.",RB,6,162033390
+45,love,I' m black.,I want to watch Love Connection.,I love Love Connection.,I love that man on there.,NN,4,201063526
+46,love,That' s Arsenio.,So?,"You love Love Connection, send your picture in there.",She did.,NN,4,201063526
+48,gene,MAN:,Wloo:,"That means... it' s Gene Gene, the Dancing Machine... and just in time:",[Gene' s dancing music plays],NN,4,34266155
+49,ool,# All oven #,# Tlis land #,# Ool ool ool #,# If I lad a bell #,VB,3,268518
+50,very,I don' t know what he was thinking.,He jumped exactly when the water was receding and he hit his neck against the sand,It' s is very very sad.,God wants him to keep on living.,RB,4,334923368
+51,very,I don' t know what he was thinking.,He jumped exactly when the water was receding and he hit his neck against the sand,This is very very sad.,God wants him to keep on living.,RB,4,334923368
+52,wait,What if I told you that...,that you give me strength to live Ramon,Wait wait.,Stop this thing for a moment,VB,4,39001376
+53,wait,What if I told you that...,that you give me strength to live Ramon,Wait wait.,Stop this thing for a moment,VB,4,39001376
+54,big,Based on the true story,I always wanted to be in the movies,"When I was Iittle I thought for sure 1 day, I could be a big big star...",Or maybe just beautiful...,JJ,3,216690546
+55,far,I don' t know... if can forgive myself for...,"I' II come back to you, I' II come back","I mean, we come back here and we go far far away",Go,RB,3,93061804
+56,big,Based on the true story,I always wanted to be in the movies,"When I was Iittle I thought for sure 1 day, I could be a big big star...",Or maybe just beautiful...,JJ,3,216690546
+57,far,I don' t know... if can forgive myself for...,"I' II come back to you, I' II come back","I mean, we come back here and we go far far away",Go,RB,3,93061804
+58,big,Based on the true story,I always wanted to be in the movies,"When I was Iittle I thought for sure 1 day, I could be a big big star...",Or maybe just beautiful...,JJ,3,216690546
+59,far,I don' t know... if can forgive myself for...,"I' II come back to you, I' II come back","I mean, we come back here and we go far far away",Go,RB,3,93061804
+60,yum,They' re out of sight.,I' m into comics myself.,Big Yum Yum Book.,I' d never seen anything like it.,VB,3,2362952
+61,yum,I' m into comics myself.,So Crumb showed me this comic book novel he was working on.,Big Yum Yum Book.,I' d never seen anything like it.,VB,3,2362952
+62,back,"Yeah I er, I went for a run.",You smell like you ran far.,"Well I showered, I mean I guess I didn' t cool, I wanted to get back back down here and check on you, it was a Tour de Stad.",What?,RB,4,488024109
+63,very,W at that time was just starting out in the world as a business man.,"Because he' s a guy who¡ ¯s always tried to emulate his father, uh, he decided to go into the oil business.","He founded an oil company, a drilling company, out of west Texas called Arbusto, which was very very good at drilling dry holes that nothing came out of.",But the question has always been where did this money come from?,RB,4,334923368
+64,very,"It' s like training a dog; ya tell him to sit down or ya tell him to roll over at the same time, the dog doesn' t know what to do.",Well the American people are being treated like that.,"It was really very very skillfully and, and ugly in what they did.",We must stop the terror.,RB,4,334923368
+65,very,"That' s the case, for example with Microsoft.",So no wonder the support is so bad.,"The benefits of Free Software were tremendous but the cost of supporting it internally uh, and made managers very very nervous and so the fundamental idea I had was if we can build a model that could deliver two to four times the support and uh, and uh, and hand holding capability that an internal engineer could provide.",And we could do it at 1/ 2 to 1/ 4 of the cost that would meet the test of whether or not people would actually buy.,RB,4,334923368
+66,city,Right and so we had maps there and we handed them off everybody who was coming.,"Well, we actually met at a Denny' s That' s just outside the Foster City limits...","Foster City city limits, which meant also just outside of Foster City Police jurisdiction, which meant any, any incidents that happened at the meeting point happened in the jurisdiction of San Mateo, and if they told us they get lost, we' d say, ""Fine, we are going to Foster city.","Bye. """,NN,4,390564835
+67,very,"If you don' t share, you get thrown in jail or killed.","In 1990, we got a visit from a director of an institute in uh, Moscow University, and actually I saw him in Helsinki just 2 weeks ago, but in any event, he came by, and Richard Stallman had suggested that he visit Cygnus, because he was interested in and understanding how the Free Software model... might apply to stimulating entrepreneurial innovation in Russia of all places, and we had been kind of secretive about our business plan, because you know, we were' nt really sure it' s gonna work, we didn' t want to look too stupid if it failed.",But I was very very open with him.,"The more I told him, the more he started to shake his head like this, and I finally said, you know, ""What' s wrong?""",RB,4,334923368
+68,very,That' s the purest style and that' s the style that Joe and I had climbed Siula Grande.,"It' s a very committing way of climbing, because you have no line of retreat.","If something goes wrong, it can be very very serious.","There' s no rescue, there' s no helicopter rescue and there' s no other people.",RB,4,334923368
+69,very,And to put an element of risk back into it takes us out of the humdrum.,"In that sense, it makes you feel more alive.","I' ve never been that high before, and it' s very very strenuous to climb ice like that.","Not only is it technically difficult and unstable and frightening, but your heart is going like crazy because of the altitude.",RB,4,334923368
+70,very,"And I' d be looking and trying to push the thing in, and using my teeth, and getting it round, and getting it round.","My hands were cold, my feet were...",I was very very cold.,"It was a desperate position, made worse by the fact that that I had no idea what Joe was doing, or what position he was in.",RB,4,334923368
+71,very,I was pretty surprised to be alive.,"The head torch beam just went down, and down, and down, and the darkness just ate it, just gone.","I felt very unnerved, very very vulnerable.","If I had landed less than 1m further to the right,",RB,4,334923368
+72,very,I started to go down the glacier on my own.,In this stage I was still certain that I was gonna die myself.,"Crossing a glacier is very very dangerous on your own, because there are crevices in the ice, and the snow covers them.","Fortunately I managed to find a faint outline of our tracks, from when we walked in.",RB,4,334923368
+73,attack,I never felt angry at my dad.,My dad had nothing to do with this.,Someone knocks on the door and accuses you for a crime you didn' t commit you gotta attack attack your attackers and do what you can.,And that' s all it was.,VB,6,35599513
+74,fuck,Jesse' s gonna go to jail for the rest of his life.,Seth is gonna move west.,Fuck fuck.,I received a telephone call from jesse asking to see me and jesse told me that he wanted to plead guilty.,NN,4,39099536
+75,bent,I can' t... it' s bent.,It' s meant to be bent.,I know that but this one' s bent bent.,It' s bloody cold in here.,JJ,4,5070333
+76,run,# FLANAGAN & ALLEN:,Run Rabbit Run,# Run run run,# Run rabbit run rabbit Run run run,VB,3,117213565
+77,run,Run Rabbit Run,# Run run run,# Run rabbit run rabbit Run run run,Shall we go back and kill him?,VB,3,117213565
+78,run,Cuthbertson! >,"Sorry, Sergeant.",# So run rabbit Run run run. #,You don' t have to tell me if you don' t want to.,VB,3,117213565
+79,tin,"Ren, Stimpy.",Stimpy?,Rin Tin Tin.,Dre:,NN,3,10695557
+80,tin,Rin Tin Tin.,Dre:,Rin Tin Tin...,Rin...,NN,3,10695557
+81,mmm,To hip- hop.,# Time after time #,# Mmm mmm... #,# Mmm mmm... #,VB,3,1705485
+82,mmm,# Time after time #,# Mmm mmm... #,# Mmm mmm... #,Wait.,VB,3,1705485
+83,sing,"Dr. Sobel, you received a call this morning from Paul Vitti.",Why would you say that I got a call from Paul Vitti?,Because we monitor all his phone calls from Sing Sing.,"Then, yes, I did.",VB,4,11114001
+84,sing,Okay...,"Based on his symptoms and his test results, I would call it brief psychotic disorder...... and if it persists, schizophreniform disorder.","And Dr. Kassam, the psychiatrist at Sing Sing, concurs with the diagnosis.",So he' s crazy.,VB,4,11114001
+85,sing,That' s what I wanted.,You told me I can' t.,You said it' s either here or Sing Sing.,"I' m not trying to punish you, but I do have some responsibilities.",VB,4,11114001
+86,sing,"I mean, what' s next?",Do you go on the run for the rest of your life?,Do you just go back to Sing Sing?,Or maybe they find you dead in an alley?,VB,4,11114001
+87,hip,Men!,We' re seaworthy again.,Hip hip hip...,- Hurrah.,NN,3,26826008
+88,hip,Hip hip hip...,- Hurrah.,Hip hip hip...,- Hurrah.,NN,3,26826008
+89,hip,Watch out!,"By Toutatis, I know he fell...... in a cauldron of magic potion...... but he' il never cease to amaze me.",Hip hip hip... hurrah...,- Stop it.,NN,3,26826008
+90,sing,"Dr. Sobel, you received a call this morning from Paul Vitti.",Why would you say that I got a call from Paul Vitti?,Because we monitor all his phone calls from Sing Sing.,"Then, yes, I did.",VB,4,11114001
+91,sing,Okay...,"Based on his symptoms and his test results, I would call it brief psychotic disorder...... and if it persists, schizophreniform disorder.","And Dr. Kassam, the psychiatrist at Sing Sing, concurs with the diagnosis.",- So he' s crazy.,VB,4,11114001
+92,sing,That' s what I wanted.,You told me I can' t.,You said it' s either here or Sing Sing.,"I' m not trying to punish you, but I do have some responsibilities.",VB,4,11114001
+93,sing,"I mean, what' s next?",Do you go on the run for the rest of your life?,Do you just go back to Sing Sing?,Or maybe they find you dead in an alley?,VB,4,11114001
+94,really,"Whenever I get a good idea, I write it down in my diary before it goes out of my head.",And you know what occurred to me?,"The other day... that... all the really really knock- out acts have something a little different going on, you know?","Like, a signature band.",RB,6,162033390
+95,maybe,"And I thought my thing could be.. ""aloof""... you know?",Give them just enough to get them good and hungry but always leave them wanting more.,"Once I get a name for myself, maybe maybe we can open up a club of our own, you know?","You could run it, and I could be the headliner.",RB,5,51895609
+96,omega,"I certainly hope so, Mr. Wilder.",I come to you in desperation.,"I' m Panos Patakos, president of the Lambda Omega Omega fraternity.",I' m sure you' re aware of our... stigma.,NN,5,10289113
+97,omega,- Okay.,Where the hell is everyone?,Mad props for this pimpin 'good time... go out to those hung and handsome bad boys... of Lambda Omega Omega.,"Thanks for the good time, fellas.",NN,5,10289113
+98,happy,"Yes, I understand it was a funeral.",I guess I goofed up.,"I can see how a happy happy- birthday basket...... might seem ironic and cruel, but it was an honest mistake.",It' s not that easy running a small- sized business out of a house...... especially this house!,JJ,5,63471922
+99,hope,Your son is a born leader.,Those people out there are following him because they believe in him.,"They believe he can give them hope hope of a new life, a new world, a better future!",Who' s that?,NN,4,74145758
+100,very,"So it' s back,,, Whoa,,,","Harder than it looks, isn' t it, gentlemen?","Well, you' ve all done very very well for your first lesson,","And before you leave tonight,",RB,4,334923368
+101,very,Whoa...,"Harder than it looks, isn' t it, gentlemen?","Well, you' ve all done very very well for your first lesson.","And before you leave tonight,",RB,4,334923368
+102,temptation,"- Ooh, give me a breakdown - Temptation",- Because it' s time for a showdown - Temptation,"Temptation, Temptation Temptation","Oh, oh- oh- oh",NN,10,2536564
+103,digi,So find the feelin ',So find the feelin ',Bom Digi Digi Digi Bom Digi Bom,Lifestyle Letting Agency.,NN,4,2425142
+104,many,And I have to thank my husband,He gave me chance to act,We had rehearsed many many times,"So, this award is yours too",JJ,4,318966441
+105,very,Whoa...,"Harder than it looks, isn' t it, gentlemen?","Well, you' ve all done very very well for your first lesson,","And before you leave tonight,",RB,4,334923368
+106,gold,What can stop that itchin ',Ain' t around the kitchen,"Gold, gold Gold, gold",Gold,NN,4,107497778
+107,circus,In fucking Vegas!,"Not on no side street, the motherfucker got shot on the Strip!",In front of Circus Circus!,Damn.,NN,6,5377139
+108,ray,Ooh!,"Hello, ma' am.",My name is Ray Ray and I' m here to... service you.,"I' m Sylvia, and I hit my head.",NN,3,32113994
+109,ray,"Sex addicts are everywhere, Sylvia, and pretty soon, Harford Road will be ours.","Oh, hey, hold on.",Ray Ray is a sexual healer.,"Come visit us, Sylvia.",NN,3,32113994
+110,ray,Taxi!,Taxi!,"Ray Ray' s service center, 6630 Harford Road.","Yes, ma' am.",NN,3,32113994
+111,ray,"What is she talking about, that bitch?",Hello?,Ray Ray?,"It' s me, Sylvia.",NN,3,32113994
+112,ray,Dirt worship' s been around long before my accident.,I just didn' t know.,Ray Ray has helped me understand my hypersexuality.,And he cured me of my herpes.,NN,3,32113994
+113,ray,"As you grow to embrace your concussion, you' il learn to accept anything sexual as long as it' s safe, consensual and doesn' t harm others.",You wanna powder my chafed butt?,"Uh, I would, but I' m supposed to help Ray Ray think up a new sex act.",Maybe later.,NN,3,32113994
+114,ray,I can...,I know you are and we' re gonna do something about that.,"Ray Ray is a sex saint,",- and he' s got powers.,NN,3,32113994
+115,ray,- Amen to that.,"I' ve got a hard- on of gold, and my tongue is on fire.","Oh, and I' ve got hot pants, Ray Ray.",We' re all in heat.,NN,3,32113994
+116,ray,Thank you for asking.,"Oh, my God!",You have met Ray Ray.,"Oh, Mother!",NN,3,32113994
+117,ray,I' m supposed to help them.,"It will pass, Sylvia.","No, there' s this guy named Ray Ray and he is their leader and he ate me out.",Ugh!,NN,3,32113994
+118,ray,Fucking tranquilizers.,It' s all right.,"Ray Ray is gonna be all better, right?",You betrayed me.,NN,3,32113994
+119,ray,Get out.,This is a Neuter establishment.,We don' t serve Ray Ray' s people here.,"Don' t get a breast reduction, Ursula.",NN,3,32113994
+120,ray,There is somebody for everybody.,- That means you!,- Ray Ray!,"Straight, gay or bi, there' s a new sex act just waiting for you.",NN,3,32113994
+121,ray,Ooh- oh!,"The big ""O.""","Do it for us one more time, Ray Ray.","Now, Ray Ray, now!",NN,3,32113994
+122,ray,"The big ""O.""","Do it for us one more time, Ray Ray.","Now, Ray Ray, now!",Now!,NN,3,32113994
+124,anything,"Julie, focus.",What do you want more than anything in this world?,Anything anything?,Ultimate anything.,NN,8,75985266
+125,plan,I don' t -- I don' t have a plan.,"Yes, you do!",You' re on the non- plan plan.,I am not on a non- plan plan!,NN,4,160746244
+126,plan,"Yes, you do!",You' re on the non- plan plan.,I am not on a non- plan plan!,You are too!,NN,4,160746244
+127,very,"Yeah... I was that good, as a child",So if you could stick around for a minute...,I' m pretty sure you could make the Iadies very very happy 1 slice of cake for her...,I can do that...,RB,4,334923368
+128,doo,You are on.,- I' m on right now?,I don' t believe you. - § Doo doo doo. § - Ron!,"Oh, come on.",VB,3,4102101
+129,alone,You' ve never been alone.,"On Christmas, it' s not like being alone.",It' s alone alone.,This wouldn' t be one of those lucid moments.,RB,5,39326417
+130,haw,It looks like Sally is going to catch her bell in favour of the president.,"I' m Christi, TBNN News","Haw haw... you baby, you going down!","So, what do you think?",NN,3,740732
+131,urt,I like 3 ¡3 isn' t healthy,What' s yielding you Yielding me?,"Yes, somehow you seem Urt Urt, Really?",- Really,JJ,3,165302
+132,sally,"It' s brilliant, sir",Thank you and I get the girl.,"Sally Sally, right","Sally, hey, hi, I' m here",RB,5,5933047
+133,sing,Grandma Fung- Yu.,Yeah.,"And Sing Sing, XiXi' s mother.",All right.,VB,4,11114001
+134,sing,"And XiXi' s mama, sexy thing.",- Oh.,- Sing Sing.,Yeah.,VB,4,11114001
+135,thing,- Grandma Egg Foo Yong?,"Fung- Yu, dawg.","Sexy thing, Miss Thing Thing.",Sing Sing!,NN,5,97451660
+136,sing,"Fung- Yu, dawg.","Sexy thing, Miss Thing Thing.",Sing Sing!,[Muttering in Chinese],VB,4,11114001
+137,sing,Grandma Kung Fu.,Sexy Thing.,Sing Sing.,Sing Sing.,VB,4,11114001
+138,sing,Sexy Thing.,Sing Sing.,Sing Sing.,- Bling Bling.,VB,4,11114001
+139,sing,- All right.,Let' s eat.,"Sing Sing, these Peking duck feet is the shit!",You no like my cooking?,VB,4,11114001
+140,gus,"Just so you know, that' s incredibly hot.","Oh, I' m sorry.","Oh, hi, Gus Gus.",Gus Gus.,JJ,3,1795932
+141,gus,"Oh, I' m sorry.","Oh, hi, Gus Gus.",Gus Gus.,So much of you they had to name you twice.,JJ,3,1795932
+142,gus,You know what?,I' m tired of living my life just in theory.,- I think I' m gonna go talk to Gus Gus.,"- Oh, come on.",JJ,3,1795932
+143,gunther,You can' t seriously be attracted to that walking...... Alp.,I don' t know.,"I can see myself in the mountains, raising children...... little Hans Hans and Gunther Gunther.","Anna, don' t.",NN,7,585995
+144,gus,"Okay, all right.",Because...... I' m jealous as hell.,I' d hate to see you with Gus Gus.,I' d hate to see you with another man.,JJ,3,1795932
+145,plan,I don' t have a plan.,"Yes, you do!",You' re on the non- plan plan.,I am not on a non- plan plan!,NN,4,160746244
+146,plan,"Yes, you do!",You' re on the non- plan plan.,I am not on a non- plan plan!,You are too!,NN,4,160746244
+147,bright,Actually...,L think I did., ~ Gonna be a bright Bright sunshiny day,Whoo! ~ Gonna be a bright Bright sunshiny day,JJ,6,19446368
+148,bright,L think I did.,[Tim] ~ Gonna be a bright Bright sunshiny day,Whoo! ~ Gonna be a bright Bright sunshiny day,- Timmy!,JJ,6,19446368
+150,haw,It looks like Sally is going to catch her bell in favour of the president.,I' m Christi£¬TBNN News,"Haw haw... you baby, you going down!",So£¬what do you think?,NN,3,740732
+151,urt,I like 3£ ¡3 isn' t healthy,What' s yielding you£ ¿Yielding me?,"Yes, somehow you seem Urt Urt£¬Really?",- Really,JJ,3,165302
+152,sally,"It' s brilliant, sir",Thank you and I get the girl.,Sally Sally£¬right,"Sally£¬hey, hi, I' m here",RB,5,5933047
+153,pum,Let' s follow it.,"# Come, they told me, # par um pa pa pa pum","# A new born King to see, # par um pa pum pum","No, Saint Maureen.",VB,3,171373
+155,gus,"Just so you know, that' s incredibly hot.","Oh, I' m sorry.","Oh, hi, Gus Gus.",Gus Gus.,JJ,3,1795932
+156,gus,"Oh, I' m sorry.","Oh, hi, Gus Gus.",Gus Gus.,So much of you they had to name you twice.,JJ,3,1795932
+157,gus,You know what?,L' m tired of living my life just in theory.,- I think I' m gonna go talk to Gus Gus.,"- Oh, come on.",JJ,3,1795932
+158,gunther,You can' t seriously be attracted to that walking...... Alp.,L don' t know.,"L can see myself in the mountains, raising children...... little Hans Hans and Gunther Gunther.","Anna, don' t.",NN,7,585995
+159,gus,"Okay, all right.",Because...... l' m jealous as hell.,L' d hate to see you with Gus Gus.,L' d hate to see you with another man.,JJ,3,1795932
+160,sing,Grandma Fung- Yu.,Yeah.,"And Sing Sing, XiXi' s mother.",All right.,VB,4,11114001
+161,sing,"And XiXi' s mama, sexy thing.",- Oh.,- Sing Sing.,Yeah.,VB,4,11114001
+162,thing,- Grandma Egg Foo Yong?,"Fung- Yu, dawg.","Sexy thing, Miss Thing Thing.",Sing Sing!,NN,5,97451660
+163,sing,"Fung- Yu, dawg.","Sexy thing, Miss Thing Thing.",Sing Sing!,- Bling Bling.,VB,4,11114001
+164,sing,Grandma Kung Fu.,Sexy Thing.,Sing Sing.,Sing Sing.,VB,4,11114001
+165,sing,Sexy Thing.,Sing Sing.,Sing Sing.,- Bling Bling.,VB,4,11114001
+166,sing,- All right.,Let' s eat.,"Sing Sing, these Peking duck feet is the shit!",You no like my cooking?,VB,4,11114001
+167,plan,I don' t have a plan.,"Yes, you do!",You' re on the non- plan plan.,I am not on a non- plan plan!,NN,4,160746244
+168,plan,"Yes, you do!",You' re on the non- plan plan.,I am not on a non- plan plan!,You are too!,NN,4,160746244
+169,doo,- I' m on right now?,I don' t believe you. -?,Doo doo doo.?,- Ron!,VB,3,4102101
+170,anything,"Julie, focus.",What do you want more than anything in this world?,Anything anything?,Ultimate anything.,NN,8,75985266
+171,smack,Just when I oughta say nix,When a person tries to kiss a girl,I know she oughta give his face a smack Smack.,[Low <i>V</ i>oice],VB,5,1451860
+172,doo,- You are on.,- I' m on right now?,I don' t believe you. - # Doo doo doo. # - Ron!,"Oh, come on.",VB,3,4102101
+173,very,- Very.,Would you rather I continued as a watcher or a witness?,Very very.,"Now tell us why you did it, okay?",RB,4,334923368
+174,dirty,"I knew all along why your hair smells of poo but I kept quiet 'cause I thought you were different and that under your dirt, you deserved to be... clean.",But you' re like all of your tribe.,Dirty Dirty!,Wait!,JJ,5,16101662
+175,dirty,I could have pok...,What' s Dungface doing here?,You called my daughter a dirty Dirty!,Nobody does that!,JJ,5,16101662
+176,dirty,You called my daughter a dirty Dirty!,Nobody does that!,Nobody calls my girl a dirty Dirty.,Proud of yourself?,JJ,5,16101662
+177,get,Yes.,"95 pound of Chinese finest manmade, with $160 millions behind this door.",Lets get get' em out.,Yeah.,VB,3,605984508
+178,there,how do you save the forest anyway? it' s not gonna be easy,"I assume the lumber companies have a lot of crowd but I do know a few endangered species living in the forest who definitely have lost the protective how am I gonna find how many endangered animals living in the forest you can ask Eugine we find the endangered species the females killed by the poachers it' s the only western Pacific bear at least one bear has to be protected, right?",let the lawyer of the logging company argue this since she is the only up there there' s no chance for survival anyway there had to be a male too so we get a male up there and let them together,let nature take its course the only male western Pacific bear we can find is raised in captivity never has a bear raised in captivity been successfully reintroduced to the wild they never have a world famous doctor make an introduction your man left the button open something wrong?,RB,5,701170205
+179,weird,hey Acher come over here,I think we can work it out what do I say to her? tell her a little more about yourself tell her a little more about yourself,I like walking on the beach and sharing pop corns with someone and also the sound of back street boys you' re weird weird?,Isn' t sexy,JJ,5,11556427
+180,out,One day all the sources in town dried out.,In those days there lived a dragonking and a woman.,The let the sources drie out out of revenge.,Nobody dared fight the dragons... but Kao lang volunteered.,RB,3,741601852
+181,sing,"Crushed when he caught his wife cheating, he' s feeling older, he looks around and says ""Maybe it' s time I get mine.""",Guy named Peterson tried the same.,Now he' s a houseguest in Sing Sing.,I' m sure you know him better than I do.,VB,4,11114001
+182,hot,It' s a hot dog.,It' s a hot dog.,It' s a hot hot dog.,It' s a hot dog.,JJ,3,159287179
+183,louie,(captain) Please put your seats to the upright position..... in preparation for our arrival in Puerto Vallarta.,"(""Louie Louie"" by The Kingsmen)",Louie Louie,"Oh, no",VB,5,1252710
+184,something,"Okay, maybe I wasn t allowed on the property, but that didn' t mean I couldn t keepan eye on her",And then she did something that sent me over the edge,I knew I had to do something something drastic to salvage what little I had left,I got the ten thousand.,NN,9,131836210
+185,squash,You bet!,Because I need a partner tomorrow at 5: 00.,"- Oh, squash squash!",- You know.,VB,6,3985349
+186,something,"Okay, maybe I wasn t allowed on the property, but that didn' t mean I couldn t keepan eye on her",And then she did something that sent me over the edge,I knew I had to do something something drastic to salvage what little I had left,I got the ten thousand.,NN,9,131836210
+187,woo,Bloody English wizards.,They cannot do anything right.,Woo woo.,"Ah, here we go.",VB,3,2718146
+188,woo,Woo woo.,"Ah, here we go.",Woo woo.,I like your chariot.,VB,3,2718146
+189,party,Will you?,Hm?,"Oh, you mean a party party?",Like for everyone' s fun.,NN,5,144707500
+190,ever,Now flash your teeth,Not like a grimace but more relaxed...,Now pull the sides of your mouth ever ever closer to the ears...,And don' t forget to blink your eyes,RB,4,100264634
+191,something,Hello?,Who' s this?,- Somebody from something something.,- Okay.,NN,9,131836210
+192,friend,This guy' s your girl' s best friend?,No.,"I mean, I like to consider myself her best friend...... but Andrew is her best friend friend, if that makes any sense.",You ought to golf yourself.,NN,6,154527125
+193,friend,This guy' s your girl' s best friend?,No.,"I mean, I like to consider myself her best friend...... but Andrew is her best friend friend, if that makes any sense.",You ought to golf yourself.,NN,6,154527125
+194,something,Hello?,Who' s this?,- Somebody from something something.,- Okay.,NN,9,131836210
+195,friend,This guy' s your girl' s best friend?,No.,"I mean, I like to consider myself her best friend...... but Andrew is her best friend friend, if that makes any sense.",You ought to golf yourself.,NN,6,154527125
+196,business,Mm.,Erm...,"Listen, why don' t I give you a lift and then we can talk about this state business business in the car.",OK.,NN,8,637134177
+197,cher,- lt´s called Honey and the Beaze.,"Cher plays Honey, I have the role of Mack Beasley.",- Cher Cher?,- One of the nicest women.,NN,4,1720213
+198,hunka,- There' s gotta be a card...,- Is that Michael?... for a redhead from...,- I can' t see.... a newly smitten hunka hunka burning love.,I mean...,NN,5,38692
+199,weird,I don' t know.,She' s being weird.,"Normal weird, or weird weird?",- She found this.,JJ,5,11556427
+200,electricity,But nuclear power is supposed to be very stable.,"Yes, I suppose it is.",But isn' t electricity electricity?,Whether it comes from nuclear power or water power?,NN,11,15377549
+201,have,"You shouldn' t have to wake up day after day after that, trying to understand how in the world you didn' t know.","The light just never went on, you know.","I must have have known, of course, but I was too scared to see the truth.",Then fear just makes you so stupid.,VB,4,1564202750
+202,night,Airplane into the hangar.,Zzz -- ow!,"AII right, pumpkin, night night.","'Night, Mom.",NN,5,130531484
+203,zip,<i>You my electrical lip balm flava </ i>,<i>I gotta do ya till</ i> <i>the next song saves ya </ i>,"<i>Can I get a little zip zip</ i> <i>Looky, looky </ i> ","<i>Maybejust a little uh</ i>- <i>uh </ i> <i>Looky, looky </ i>",VB,3,70551270
+204,hunka,For a redhead from...,- I can' t see.,A newly smitten hunka hunka burning love.,I mean...,NN,5,38692
+205,something,Hello?,Who' s this?,- Somebody from something something.,- Okay.,NN,9,131836210
+206,lambda,Yeah.,Everybody except for...,Lambda Lambda Lambda.,Here' s one that will see us.,NN,6,9279528
+207,lambda,Lambda Lambda Lambda.,Here' s one that will see us., Lambda Lambda Lambda?,Yeah.,NN,6,9279528
+208,lambda,# (Betty) We prefer your high lQs,# To their great big... jocks,# Lambda Lambda Lambda boys,# Really are the best,NN,6,9279528
+209,lambda,# Won' t you take a piece of Pi?,# And we' il do the rest,"The sisters of Pi welcome our newest fraternity, Lambda Lambda Lambda.",We' d like to be escorts to your party Saturday night and help out in any way possible.,NN,6,9279528
+210,lambda,"Poindexter, do you wanna fuck or not?",- (she roars) - Agh!,"You know, if we get into Lambda Lambda Lambda, we could be partners in the homecoming carnival.",- That' d be so great.,NN,6,9279528
+211,lambda,# Old MacDonald had a farm,# E- l- E- l- O (jeering),We' il never get into Lambda Lambda Lambda now.,Those jocks ruined everything.,NN,6,9279528
+212,lambda,"- Now say ""Hi, UN.""","- (all) Hi, UN."," Well, I' d like to propose a toast to UN Jefferson, who, in his ultimate wisdom, chose to accept us into our new fraternity, Lambda Lambda Lambda.",(all) Lambda Lambda Lambda.,NN,6,9279528
+213,lambda,"- (all) Hi, UN.","(Lewis) Well, I' d like to propose a toast to UN Jefferson, who, in his ultimate wisdom, chose to accept us into our new fraternity, Lambda Lambda Lambda.", Lambda Lambda Lambda.,"Before we take this matter to a vote, I would like it clearly stated in the record...",NN,6,9279528
+214,lambda,(well- played violin riff),"# Clap your hands, everybody And everybody clap your hands",# We' re Lambda Lambda Lambda and Omega Mu,# We come here on stage tonight to do our show for you,NN,6,9279528
+215,lambda,(wild cheering and applause),"I' d like to present the trophy to this year' s champions,",Lambda Lambda Lambda and Omega Mu.,They will be able to select the president of next year' s Greek Council.,NN,6,9279528
+216,lambda,Nerds!,What are we waitin 'for?!,# We' re Lambda Lambda Lambda and Omega Mu  Nerds!,Nerds!,NN,6,9279528
+218,tricky,* It' s tricky to rock around *,"* To rock around, that' s right on time, it' s tricky *","* It' s tricky Tricky, tricky, tricky *","* It' s tricky to rock around torock around, that' s right, on time *",JJ,6,2350431
+219,tricky,* We know who' s inside *,"* It' s tricky to rock around, to rock around, that' s right, on time *","* It' s tricky Tricky, tricky, tricky *",Isn' t he just the cutest little thing?,JJ,6,2350431
+220,tricky,Isn' t he just the cutest little thing?,"Oh, yeah, Kyle' s the man!","* Tricky, tricky Tricky, tricky **",** [Minnie Riperton.:,JJ,6,2350431
+221,kiss,"So, you will try?",- I' il do my best.,- Kiss kiss.,Mrs Potter is coming!,VB,4,14790481
+222,love,Ain 't got no sense ofpride Pride,"Boy, yougot a weirdperception now Yo",Ofwhat is it to love Love,Andlam sure because Because,NN,4,201063526
+223,tricky,* It' s tricky to rock around *,"* To rock around, that' s right on time, it' s tricky *","* It' s tricky Tricky, tricky, tricky *","* It' s tricky to rock around torock around, that' s right, on time *",JJ,6,2350431
+224,tricky,* We know who' s inside *,"* It' s tricky to rock around, to rock around, that' s right, on time *","* It' s tricky Tricky, tricky, tricky *",Isn' t he just the cutest little thing?,JJ,6,2350431
+225,tricky,Isn' t he just the cutest little thing?,"Oh, yeah, Kyle' s the man!","* Tricky, tricky Tricky, tricky **",You mean never?,JJ,6,2350431
+226,shout,# Shout shout shout shout shout shout #,# Shout shout shout shout shout shout shout shout #,"# Shout shout shout, oh, shout #",# Whoa!,VB,5,3965861
+227,class,"Yes, you did, class, first class aII the way.",You were not Iying.,Class class class.,They' ve got some kind of seasoning on here.,NN,5,191087771
+228,very,- How?,- What do you mean how?,She was a very very family- oriented girl.,And she was very into her grandmother.,RB,4,334923368
+229,very,That is exactly the kind of nervous overall behavior that leads to...,Pictues of Sebby with busty brunettes.,A very very big raise.,Jesus!,RB,4,334923368
+230,great,What is there?,"Oh, my God!",It' s my great great grandfather.,That' s his signature.,JJ,5,301487430
+231,lop,Earl...!,- Whad up?,Nescobar A Lop Lop.,It wasn' t easy but the hard things in life never are.,VB,3,455673
+232,wha,"It is true, he just hasn' t found you yet But he will.","As he' s leaving, guess what he says? ""date doctor, my ass!""",Err... wha wha what does that mean?,It means he' s really out there.,NN,3,673618
+233,lie,What should be toast to?,"Never lie, steal, cheat or drink!",But if you must lie lie in the arms of the one you love.,If you have to steal steal away from bad company.,VB,3,13533542
+234,steal,"Never lie, steal, cheat or drink!",But if you must lie lie in the arms of the one you love.,If you have to steal steal away from bad company.,If you must cheat cheat death.,VB,5,6257493
+235,cheat,But if you must lie lie in the arms of the one you love.,If you have to steal steal away from bad company.,If you must cheat cheat death.,And if you must drink drink in the moments that take your breath away.,VB,5,9903572
+236,drink,If you have to steal steal away from bad company.,If you must cheat cheat death.,And if you must drink drink in the moments that take your breath away.,Did you make that up?,VB,5,29254937
+237,very,Taxi!,Mr. Hitchens,"Mrs. Cole, thanks very very much for seeing me.",You said it was a matter of life and death.,RB,4,334923368
+238,anything,# It happens every time,# Na- na- na na- na na- na na- na,# I can do anything Anything,# Na- na- na na- na na- na na- na #,NN,8,75985266
+239,sing,"Yes, you are, you are very good.",So where did you do your stretch?,Sing Sing?,Alcatraz?,VB,4,11114001
+240,long,"Foot on ball, and pull.",Go.,"OK. ""I got a long long day ahead of me""  Yeah!",Tap.,RB,4,252519588
+241,hide,- It' s okay.,- No no no no.,Hide hide hide!,Please please please.,VB,4,27157035
+242,special,I' m diggin 'talkin' with ya.,You' re a really enlightened cat and I like that about ya.,I think you' re a special special man.,"Okay, come in for the real thing.",JJ,7,244311841
+243,whoa,She' s trying to kill me!,- Grandma!,- Whoa whoa!,- Get the gun from her!,NN,4,1286431
+244,good,What an idiot!,"Oh, what a loser!",Good good!,More for me and you.,JJ,4,365796396
+245,whoa,That' s what makes today so special.,We witness two people choosing to marry ones they truly love.,"Whoa whoa, hey!",Hey hey!,NN,4,1286431
+246,deeply,How tall are you son?,- 6' 2 - 6' 2?,I deeply deeply love,"Whoo, 6' 2?",RB,6,7641115
+247,shake,I need you to go out here be cool,Try not to chunk can you do that?,"Give me some shake shake your base, you know","Double it up, you understand? allright?",VB,5,6839319
+248,wop,Come on.,"(# The Chiffons, One Fine Day)","# Shoo be do be do be do be do wop wop, shoo be do be do be do be do wop wop #","Come on, throw it.",NN,3,558906
+249,wop,"- Are you ready, TJ?",- Bugger off.,# You' re gonna want me for your girl # Shoo be do be do be do be do wop wop,"# Oh, yeah #",NN,3,558906
+250,wop,"# Oh, yeah #","All right, batter, batter.",# The arms I long for will open wide # Shoo be do be do be do be do wop wop,# And you' il be proud to have me # Shoo be do be do be do be do wop wop,NN,3,558906
+251,wop,"All right, batter, batter.",# The arms I long for will open wide # Shoo be do be do be do be do wop wop,# And you' il be proud to have me # Shoo be do be do be do be do wop wop,# Right by your side # Shoo be do be do be do be do wop wop,NN,3,558906
+252,wop,# The arms I long for will open wide # Shoo be do be do be do be do wop wop,# And you' il be proud to have me # Shoo be do be do be do be do wop wop,# Right by your side # Shoo be do be do be do be do wop wop,# One fine day,NN,3,558906
+253,wop,# Right by your side # Shoo be do be do be do be do wop wop,# One fine day,# You' re gonna want me for your girl # Shoo be do be do be do be do wop wop #,- Move back.,NN,3,558906
+254,wop,"# When you want to settle down, oh! #","Be nice to me, Jeffrey.","# One fine day, we' il meet once more # Shoo be do be do be do be do wop wop #",- Out!,NN,3,558906
+255,wha,"It is true, he just hasn' t found you yet But he will.","As he' s leaving, guess what he says? ""date doctor, my ass!""",Err... wha wha what does that mean?,It means he' s really out there.,NN,3,673618
+256,lie,What should be toast to?,"Never lie, steal, cheat or drink!",But if you must lie lie in the arms of the one you love.,If you have to steal steal away from bad company.,VB,3,13533542
+257,steal,"Never lie, steal, cheat or drink!",But if you must lie lie in the arms of the one you love.,If you have to steal steal away from bad company.,If you must cheat cheat death.,VB,5,6257493
+258,cheat,But if you must lie lie in the arms of the one you love.,If you have to steal steal away from bad company.,If you must cheat cheat death.,And if you must drink drink in the moments that take your breath away.,VB,5,9903572
+259,drink,If you have to steal steal away from bad company.,If you must cheat cheat death.,And if you must drink drink in the moments that take your breath away.,Did you make that up?,VB,5,29254937
+260,very,Taxi!,Mr. Hitchens,"Mrs. Cole, thanks very very much for seeing me.",You said it was a matter of life and death.,RB,4,334923368
+261,sing,"Yes, you are, you are very good.",So where did you do your stretch?,Sing Sing?,Alcatraz?,VB,4,11114001
+262,long,Go.,OK.,I got a long long day ahead of me  Yeah!,Tap.,RB,4,252519588
+263,smoke,I was gonna steal a cigarette.,Your mother doesn' t smoke.,"Not smoke smoke, but she used to... once in a while.",She had the same pack of Newport Lights in there for seven years.,VB,5,16567733
+264,long,Go.,OK.,# I got a long long day ahead of me #  Yeah!,Tap.,RB,4,252519588
+265,liar,I am going to tell her.,"You should totally tell her, man.","I`m going to. `Cause I watched this movie called Liar Liar... and the message was, ``Don`t lie. ``",And that was a smart movie.,VB,4,1819814
+266,tin,"Did you ever meet any of the old stars, then?","What, are you kiddin '?","I took Rin Tin Tin out f or a shit, f or Christ' s sakes.","Ah, hey, you talk about stars, uh --",NN,3,10695557
+267,wah,Yuck!,The maudlin music of the university station?,Wah wah wah!,Yuck!,NN,3,1423019
+268,whoa,"# Do you love me, Mary Jane?",# Yeah,# Whoa whoa whoa,"# Do you, do you, do you, do you, do you",NN,4,1286431
+269,very,We want Max to be in the best school.,- This is it.,- Because he' s a very very bright kid.,- Really bright.,RB,4,334923368
+270,ever,"We' re gonna play a special game,",But you can' t tell anybody.,"Never, ever ever.",Now what I want you to do is put your hand down here and pull very gently,RB,4,100264634
+271,ever,Get Mummy.,"What do you mean ""no""?","Never, ever ever.",You know the best part?,RB,4,100264634
+272,shit,Oh Felicia...,Where the Fuckawei?,Shit shit shit!,"Well, I' ve had a look around and I think we can safely assume that I now know less about motors than I did when I first lifted that... bonnety thing.",VB,4,14058658
+273,gobble,Ahem.,I' il see you tomorrow then.,Gobble gobble.,[Imitates Turkey],NN,6,322005
+274,real,Excuse me.,I' m gonna have to have you sign this little sheet of paper here.,"Well, my agent would be real real miffed with me if I --",This doesn' t have to do with your deal.,JJ,4,297674493
+275,very,- You wanna to help me?,- Redemption.,Loss and redemption is very very good.,Shit.,RB,4,334923368
+276,chim,I will never forget you.,Thank you very much.,"Chim chiminy, Chim chiminy Chim chim cheree",A sweep is as lucky as lucky can be,NN,4,282620
+277,chim,"Chim chiminy, Chim chiminy Chim chim cheree",A sweep is as lucky as lucky can be,"Chim chiminy, Chim chiminy Chim chim cheroo",Good luck will rub off when he shakes hands with you,NN,4,282620
+278,chim,"Chim chiminy, Chim chiminy Chim chim cheroo",Good luck will rub off when he shakes hands with you,"Chim chiminy Chim chim cheree, chim cheroo",Rum diddly- diddly- diddly Rum diddle- die,NN,4,282620
+279,chim,Just a spoonful of sugar helps the medicine go down,In the most delightful way,"Chim chiminy, Chim chiminy Chim chim cheroo",I does what I likes And I likes,NN,4,282620
+280,chim,"Well, not Royal Academy, I suppose.","Still they' re better than a finger in your eye, ain' t they?","Chim chiminy, Chim chiminy Chim chim cheroo",I draws what I likes and I likes what I drew,NN,4,282620
+281,chim,"- Bye, Jane and Michael.","- Bye, Bert.","Chim chiminy, chim chiminy Chim chim cheroo",La dum da da dum da da da da dum,NN,4,282620
+282,chim,I only observe that a father can always do with a bit of help.,"Come on, I' il take you home.","Chim chiminy, chim chiminy Chim chim cheree",A sweep is as lucky as lucky can be,NN,4,282620
+283,chim,"Chim chiminy, chim chiminy Chim chim cheree",A sweep is as lucky as lucky can be,"Chim chiminy, chim chiminy Chim chim cheroo",Good luck will rub off when I shakes hands with you,NN,4,282620
+284,chim,Though I spends me time in the ashes and smoke,In this whole wide world there' s no happier bloke,"Chim chiminy, chim chiminy Chim chim cheree",A sweep is as lucky as lucky can be,NN,4,282620
+285,chim,"Chim chiminy, chim chiminy Chim chim cheree",A sweep is as lucky as lucky can be,"Chim chiminy, chim chiminy Chim chim cheroo",Good luck will rub off when I shakes hands with you,NN,4,282620
+286,chim,"Chim chiminy, chim chiminy Chim chim cheroo",Good luck will rub off when I shakes hands with you,"Chim chiminy, chim chiminy Chim chim cheree",A sweep is as lucky as lucky can be,NN,4,282620
+287,chim,"Chim chiminy, chim chiminy Chim chim cheree",A sweep is as lucky as lucky can be,"Chim chiminy, chim chiminy Chim chim cheroo",Good luck will rub off when I shakes hands with you,NN,4,282620
+288,chim,"Quite nice, but we should all get in out of the night air.","Follow me, please.","Chim chiminy, chim chiminy Chim chim cheree",When you' re with a sweep you' re in glad company,NN,4,282620
+289,chim,When you' re with a sweep you' re in glad company,Nowhere is there a more happier crew,"Then them what sings chim chim cheree, chim cheroo",Chim chiminy chim chim,NN,4,282620
+290,chim,Nowhere is there a more happier crew,"Then them what sings chim chim cheree, chim cheroo",Chim chiminy chim chim,Cheree chim cheroo,NN,4,282620
+291,piu,"There' re many people here, let' s go over there.","I' m Wan Tin Sau, and you?",Lau Piu Piu.,What do you want to learn?,NN,3,361747
+292,piu,- Hello.,It' s you?,I' m Lau Piu Piu.,"I' m your fans, can I' ve your autograph, please?",NN,3,361747
+293,piu,He' s on my side...,Call the ambulance!,Piu Piu.,What' s going on?,NN,3,361747
+294,piu,What are you looking at?,"Fight back, nuts!","Piu Piu, I love you.",Wait,NN,3,361747
+296,love,"ln a spin, loving the spin",l' m in under that,Old black magic called love Love,"Love, love, love",NN,4,201063526
+297,lopo,Natasha Cohn,ENGLlSH SDH,Subtitles ripped 6. nov. 2002 by Lopo lopo@ losys. sk,Somewhere in the vaults of a bank in London... is a tin dispatch box with my name on it.,NN,4,24780
+298,boom,"Come on down, buddy.",Come on.,"Match in the gas tank, boom boom","Match in the gas tank, boom boom",NN,4,7869145
+299,boom,Come on.,"Match in the gas tank, boom boom","Match in the gas tank, boom boom","Match in the gas tank, boom boom",NN,4,7869145
+300,boom,"Match in the gas tank, boom boom","Match in the gas tank, boom boom","Match in the gas tank, boom boom","Match in the gas tank, boom boom",NN,4,7869145
+301,boom,"Match in the gas tank, boom boom","Match in the gas tank, boom boom","Match in the gas tank, boom boom",Boom boom boom boom,NN,4,7869145
+302,boom,"Match in the gas tank, boom boom",Boom boom boom boom,"Match in the gas tank, boom boom {y: i} Good boy.","Come on down, buddy.",NN,4,7869145
+303,sweet,"- Well, you folks take care.","- Good to see you, Randy.",# I used to be such a sweet sweet thing 'til they #,# Got a hold of me #,JJ,5,32311923
+304,sing,His name was Angelo.,- He' s handsome.,My old man was executed at Sing Sing in '59...... for murder.,I was 8.,VB,4,11114001
+305,never,I didn' t know you were out.,"When you get tired of Cagney and Lacey, find me.",Ding Don' t you never never say that we' re through Ding,[Jew' s Harp Twanging],RB,5,149556758
+306,totally,"Please i' il do anything, just dont kill me. ""","And then right when he said that, Marty just walked up to him, and - wacked him in the heart with his knife.",The whole thing was just totally totally extreme.,Wait... you want somebody to take you out there to move the body?,RB,7,24276857
+307,food,- Didn' t really bring anything.,- You didn' t bring any food?,- Not food food.,A bit of gum.,NN,4,180144029
+308,very,That' s your love line.,That' s your money line.,And that' s looking very very good.,"And that' s your life line, going all the way down...",RB,4,334923368
+309,very,That' s your love line.,That' s your money line.,And that' s looking very very good.,"And that' s your life line, going all the way down...",RB,4,334923368
+311,light,That wiII do very weIl.,"Thank you very much, Iadies and gentlemen.","She came towards me...... with the light, like it was the light light of heavenly grace.","And the thing that flashed in me gulliver...... was that I' d like to have her there on the floor...... with the old in- out, real savage.",JJ,5,126699632
+313,light,That will do very well.,"Thank you very much, ladies and gentlemen.",She came towards me...... with the light like it was the light light of heavenly grace.,And the thing that flashed in me gulliver...... was that I' d like to have her there on the floor...... with the old in- out.,JJ,5,126699632
+314,black,But I did not snuff it.,If I had snuffed it...... l would not be here to tell what I told have.,"I came back to life after a long, black black gap...... of what might have been a million years.","He' s recovered consciousness, Doctor.",JJ,5,244690155
+315,sing,Dean Keaton was under indictment a total of 7 times while he was on the force.,In every case the witnesses either reversed their testimony to the grand jury...... or died before they could testify.,When they finally nailed him for fraud he spent five years in Sing Sing.,He killed three prisioners inside.,VB,4,11114001
+316,sure,# The boy' s no good #,"# Well, I' ve finally have found what I been lookin 'for #",# But if they get a chance they' il end it for sure Sure they would #,"# Baby, I' ve done all I could # [Sighs]",RB,4,110528740
+317,sure,The boy' s no good,"Well, I' ve finally have found what I been lookin 'for",But if they get a chance they' il end it for sure Sure they would,"Baby, I' ve done all I could [Sighs]",RB,4,110528740
+318,there,Do you want some?,Okay.,Look over there there' s some DVDs.,Choose if there' s one you wanna to watch...,RB,5,701170205
+319,denial,He said he forgot the entire incident.,- That means he didn' t deny it.,- That' s a non- denial denial.,"Wichita, Kansas?",NN,6,6157847
+320,denial,"I knew we had enemies, but I didn' t know we were this popular.",Look at this!,My non- denial denial.,"Fuck it, let' s stand by the boys.",NN,6,6157847
+321,ying,It takes time...... for the eye and brain to work together,Come on,Ying Ying,Ying Ying,NN,4,1280737
+322,ying,Come on,Ying Ying,Ying Ying,"Hi, can you see now?",NN,4,1280737
+323,ying,Ying Ying,"Hi, can you see now?",I' m Ying Ying,Can you really see me?,NN,4,1280737
+324,ying,Take your time and call me if you need anything,Who' s that?,"Ying Ying, is that you?",Why are you so quiet?,NN,4,1280737
+325,ying,Are you sure?,We don' t allow any visitors here at night,Where' s Ying Ying?,She went for an operation this morning,NN,4,1280737
+326,ying,I really haven' t seen it,Perhaps you should ask someone else,Ying Ying!,"Excuse me, I' d like to talk to her",NN,4,1280737
+327,then,Go play with the troupe!,I can accept you pretending to be blind,But even then then you didn' t isolate yourself here,I just want to help,RB,4,369928941
+328,ying,Mun!,Sis.,"Ying Ying, what are you doing here?",I can leave the hospital now,NN,4,1280737
+329,ying,"I' m so happy that you can see now,",because this world is really beautiful,Ying Ying...,It' s alright!,NN,4,1280737
+330,ying,Be strong and things will work out for the best,I have to go now,Ying Ying!,"Wong Kar Mun, I want to tell you¡ ¤¡¤¡¤",NN,4,1280737
+331,ying,Ying Ying!,"Wong Kar Mun, I want to tell you¡ ¤¡¤¡¤",Ying Ying has already...,I know...,NN,4,1280737
+332,ying,I know she' s dead,What are you looking at?,Ying Ying,Can you see her?,NN,4,1280737
+333,ying,"At least, I get to see the people I care about",What' s this?,Ying Ying made this for you,What' s written on it?,NN,4,1280737
+334,very,- Describe it.,It' s dark.,It' s very very dark.,And there are no paintings on the wall.,RB,4,334923368
+335,really,"I do remember things, but I don' t remember being there.",I don' t remember experiencing those things.,I' m really really trying to understand.,And these...,RB,6,162033390
+336,baby,Darling.. Relax.. Don`t worry,I will be with you foever,Don`t such strong strength! you will hurt baby baby`s head is out.. so dangouse,Darling,NN,4,117696064
+337,pop,That same old cola,I wanna pop,-- Pop pop I wanna... Shasta -- I' il take it.,I cursed 37 times last week,VB,3,54140138
+338,ryu,Ryu!,Ryu,Ryu Ryu Ryu,Ryu,JJ,3,714507
+339,there,# There' s a party over here #,- Ohh! - # There' s a party over here #,# There' s a party over there There' s a party over here #,Are you ready?,RB,5,701170205
+340,sing,Be a darling and look under the bed for a pair of alligator shoes.,I' ve got to do something about how I look.,I oan' t go to Sing Sing with a green faoe.,Sing Sing?,VB,4,11114001
+341,sing,I' ve got to do something about how I look.,I oan' t go to Sing Sing with a green faoe.,Sing Sing?,It' s a ridioulous name for a prison.,VB,4,11114001
+342,sing,"It should be sad seeing kids there, but it isn' t.",They have ribbons in their hair and shine on their shoes.,"As I understand it, you' re going to visit somebody at Sing Sing.",You oan tell what kind of person a man thinks you are by the earrings he gives you.,VB,4,11114001
+343,sing,"No, I got the key.","Miss Golightly, my neighbour, kindly let me in.",Miss Golightly' s on her way to Sing Sing.,"Just visiting, of oourse.",VB,4,11114001
+344,sing,"You oan throw me out if you want, but you looked so oosy and your friend had gone, and it was getting oold out there.",And I' d heard people in New York never get to knowtheir neighbours.,"Well, how was Sing Sing?",Fine.,VB,4,11114001
+345,out,"Gee, damn!","Well, so muoh for South Amerioa.","You' re not out out for queen of the Pampas, anyway.",- Clayton Hotel.,RB,3,741601852
+347,mow,You can' t join in the middle.,I got him!,What am I asking for? papa oom mow mow.,O. K. papa oom mow mow.,VB,3,517690
+348,mow,I got him!,What am I asking for? papa oom mow mow.,O. K. papa oom mow mow.,Mike?,VB,3,517690
+349,mow,Oops.,* A papa oom mow mow mow,* papa oom mow mow,Harvey?,VB,3,517690
+350,mow,"Harvey 'is that you, boy?",* I hear that sound everywhere I go,* papa oom mow mow,* A papa oom mow mow mow,VB,3,517690
+351,mow,Over here 'you guys.,Stop it.,Sorry. * papa oom mow mow...,Harvey?,VB,3,517690
+352,toot,The van to Antwerp.,And then you take boat.,"Toot toot, America...",Five dollars each.,VB,4,335690
+353,too,"I shall in all my best obey you, madam.",This gentle and unforced accord sits smiling to my heart.,That this too too solid flesh would melt... thaw and resolve itself into a dew.,Or that the Everlasting had not fixed his canon against self- slaughter.,RB,3,176093255
+354,night,I think it sure that I have found the very cause of Hamlet' s lunacy.,"Speak on that, that I do long to hear.","My liege, and madam... to expostulate what majesty should be, what duty is... why day is day, night night, and time is time... were nothing but to waste night, day, and time.","Therefore, since brevity is the soul of wit, I will be brief.",NN,5,130531484
+355,bam,"Frankie would say, show me a fighter who' s nothing but heart, and i' il show you a man waiting for a beating.",Think i' ve only ever met one fighter who' s all heart.,My name is Dangerous Dillard fighting flipo bam bam... out of Broward county Texas.,"Dangerous showed up a couple years back, it comes to everything to LA with errilville,... new boyfriend, apparently errilville got lost, and ended up back in Texas.",NN,3,1994832
+356,good,I appreciate any help i can get.,"What you wanna do is take it to the mat see, he' s constantly moving, moving towards you, moving around ya, and moving away from ya.","Alright, now you dont want to hit him when he' s coming toward ya cause what he' s gonna do is just push you back and is gonna smuggle your punches take you by , so you watch him real carefully, keep rotating, that keeps your head moving and keep one shoulder back so you' re always ready to fire power shot, alright now go ahead now, good good, keep rotating, keep moving, that' s it, good good, keep that chin tucked in, come around keep moving, keep moving, good... yeah?","Give it a few shots, tuck that chin in, tuck that chin in, that' s good, that' s good now you get this down we' il put you on a speed bag?",JJ,4,365796396
+357,stop,"I want a trainer, i dont want charity, and i dont want favors,",if your not interested than i got more celebrating to do.,"Stop stop stop, god damnit stop.",What the hell are you doing?,VB,4,77749471
+358,mmm,If i take you on...,I' il promise I' il work so hard.,God this is a mistake already. mmm mmm i' m listening boss.,"If i take you on, you dont say anything, you dont question me, dont ask why, you dont say nigger something maybe yes frankie and i' m gonna try to forget the fact that your a girl.",VB,3,1705485
+359,good,Now what is the rule?,Protect myself at all times.,Good good.,You gave me away how is that protecting me?,JJ,4,365796396
+360,about,Véronique Passavant on July 17th 1920,"Lady, I write to you from the bar of Petit Louis, who told me about you.",I have to tell about about a meeting I have had which gave me a fright.,I was on my way to the factory of Bastoche because I was sad.,RB,5,1226734006
+361,mathilde,Manech Loves Mathilde,Manech Loves Mathilde,Manech Loves Mathilde Mathilde Loves Manech,Manech Loves Mathilde,RB,8,149882
+362,bum,And we don' t have any music.,"Well, we' il make some.",Bum bum,Bum bum bum,NN,3,1523602
+363,bum,"Well, we' il make some.",Bum bum,Bum bum bum,Bum,NN,3,1523602
+364,bum,Bum bum bum,Bum,Bum bum,Bum bum bum bum bum.,NN,3,1523602
+365,ally,"Ooh bop sha bam, shi bimmy bop","- Oh bop sha bam, shi bimmy bop - You say it!",- Ally ally ally ooh - Ally ally ally ooh,- Olly olly olly ooh - Olly olly olly ooh,NN,4,3228428
+366,olly,"- Oh bop sha bam, shi bimmy bop - You say it!",- Ally ally ally ooh - Ally ally ally ooh,- Olly olly olly ooh - Olly olly olly ooh,- Whooly ooh - Whooly ooh,RB,4,204254
+367,ambulance,HeIlo,HeIlo,Ambulance ambulance,And you' re a puppy What' s your name?,NN,9,4363682
+368,open,That' s nice Are you horny?,- Geko?,- Open open open wide,Even more As wide as you can,VB,4,239670331
+369,dad,"What, does he scream Iike that when he has nightmares?",I should go and Iook,Dad Dad!,Wake up Dad!,NN,3,15136055
+370,mathilde,Manech But Mathilde,Mathilde But Manech,Manech But Mathilde Mathilde But Manech,Manech But Mathilde,RB,8,149882
+371,bum,And we don' t have any music.,"Well, we' il make some.",# Bum bum #,# Bum bum bum #,NN,3,1523602
+372,bum,"Well, we' il make some.",# Bum bum #,# Bum bum bum #,# Bum #,NN,3,1523602
+373,bum,# Bum bum bum #,# Bum #,# Bum bum #,# Bum bum bum bum bum. #,NN,3,1523602
+374,ally,"# Hey, band, you feeling all right?! #","# Ooh bop sha bam, shi bimmy bop #","- # Oh bop sha bam, shi bimmy bop # - You say it! - # Ally ally ally ooh # - # Ally ally ally ooh #",- # Olly olly olly ooh # - # Olly olly olly ooh #,NN,4,3228428
+375,olly,"# Ooh bop sha bam, shi bimmy bop #","- # Oh bop sha bam, shi bimmy bop # - You say it! - # Ally ally ally ooh # - # Ally ally ally ooh #",- # Olly olly olly ooh # - # Olly olly olly ooh #,- # Whooly ooh # - # Whooly ooh #,RB,4,204254
+376,now,I in life did not it be to bore so.,By first month,"I bought how mad, there now now... nothing.",I will get skrêta?,RB,3,611387736
+377,thing,- You know what thing.,"- No, I don' t know what thing.",The thing thing.,"Now, let' s see, there are any number of things, um... in an afternoon full of all sorts of things, so I, um...",NN,5,97451660
+378,bridge,"I mean, you see, if I stay with you tonight, well, it' s definitely the end of something... important with someone.","Um, which has probably ended already, - but perhaps...","- Bridge, Bridge Bridge, Bridge.",Doesn' t everyone deserve a second chance?,NN,6,35180146
+379,think,But definitely not me. - # Think - # Think,# Think about what you' re trying to do to me,- # Think - # Think think,# Let your mind go...,VB,5,217856550
+380,think,- It is a fertility- snake bowl.,- Ooh.,- Jed gave it to me. - # Think think - # Let your mind go...,How romantic.,VB,5,217856550
+381,cowardly,- Leave me alone!,"- So you don' t want to see him now, eh?","You' re a cowardly custard... cowardly, cowardly custard, cowardly cowardly custard","Well, I' il just have to do it myself, then",RB,8,513225
+383,long,This story started many thousand of years ago.,But it was all over in just 7 days.,"All that long long time ago, none of the things we can see now.","The sun, the moon, the stars, the earth, animals and plants.",RB,4,252519588
+384,very,"No, no, no...",Let him answer.,At the centre of the earth. where it is very very hot.,"That' s where children goes, they' re liar, they don' t go there just for a few days.",RB,4,334923368
+385,very,"Oh, you' re not missing out anything.",You' re much better at home...,With your mummy and daddy who love you very very much.,And the intruder?,RB,4,334923368
+386,ray,- All right?,"Yo, Coach.",Kofi and Ray Ray want to play.,Is that Kofi Evans and...,NN,3,32113994
+387,ray,She said they couldn' t play ball until they do these book reports.,- Kofi ain' t doin 'shit.,- Ray Ray neither.,They' re like...,NN,3,32113994
+388,ray,He' s out!,- Strike!,"- It' s all right, Ray Ray.",Strike!,NN,3,32113994
+389,ray,Kekambas!,"Damn, Miles, you don' t even know how to throw the ball!","Shut up, Ray Ray.",At least he ran after it when it went by.,NN,3,32113994
+390,ray,You mad at me?,"Jamal, the other coach --",'Cause I' m sorry about pushing Ray Ray.,I just want to play.,NN,3,32113994
+391,ray,Last licks.,"We pull this out, we goin 'to the' ship.","Leading off, we' ve got Andre, we' ve got Ray Ray, we' ve got Clarence.","After that, it' s you, Kofi, and then we' ve got Jefferson.",NN,3,32113994
+392,ray,Strike three!,"Yeah, yeah, yeah.","Nice job, Ray Ray.",- Damn!,NN,3,32113994
+393,ray,Good luck today.,Thank you.,"- Andre, Ray Ray.","- What' s up, Coach?",NN,3,32113994
+394,spectacular,- We were just upstairs rehearsing a play.,- What?,"A play, something very modern called Spectacular Spectacular.",- And it' s set in Switzerland.,JJ,11,10602657
+395,spectacular,- Satine.,- They would dress me in the Argentinean' s best suit... and pass me off as a famous English writer.,"Once Satine heard my modern poetry, she would be astounded... and insist to Zidler that I write Spectacular Spectacular.","The only problem was, I kept hearing my father' s voice in my head.",JJ,11,10602657
+396,spectacular,The world,That' s very beautiful.,It' s from Spectacular Spectacular.,"Suddenly, with you here,",JJ,11,10602657
+397,spectacular,- It will be...,- [Glissando],Spectacular Spectacular!,No words in the vernacular,JJ,11,10602657
+398,spectacular,"So exciting, the audience will stomp and cheer",So delighting it will run for 50 years,Spectacular Spectacular No words in the vernacular,Can describe this great event You' il be dumb with wonderment,JJ,11,10602657
+399,hungry,(DONNlE) They didn' t buy me what I wanted for Christmas.,What did you want for Christmas that year?,Hungry Hungry Hippos.,"How did you feel, being denied these Hungry Hungry Hippos?",JJ,6,6217455
+400,hungry,What did you want for Christmas that year?,Hungry Hungry Hippos.,"How did you feel, being denied these Hungry Hungry Hippos?",- Regret.,JJ,6,6217455
+401,hip,- Three cheers for North Carolina!,"- All right, - Three cheers for the South!",Hip hip hurrah!,Hip hip hurrah!,NN,3,26826008
+402,hip,"- All right, - Three cheers for the South!",Hip hip hurrah!,Hip hip hurrah!,Hip hip hurrah!,NN,3,26826008
+403,hip,Hip hip hurrah!,Hip hip hurrah!,Hip hip hurrah!,"Inman, It belongs to Inman,",NN,3,26826008
+404,long,A beautiful friend.,"In fact, I made a mistake.",This game started long long ago.,It started with a sick word.,RB,4,252519588
+405,whoa,"- All right, up on the table, right now!",- Mikey:,"Whoa, whoa whoa --",Wait a second.,NN,4,1286431
+406,long,A beautiful friend.,"In fact, I made a mistake.",This game started long long ago.,It started with a sick word.,RB,4,252519588
+407,wise,Yeah.,Yearning will only make it better.,"Thank you for your words, your wise wise words.",You' re welcome.,JJ,4,13299902
+408,truly,"Truth is, he was pretty incredible.",(¶ The Fags:,Truly Truly),"¶ You' ve got a way of spinning ¶ I guess you' d call it art ¶ Doesn' t matter what the outcome is ¶ I' m sure you played your part ¶ Well, you come on like an earthquake ¶ Even though you float on through ¶ Give me just a moment' s notice ¶ I' il make due ¶ Only a fool would not believe it ¶ Only a blind man couldn' t see ¶ If you' re concerned about my heart ¶ Truly truly ¶ I' ve seen this movie a thousand times ¶ I won' t give the ending away ¶ I' ve bought a ticket so I' m entitled to stay ¶ I' ve seen this movie a thousand times ¶ And I' m not giving the ending away ¶ I' ve bought a ticket so I' m entitled to stay",RB,5,21693553
+409,truly,(¶ The Fags:,Truly Truly),"¶ You' ve got a way of spinning ¶ I guess you' d call it art ¶ Doesn' t matter what the outcome is ¶ I' m sure you played your part ¶ Well, you come on like an earthquake ¶ Even though you float on through ¶ Give me just a moment' s notice ¶ I' il make due ¶ Only a fool would not believe it ¶ Only a blind man couldn' t see ¶ If you' re concerned about my heart ¶ Truly truly ¶ I' ve seen this movie a thousand times ¶ I won' t give the ending away ¶ I' ve bought a ticket so I' m entitled to stay ¶ I' ve seen this movie a thousand times ¶ And I' m not giving the ending away ¶ I' ve bought a ticket so I' m entitled to stay","¶ Truly truly ¶ Yeah, truly truly ¶ Truly truly ¶ Yeah, truly truly ¶ Truly truly ¶ Yeah, truly truly ¶ Truly truly ¶ Yeah, truly truly ¶",RB,5,21693553
+410,truly,Truly Truly),"¶ You' ve got a way of spinning ¶ I guess you' d call it art ¶ Doesn' t matter what the outcome is ¶ I' m sure you played your part ¶ Well, you come on like an earthquake ¶ Even though you float on through ¶ Give me just a moment' s notice ¶ I' il make due ¶ Only a fool would not believe it ¶ Only a blind man couldn' t see ¶ If you' re concerned about my heart ¶ Truly truly ¶ I' ve seen this movie a thousand times ¶ I won' t give the ending away ¶ I' ve bought a ticket so I' m entitled to stay ¶ I' ve seen this movie a thousand times ¶ And I' m not giving the ending away ¶ I' ve bought a ticket so I' m entitled to stay","¶ Truly truly ¶ Yeah, truly truly ¶ Truly truly ¶ Yeah, truly truly ¶ Truly truly ¶ Yeah, truly truly ¶ Truly truly ¶ Yeah, truly truly ¶",Can you believe this?,RB,5,21693553
+411,hip,- All right.,- Three cheers for the South!,Hip hip hurrah!,Hip hip hurrah!,NN,3,26826008
+412,hip,- Three cheers for the South!,Hip hip hurrah!,Hip hip hurrah!,Hip hip hurrah!,NN,3,26826008
+413,hip,Hip hip hurrah!,Hip hip hurrah!,Hip hip hurrah!,Inman.,NN,3,26826008
+414,truly,"Truth is, he was pretty incredible.",(The Fags:,Truly Truly),You' ve got a way of spinning,RB,5,21693553
+415,truly,Only a blind man couldn' t see,If you' re concerned about my heart,Truly truly,I' ve seen this movie a thousand times,RB,5,21693553
+416,truly,And I' m not giving the ending away,I' ve bought a ticket so I' m entitled to stay,Truly truly,"Yeah, truly truly",RB,5,21693553
+417,truly,I' ve bought a ticket so I' m entitled to stay,Truly truly,"Yeah, truly truly",Truly truly,RB,5,21693553
+418,truly,Truly truly,"Yeah, truly truly",Truly truly,"Yeah, truly truly",RB,5,21693553
+419,truly,"Yeah, truly truly",Truly truly,"Yeah, truly truly",Truly truly,RB,5,21693553
+420,truly,Truly truly,"Yeah, truly truly",Truly truly,"Yeah, truly truly",RB,5,21693553
+421,truly,"Yeah, truly truly",Truly truly,"Yeah, truly truly",Truly truly,RB,5,21693553
+422,truly,Truly truly,"Yeah, truly truly",Truly truly,"Yeah, truly truly",RB,5,21693553
+423,truly,"Yeah, truly truly",Truly truly,"Yeah, truly truly",Roses?,RB,5,21693553
+424,proud,"Oh, God!","My nose, sir, is enormous!",Cretinous moron a man ought to be proud proud of such an appendix.,"A great nose may be an index of a great soul - kind, endowed with liberality and courage...",JJ,5,17167504
+425,exciting,What do you wanna do in New York?,Study,That' s exciting exciting!,It really is,JJ,8,16900145
+427,there,- For always?,Five targets live yet.,Thus there there yet five must be killed.,"In the beginning, you had it trouble with.",RB,5,701170205
+428,tin,- And Judy and her daughter Liza next week.,"No, no.",You' re interviewing Rin Tin Tin!,I' il talk to Mr. Paley.,NN,3,10695557
+429,there,- For always?,Five targets live yet.,Thus there there yet five must be killed.,"In the beginning, you had it trouble with.",RB,5,701170205
+430,there,I' m sure there are people in the other cars,"Still, it' s a bit creepy","See, look over there there' s someone",Who is in there?,RB,5,701170205
+431,have,I can bring you no relief before three days.,And if the Germans do attack tonight or tommorow as its suggested they would.,- We' iljust have have to deal with them.,- Yes sir!,VB,4,1564202750
+432,karol,"The widow of a French composer who died last year, Julie Vignon.","Steven Killian, English citizen, barman on the ferry.","A businessman from Poland, Karol Karol.","Dominique Vidal, French citizen.",NN,5,390229
+433,never,"Fancy gloves, oh","Wears old Macheath, babe",So there' s never Never a trace of red,"Now on the sidewalk uh- huh, uh- huh",RB,5,149556758
+434,karol,"The widow of a French composer who died last year, Julie Vignon.","Steven Killian, English citizen, barman on the ferry.","A businessman from Poland, Karol Karol.","Dominique Vidal, French citizen.",NN,5,390229
+435,sex,You saw this woman alone.,"You had wine, a back rub, you kissed.",And then this non- sex sex thing.,You took off her panties.,NN,3,320105999
+436,sweetheart,Will you stop?,How long can Anna keep him there?,Sweetheart Sweetheart,Sweetheart,NN,10,1767766
+437,there,"I have no friends, haven' t you understood, not one!","Mum hasn' t understood anything, anyway.","Hey, there there...",'Cause she can' t understand these things...,RB,5,701170205
+438,boom,But nobody knew how crazy.,Her room smelled of dead flowers and cat piss.,Boom boom.,Chicka- boom!,NN,4,7869145
+439,something,What actor?,"Oh, it has an A in it...... it' s, oh, you know...",Something something something he has,Three names....,NN,9,131836210
+440,timmy,Here.,"Hey, did anyone watch Leno last night?","Timmy, Oh Timmy Timmy come over and sit on Grandma' s lap Timmy, Timmy, what?",Timmy.,JJ,5,726546
+441,oink,"I like ""The full blossom of the evening"".","Hey, Snake.",Don' t take any oink oink off that pretty pig.,Don' t you worry about that.,VB,4,214048
+442,just,Can you help me out?,I need some toilet paper I ran out,Just just go out to the next stall,Come on help me out,RB,4,462836169
+443,just,- Phone?,"- Phone... if there was one we' il wait for help, so...",Iet' s just just wait for help,"Okay, I' il give you a boost",RB,4,462836169
+444,very,He took the kids to the zoo,The zoo?,That' s very very sweet,Which zoo?,RB,4,334923368
+445,really,- Think about it what' d you see?,- I saw them kill him,"No, what' d you really really see?","This whole time, special effects... squibs squibs like in the movies Nicholas, Nicholas listen",RB,6,162033390
+446,call,one pill makes you larger and one pill makes you small and the ones that mother gives you don' t do anything at all,Go ask goddess... when she' s 10feet tall,And if you go chasing rabbits and you know you' re going to fall tell him I' il hook her smoking caterpillar has given you the call call Alice... when she was just small when the men on the chess board get up and tell you where to go and you just have some kind of mushroom and your mind is moving on go ask Alice,I think she' il know when logic and proportion have fallen so all be dead and the white knight is talking backwards and my red queens all in her head remember that the dog have said...,VB,4,199608869
+447,run,He can' t see you if you' re wet,He' s coming,Run Run,"Oh, no The jacket' s too short",VB,3,117213565
+448,very,"There you go, guys.","This is a very kind offer, Mr Kirby.",I' m a very very busy man.,I can recommend a couple of guys who is highly qualified that...,RB,4,334923368
+449,mighty,Hi.,#... brick house #,"# She' s mighty mighty, #",# Just lettin 'it all hang out #,RB,6,7268735
+450,mighty,(moaning),"# Ow, she' s a brick house #","# Yeah, she' s mighty mighty, just lettin 'it all hang out #","# Ow, she' s a brick house #",RB,6,7268735
+451,mighty,"# 36- 24- 36, what a winning hand #","# Ow, she' s a brick house #","# Yeah, she' s mighty mighty, just lettin 'it all hang out #","# Ow, she' s a brick house #",RB,6,7268735
+452,mighty,# Sure enough can knock a strong man to his knees #,# She' s a brick house #,"# Yeah, she' s mighty mighty just lettin 'it all hang out #","# Ow, she' s a brick house #",RB,6,7268735
+453,doctor,I think another murder will happen ah,"listen, I wantyou to stop pushing him out what happen, is my baby ok? his neck is stuck, the baby is in danger in this afternoon accident, two people die one of them is die after safe because of the shake of the ambulance make the airbag explore and cause the girl die she is waiting help in the car suddenly the air beg explore","where is Elizeberth we must help the baby, call the doctor doctor Calrs please, plese come to room 6 the baby cant come out, how?",you want to die where are you going go to find Eugene doctor Cals here,NN,6,39845710
+454,home,Hunt.,Home!,"# Home, sweet home Home, sweet home","# Home, sweet home Home, sweet home",NN,4,1276852170
+455,home,Home!,"# Home, sweet home Home, sweet home","# Home, sweet home Home, sweet home","# Home, home, home # (Rabbit) Ohh...",NN,4,1276852170
+456,wait,And you are?,- Kirk' s the name.,Wait wait.,Captain Kirk?,VB,4,39001376
+457,sugar,Okay you know what?,I' m coming with you.,"I' m starting to get diabetes from all this ""sugar sugar"" over here.",- What aboutyou Studly Doolittle?,NN,5,22450333
+458,wait,Said so huh?,Maybe I should just -,Wait wait wait.,I think I feel some rain coming.,VB,4,39001376
+459,hurry,Everybody!,- We just need to - - Lock the door!,Hurry hurry!,What?,VB,5,3536968
+460,sing,"Good day, gentlemen.",Remember I told you I knew the man with the whiskers?,Do you remember that artist in Sing Sing who painted The Last Supper on his cell?,Hendricks.,VB,4,11114001
+461,sing,"- Bless you, Mr. Shane.","- Thank you, Miss Allen.",By the time this guy gets out of Sing Sing... this head will grow a long beard.,English,VB,4,11114001
+462,very,What is it?,There' s only two possibilities.,Either i' m going out of my mind or something very very strange is happening.,"Look, take it easy.",RB,4,334923368
+463,crap,"we interrupt this program to bring you a special broadcast dunwich a state of emergency, effective immediately within dunwich county all citizens are requested to return to their homes as quickly as possible in case of necessity contact this station, radio wdwc the telephone number is 825...",mind telling me what' s going on?,The dead are leaving their tombs that' s a load of crap crap or not i' m taking my money i' m closing my doors until tomorrow morning and i' m not opening it for anybody,i believe father thomas is buried in the family tomb over there,NN,4,7169097
+464,doo,"In the new year, Pooh year, too!",Deedledum,Ooh dee la doo doo ho ho ho ho,There.,VB,3,4102101
+465,listen,"- So come on, come on He won' t listen to me","- Ah, Ah- ah- ah Oh- oh- oh","- Come on, listen Listen to me",- Come on and listen to me,VB,6,43252527
+466,listen,"- Ah, Ahh Oh- oh- oh- oh",- Come on Listen to me,"- Come on, listen Listen to me","- Ah- ah- ahh Ohh, oh- oh- ohh",VB,6,43252527
+467,very,You know whatelse I want to do?,"I want to clean up this place, just get rid of all the fucking junk.","Probably look like I' m a terrible housekeeper, which I sometimes am...... but I can also be very very, you know, organised and neat.",And I wanna do more of that.,RB,4,334923368
+468,sure,"ln the books, it' s the 22th immutable laws of marketing.","The 4th law is the law of perception, which is:",we analyze a situation to make sure sure that the truth is on our side.,But it' s an illusion.,RB,4,110528740
+469,jar,"Deesa bad times, bombad times.","She didn' t even recognize me,",Jar Jar.,I thought about her every single day since we parted.,NN,3,6549211
+470,jar,I take on this responsibility with deep humility tinged with and overwhelming pride.,It is not every day that I am called upon to...,"You' re a good friend, Jar Jar.",I don' t wish to hold you up.,NN,3,6549211
+471,have,Even in my adventures since I haven' t seen a more beautiful place.,Everything is different now...,Time may have have distorted the history of your memory.,"It must be difficult having sworn your life to the Jedi, not being able to do the things you like.",VB,4,1564202750
+472,fucky,- Fuck!,"Hey you, come back.",Fucky fucky?,You know the Tenia?,JJ,5,19915
+473,good,"- I am hungry, that so your?","- I believe that I am going to happen, thanks",This good Good night,"Ohhh, Michael!",JJ,4,365796396
+474,jar,Obi!,Mesa so smilen to seein yousa!,"- Good to see you again, Jar Jar.",- Senator Padmé.,NN,3,6549211
+475,jar,"I' il have an offiicer stationed on every floor, and I' il be in the control center downstairs.","Mesa busten wit happiness seein yousa again, Ani.","She hardly even recognized me, Jar Jar.","I' ve thought about her every day since we parted, and... she' s forgotten me completely.",NN,3,6549211
+476,jar,Mesa honored to be taking on dissa heavy burden.,"Mesa accept this with muy, muy humility and, uh --","Jar Jar, I don' t wish to hold you up.",I' m sure you have a great deal to do.,NN,3,6549211
+477,aha,Save me from my self.,You' re insane Goldmember!,"And ""That' s the way aha aha I like it"", ""KC and the sunshine band"".","Alright Goldmember, don' t play the laughing boy.",RB,3,1504696
+478,sweet,"Lucky gum, huh?",- Drink!,- Gladly my sweet sweet ladies.,"Ok, I want u to get out, go roll around to the snow, run up and back down that cable.",JJ,5,32311923
+479,move,Ian?!?,Holy shit!,Move move....,- This man is Pavlev?,VB,4,70113140
+480,wait,Oh you gotta be kidding!,"- Alright, kick the windows in...","- Wait, wait wait..",Whoa..,VB,4,39001376
+481,move,Can' t I think.,Ok ok..,Move move..,Quite to drop..,VB,4,70113140
+482,boom,Or you could say that Eddie was just unlucky.,Either way it taught me to keep a very open mind.,Boom boom.,Anyway...,NN,4,7869145
+484,stop,I will not.,"You will be me or I' il kill you, with my own hands.",Stop stop stop,"Your majesty no, in the name of god.",VB,4,77749471
+485,anal,let' s go.,Where' s ana?,Anal anal get in.,What the hell were you doing?,JJ,4,59776241
+486,small,¤Everybody ¤All over the world ¤Join the celebration ¤Everybody ¤All over the world ¤Everybody ¤All over the world ¤In every nation ¤Everybody ¤All over the world ¤Join the celebration ¤Everybody ¤All over the world ¤In every nation ¤Everybody ¤All over the world ¤Join the celebration ¤¤It' s a small world It' s a small world ¤It' s a small world It' s a small world ¤It' s a world of laughter A world of tears ¤It' s a world of hope And a world of fears ¤There' s so much that we share That it' s time we' re aware ¤It' s a small world after all,"- ¤Everybody, now - ¤It' s a small world after all ¤It' s a small world after all","- ¤Everybody, now - ¤It' s a small world after all ¤It' s a small, small Small, small world ¤Oh, yeah ¤There is just one moon And one golden sun ¤And a smile means friendship To everyone ¤Though the mountains divide And the oceans are wide ¤It' s a small world after all ¤Come on, come on Everybody, now",- ¤It' s a small world after all - ¤Can you hear me now,JJ,5,208371878
+487,small,"- ¤It' s a small world after all - ¤Everybody, now ¤It' s a small world after all ¤It' s a small, small world ¤It' s a small world after all No matter if you' re big or small ¤Come on, everybody Let' s bounce to this ¤Let' s dance along with a little twist ¤It' s a small world after all No matter if you' re big or small ¤Come on, everybody Let' s bounce to this ¤Let' s spread some love With a little twist ¤It' s a small world It' s a small world ¤It' s a world of laughter A world of tears ¤It' s a world of hope And a world of fears ¤There' s so much that we share That it' s time we' re aware ¤It' s a small world after all","- ¤Everybody, now - ¤It' s a small world after all ¤Come on, everybody, now","- ¤It' s a small world after all - ¤Can you hear me now ¤It' s a small world after all ¤It' s a small, small Small, small world ¤Come on, everybody, now","- ¤It' s a small world after all - ¤Come on, everybody, now",JJ,5,208371878
+488,small,"- ¤It' s a small world after all - ¤Can you hear me now ¤It' s a small world after all ¤It' s a small, small Small, small world ¤Come on, everybody, now","- ¤It' s a small world after all - ¤Come on, everybody, now","- ¤It' s a small world after all - ¤Can you hear me now ¤It' s a small world after all ¤It' s a small, small Small, small world ¤Come on, come on",- ¤It' s a small world after all - ¤Can you hear me now,JJ,5,208371878
+489,small,"- ¤It' s a small world after all - ¤Can you hear me now ¤It' s a small world after all ¤It' s a small, small Small, small world ¤Come on, come on",- ¤It' s a small world after all - ¤Can you hear me now,"- ¤It' s a small world after all - ¤Come on, come on ¤It' s a small world after all ¤It' s a small, small Small, small world ¤It' s a small world after all ¤It' s a small world after all ¤It' s a small world after all ¤It' s a small, small Small, small world","- ¤It' s a small world after all - ¤Everybody, now",JJ,5,208371878
+490,excersize,- You are here on his territory.,Why? we didn' t want to fight.,We just wanted to excersize excersize?,He' s not allowed to see us together.,VB,9,28257
+491,crazy,But sometimes pussies get so full of shit... that they become assholes themselves!,Because pussies are only an inch and half away form assholes.,"I don' t know much in this crazy crazy world... but I do know... that if you don' t let us fuck this asshole, we are going to have our dicks and pussies all covered in shit.",Stop what you are doing Kim Jong- Il!,JJ,5,23032837
+492,takeoff,"Oh, yes.","So, how are you, pal?",Just a little pre- takeoff takeoff.,"Gives new meaning to ""flying the friendly skies.""",NN,7,646648
+493,nothing,"Wine increase sadness, don' t get drunk",We' ve eaten Hsiao Hu' s dog and we haven' t requite,"Master, monks have nothing nothing to requite","Shih K' ung, aren' t you hurt?",NN,7,73183983
+494,lock,# HOUSE OF PAlN:,Shamrocks And Shenanigans,# Boom sha lock lock boom!,# Boom sha lock lock boom!,VB,4,22253866
+495,lock,Shamrocks And Shenanigans,# Boom sha lock lock boom!,# Boom sha lock lock boom!,# Boom sha lock lock boom!,VB,4,22253866
+496,lock,# Boom sha lock lock boom!,# Boom sha lock lock boom!,# Boom sha lock lock boom!,# I kicks the flava like Stephen King writes horror,VB,4,22253866
+497,lock,# I' m always in the know when it comes to givin 'pleasure,# I' m every woman' s treasure,# The cartoon boom sha lock lock,# Boom sha lock lock boom!,VB,4,22253866
+498,lock,# I' m every woman' s treasure,# The cartoon boom sha lock lock,# Boom sha lock lock boom!,# Boom sha lock lock boom!,VB,4,22253866
+499,lock,# The cartoon boom sha lock lock,# Boom sha lock lock boom!,# Boom sha lock lock boom!,# Boom sha lock lock boom!,VB,4,22253866
+500,lock,# Boom sha lock lock boom!,# Boom sha lock lock boom!,# Boom sha lock lock boom!,# All right!,VB,4,22253866
+501,lock,# Boom sha lock lock boom!,# All right!,Boom sha lock lock boom!,"# Breaker, breaker, here comes the caper",VB,4,22253866
+502,takeoff,"Oh, yes.","So, how are you, pal?",Just a little pre- takeoff takeoff.,"Gives new meaning to ""flying the friendly skies.""",NN,7,646648
+503,lock,HOUSE OF PAlN:,Shamrocks And Shenanigans,Boom sha lock lock boom!,Boom sha lock lock boom!,VB,4,22253866
+504,lock,Shamrocks And Shenanigans,Boom sha lock lock boom!,Boom sha lock lock boom!,Boom sha lock lock boom!,VB,4,22253866
+505,lock,Boom sha lock lock boom!,Boom sha lock lock boom!,Boom sha lock lock boom!,I kicks the flava like Stephen King writes horror,VB,4,22253866
+506,lock,I' m always in the know when it comes to givin 'pleasure,I' m every woman' s treasure,The cartoon boom sha lock lock,Boom sha lock lock boom!,VB,4,22253866
+507,lock,I' m every woman' s treasure,The cartoon boom sha lock lock,Boom sha lock lock boom!,Boom sha lock lock boom!,VB,4,22253866
+508,lock,The cartoon boom sha lock lock,Boom sha lock lock boom!,Boom sha lock lock boom!,Boom sha lock lock boom!,VB,4,22253866
+509,lock,Boom sha lock lock boom!,Boom sha lock lock boom!,Boom sha lock lock boom!,All right!,VB,4,22253866
+510,lock,Boom sha lock lock boom!,All right!,Boom sha lock lock boom!,"Breaker, breaker, here comes the caper",VB,4,22253866
+511,sure,Just a few words I learned since yesterday.,"Um, may I sit at the bar?","Oh sure sure, please, sit.",What other words did you learn?,RB,4,110528740
+512,long,"Lawyers of France, engineers of Germany... architects of Holland and now of course, warriors of America.","I came when I was with the British legation, know, years ago...",I was soon relieved of my position where I have a long long forest of tendencies to tell the truth... in a country where they never say what they need.,"So now, I very accurately translate the other people' s lives.",RB,4,252519588
+513,sure,Just a few words I learned since yesterday.,"Um, may I sit at the bar?","Oh sure sure, please, sit.",What other words did you learn?,RB,4,110528740
+514,number,This money is your,Put the all right brothers,Number number haha,Is to feel fit,NN,6,383787805
+515,damn,Is,the anterior person intercepts it,damn damn haha the day kills of,raise the hand get off to come,RB,4,11016467
+516,car,Very good,See me his data,Car car,His car is there,NN,3,264720374
+517,here,Idiot,The waiter is perhaps you should,Leave to leave here here,Telling you do not want to be again like this,RB,4,639711198
+518,walk,You is fucking what waiter (foreign language),Seeing the ghost goes to bad egg,Walk walk,Over a few weeks just start,VB,4,39129365
+519,long,"Lawyers of France, engineers of Germany... architects of Holland and now of course, warriors of America.","I came when I was with the British legation, know, years ago...",I was soon relieved of my position where I have a long long forest of tendencies to tell the truth... in a country where they never say what they need.,"So now, I very accurately translate the other people' s lives.",RB,4,252519588
+520,away,I found somebody i want to spend the rest of my life with and i' m gonna hold on to her forever.,Money!,"It' s a crime share it fairly, but don' t take a slice of my pie money, so they say is the root of all evil today but if you ask for a raise it' s no surprise they' re giving none away away... away... away... away... away... away... away... away... away... away... away... away... away... away... away... away... away... away... away... away... away... away... away... away... away... away... away... away... away...",{y: i} Translated by:,RB,4,112837472
+521,wait,Come off the ship?,Thank you sir.,"Wait wait, captain.","All right, lads.",VB,4,39001376
+522,then,I can drive already,Well!,Then then only thing you need to learn is to obey!,The insurance company understands but don' t know what causes the explosion,RB,4,369928941
+523,sing,Former cellmate:,John Delano Jaster.,Released from Sing Sing prison Friday.,Treasury surveillance subcontract required.,VB,4,11114001
+524,far,Her perfume is sweet promise that brings tears to my eyes,I tell her that everything will be alright,That I' il save her from whatever she' s scared of and take her far far away,I tell her...,RB,3,93061804
+525,very,I have business in East.,My wife does not lamented my absences.,"That is either the best of wives, or the very very worst.",- You' ve got to meet Reynald...,RB,4,334923368
+526,coastal,Yes but its ithim walk from an place.,Except him walk rear lumba2.,I guess a little a few little in coastal coastal area.,"You can can see, iron in that river, my intention really.",JJ,7,14153912
+527,sing,I' d hate to think what he would do to this world if he ever broke through.,Forgot how big it was.,Two hundred souls passed through this wood and steel at Sing Sing.,Yeah.,VB,4,11114001
+528,far,Her perfume is sweet promise that brings tears to my eyes.,I tell her that everything will be alright.,That I' il save her from whatever she' s scared of and take her far far away.,I tell her...,RB,3,93061804
+529,sing,I' d hate to think what he would do to this world if he ever broke through.,Forgot how big it was.,Two hundred souls passed through this wood and steel at Sing Sing.,Yeah.,VB,4,11114001
+530,pathetic,Hartigan was right about you.,You can' t get it up unless I scream,You' re pathetic pathetic,That' s not wise at all to make fun of me like that,JJ,8,1892242
+531,far,Her perfume is sweet promise that brings tears to my eyes,I tell her that everything will be alright,That I' il save her from whatever she' s scared of and take her far far away,I tell her...,RB,3,93061804
+532,fix,Goldie.,She says her name is Goldie,They fix fix me a pretty decent steak for my last meal,They even throw in a brew.,VB,3,32334055
+533,pathetic,Hartigan was right about you.,You can' t get it up unless I scream,You' re pathetic pathetic,That' s not wise at all to make fun of me like that,JJ,8,1892242
+534,easy,"Lakchume, hurry up.","Lakchume, pick up the body.",Easy easy...,"Be careful... be careful, good boy.",JJ,4,125548527
+535,hula,How about letting us know where the hell we are?,"Hawaii, on Earth.","So where are all the surfers and hula hula dancers, smart guy?","Some 1 1, 000 years in the future.",NN,4,921011
+536,shame,Stretch him,That' s it Stretch him,Shame Shame,Pleasant... yes?,NN,5,6785296
+537,tin,Look at that!,"Pussies drink last, man.","- Fuck you, Tin Tin.",- Hey.,NN,3,10695557
+538,tin,Leather.,Geez.,"Oh, what is this, Tin Tin?",A blood stain that' s on here?,NN,3,10695557
+539,tin,[Screaming],"I repeat, a gold engagement ring, yes?",It was pawned here a year ago by a customer of yours named Tin Tin.,He confided in me before he ran out of breath.,NN,3,10695557
+540,tin,[Helicopter Departing],Who' s this sack of shit?,"That' s Tin Tin, one of T- bird' s little helpers.",I think you can rule out accidental death.,NN,3,10695557
+541,tin,- Thank you.,- Take anything!,Now you' re going to tell me where to find... the rest of Tin Tin' s little party pals.,The Pit.,NN,3,10695557
+542,tin,He had a friend who shouldn' t have played with knives.,Like the coat?,You' re the guy that murdered Tin Tin.,- [Looter],NN,3,10695557
+543,tin,One of my crew got himself perished.,"- Yeah, who might that be?",- Tin Tin.,Somebody stuck his blades in all his major organs in alphabetical order.,NN,3,10695557
+544,tin,- Tin Tin.,Somebody stuck his blades in all his major organs in alphabetical order.,"Gentlemen, by all means, I think we ought to have... an introspective moment of silence for poor, old Tin Tin.","You' re working for me tomorrow night, right?",NN,3,10695557
+545,tin,- You know how long it took us to put this together?,"- Yeah, a long time.",That piece of ratshit made Tin Tin into a fuckin 'voodoo doll!,Tin Tin was a dick.,NN,3,10695557
+546,tin,"- Yeah, a long time.",That piece of ratshit made Tin Tin into a fuckin 'voodoo doll!,Tin Tin was a dick.,Tin Tin.,NN,3,10695557
+547,tin,That piece of ratshit made Tin Tin into a fuckin 'voodoo doll!,Tin Tin was a dick.,Tin Tin.,Sheesh.,NN,3,10695557
+548,tin,I got it.,We could use you.,You did Tin Tin.,"- This is business, right?",NN,3,10695557
+549,brother,- A fellow Vulcan is not a...,- Sybok also is a son of Sarek.,He' s your brother brother?,You made that up.,NN,7,34273892
+550,time,"What is this, a conspiracy to fuck up my evening?","Mas, what are you doing?",It' s good- time time.,- Kampaitime.,NN,4,908705570
+551,high,"We gonna get out of here, boy.",I' m gonna see you in the hospital.,We gonna get a high high.,"Yes, sir.",JJ,4,345413157
+552,rrr,Aargh!,Aah!,Rrr rrr!,Ooh!,NN,3,877113
+553,squeak,Emergency provisions.,We' re inside Lo Pan' s domain.,Squeak squeak!,Later.,NN,6,871207
+554,rrr,He' s too busy to care.,"So where is he, Egg?",Rrr rrr!,Jack.,NN,3,877113
+555,again,I can' t get him off my tail.,"- Maverick, we' re hit!",We' re hit again again!,- We' re okay.,RB,5,150781416
+556,hubba,We' il hit 'em on Friday.,[Tires Squealing],Hubba hubba hubba.,[Speaking Chinese],NN,5,126157
+557,hubba,You could have asked me to quit.,You could have asked me to drive you somewhere else.,Hubba hubba hubba.,Thanks.,NN,5,126157
+558,hubba,Ohh.,Ho.,Hubba hubba hubba.,I knew I' d seen that ass before.,NN,5,126157
+559,hubba,[Grunts],Now.,Hubba hubba hubba.,Aah!,NN,5,126157
+560,fire,That felt all right.,Why can' t he just be like he used to be?,"It all seems so long ago young and happy don' t you know down by the creek i would show fireflies to that girl but that was back when he was nice before my warm heart turned to ice my sister' s wig once had lice but that was long ago the schoolyard' s where we were the first time i kissed her he thought he got some tongue but it was only retainer eleanore' s bra is a trainer well, over there' s my family home and the woods we used to roam the only time i had sex was on the phone but that was long ago i carved our names upon that tree i loved him and he loved me my darling wife was once a he but that was long ago he' d always whisper in my ear but then i started drinking beer my jewels got licked by six frisky deer now he' s just a loner and a liar and my trailer' s caught on fire fire?!","Oh, my god!",NN,4,83845349
+561,sorry,- Aah!,- BEN. shh!,Sorry. sorry Sorry,"OK, I' il get the map.",JJ,5,35595812
+562,abra,"No, no, not you.","Books are always first, you know.",Hockety pockety wockety whack Abra abra dabra nack,Shrink in size very small We' ve got to save enough room for all,VB,4,437363
+563,wait,What are you...,Let' s go destroy the boiler,"Wait wait, you can' t...",Then I' il destroy this one here...,VB,4,39001376
+564,wait,Oooowww...,Alex!,"Wait wait, I' m not part of this!",Both my father and my grandfather are working hard in a U. S. laboratory,VB,4,39001376
+565,look,"Shh, be quiet",It will be a mess if someone heard us,Look look,Isn' t it interesting?,VB,4,173043002
+566,tut,Say no more.,I' il go.,"Now, tut tut.","No mushy good- byes, my little ones.",JJ,3,945899
+567,now,"Trying to hide, are you, huh?",Won' t you just please leave me be?,"Now now there sissyboy, don' t cry You little animal tormentor","Blinking your eyes, huh?",RB,3,611387736
+568,busy,Oh my gosh!,Thank you for holding!,Busy busy busy!,Go!,JJ,4,17376500
+569,square,"- Ha, man, I told you!",- I' m doing this!,Left circle double left square right to the down square square.,Another square!,JJ,6,44784448
+570,very,- We' il you got a whale to wash and the price...,- Give me back the phone!,And the price is... very very low.,Consider no good washers!,RB,4,334923368
+571,really,Nope.,Really?,- Really really.,Oh?,RB,6,162033390
+572,really,We' il just hackle this thing together one little baby step after time.,- Really?,- Really really.,Ok.,RB,6,162033390
+573,toot,"- I don' t know either, but it' s somewhere, and it' s gonna determine the course of the rest of your life.",All ashore that' s going ashore.,Toot toot!,The reason why I refuse to take existentialism... as just another French fashion or historical curiosity... is that I think it has something very important to offer us for the new century.,VB,4,335690
+574,really,You and what army?,Can I say something to you?,"Listen, you were really really something, back there.",Incredible.,RB,6,162033390
+575,really,Nope.,Really?,- Really really.,Oh?,RB,6,162033390
+576,far,"So, just sit back and realax my lord, becouse it' s time for you to meet todays eligible batch leerets.",And here they are.,Batch leeret number one is a mostly abuse shading from a kindom far far away.,She likes sushi and hottubbing anytime.,RB,3,93061804
+577,really,We' il just hackle this together one little baby step after time.,- Really?,- Really really.,Ok.,RB,6,162033390
+578,really,I love you.,Really?,Really really.,I love you to.,RB,6,162033390
+579,there,Run.,let' s move.,Come on please be there there it is just like Randall said,"Randall wait a minute 1 34, get the kid back open the door it' s ok Boo come on it' s to move what are you thinking? we can' t trust Randall.",RB,5,701170205
+580,har,Only close the door.,We' re modest.,Har har har.,The guy' s a riot.,VB,3,2500142
+581,very,Yes!,Let' s leave far from here.,Very very far!,One has a long journey before us.,RB,4,334923368
+582,very,I am going a lot to like you.,"One will leave very far from here, do say?",Very very far!,- Angel!,RB,4,334923368
+583,doot,[Panting],DORY:,Hoo doot doo doot doot doo doot,Whoo- hoo!,NN,4,52085
+584,doot,Get it!,DORY:,* Hoo doot doo doot doot doo doot *,Whoo- hoo!,NN,4,52085
+585,ever,"Guys, we' re running out of time!","Oh Melman, you broke their clock?",Don' t you ever ever do this again!,Come here!,RB,4,100264634
+586,hunka,- Ah!,Behold.,"A super- duper, extra- looper, hunka hunka Heffatrap.","Oh, m- m- m- my.",NN,5,38692
+587,sugar,To the Roundabout!,(laughter),# Sugar Sugar ,DOUGAL:,NN,5,22450333
+588,not,- You do not?,No!,"I meant, no, I do not not wish to be married.","That is, I want very much to --",RB,3,2633487141
+589,here,She' s waited for this day For many a year,"For this day, for this day Our hopes and our pride",The bride is here Here comes the bride,Here comes the bride Here comes the bride,RB,4,639711198
+590,not,- You do not?,No!,"I meant, no, I do not not wish to be married.","That is, I want very much to...",RB,3,2633487141
+591,here,She' s waited for this day For many a year,"For this day, for this day Our hopes and our pride",The bride is here Here comes the bride,Here comes the bride Here comes the bride,RB,4,639711198
+592,not,- You do not?,No!,"I meant, no, I do not not wish to be married.","That is, I want very much to...",RB,3,2633487141
+593,here,She' s waited for this day For many a year,"For this day, for this day Our hopes and our pride",The bride is here Here comes the bride,Here comes the bride Here comes the bride,RB,4,639711198
+594,not,- You do not?,No!,"I meant, no, I do not not wish to be married.","That is, I want very much to...",RB,3,2633487141
+595,here,She' s waited for this day For many a year,"For this day, for this day Our hopes and our pride",The bride is here Here comes the bride,Here comes the bride Here comes the bride,RB,4,639711198
+596,many,I like walking most,Walk straight wolves foxes come here deep to the forest enjoy the adventure,Many many friends,Make me live happily,JJ,4,318966441
+597,many,Many many friends,Make me live happily,Many many friends,Make me live happily,JJ,4,318966441
+598,new,I can 't believe the devil ls so unforgiving,I can 't believe Everybody' s just ad- libbing,By the power vested in me By the state of New New York,No!,JJ,3,1551258643
+599,deadly,- It' s not small?,"- No, no, no.",It don' t take more than deadly deadly bees to keep us from doing our job.,"- Come on, boys!",JJ,6,5740299
+600,deadly,"There' s the blackbox. « Captain, the bees have us surrounded. » « The professor was right.",We' re not as good as his old crew. » « Well I aim to proove him wrong.,It' il take more than a few deadly deadly bees to... »,Couldn' t make that out.,JJ,6,5740299
+601,boo,You' il have to go through me!,You call that a wound?,That' s a boo boo tops!,"But thanks for trying to save me, Fry!",NN,3,2884230
+602,late,- Do you have a tissue?,"- Just stare at it,", It' s the Late Late Show with Craig Kilborn.,"OK, Go, Go!",RB,4,65574606
+603,hip,Jack!,Three cheers for our champion!,Hip hip!,Hooray!,NN,3,26826008
+604,hip,Hip hip!,Hooray!,- Hip hip!,- Hooray!,NN,3,26826008
+605,hip,- Hip hip!,- Hooray!,Hip hip!,Hooray!,NN,3,26826008
+606,mwah,How you broke my brother' s heart... or how you stuck me with Jeremiah... during my cable show doing...,"Pick a card, pick a card.",Mwah mwah mwah!,"I' m sorry, OK?",NN,4,117335
+607,else,Anybody else?,Fine by moi.,Anybody else else?,It' s still just a pig.,RB,4,96020036
+608,cluck,"* Baa baa, said the sheep from another hole *","* Moo moo, said the cow Let the butter roll *","* Cluck cluck, said the little red hen Let' s boogie in the barnyard *","- * Yes, the barnyard' s jumpin '* - (Ferdinand Muttering, Squawking)",NN,5,134048
+609,circus,"You would think at some point, Ursula would recommend a zebra pattern.",Unaware of the deadly denizens determined to destroy him...,"Well, that' s a change of pace... our accidental tourist took his family backstage at Circus Circus.","As George gleefully greeted his performing pals,..... Ursula wondered if she' d ever come first.",NN,6,5377139
+610,circus,A backscratcher.,And where did he take you on your first day back in civilisation?,Backstage at Circus Circus.,Can you believe his lack of feeling?,NN,6,5377139
+611,wild,- John!,- [Singing],- I got a wild wild life - Don' tyou ever stop?,"Oh, this is so much more cool than hanging out in that lab.",JJ,4,39937252
+612,widow,And that' s how my 12th husband died.,"So, now I' m a widow.","I mean, I' ve always been a black widow... but now I' m a black widow widow.",- Thorny!,NN,5,3804620
