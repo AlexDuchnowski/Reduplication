@@ -7,25 +7,43 @@ editor: visual
 ## Data
 
 ```{r}
-data <- read.csv("../data/salad_consolidated_refined.csv")
+salad.data <- read.csv("../data/salad_consolidated_refined_counted.csv")
 
-head(data)
+head(salad.data)
+```
+```{r}
+opensubs.data <- read.csv("../data/222k_filtered_counted.csv")
+
+head(opensubs.data)
 ```
 
 ```{r}
-#toy.data <- data.frame(
-#  part.of.speech = sample(c("noun", "verb", "adjective"), 100, replace = TRUE),
-#  semantic.contribution = sample(c("prototypical", "extreme", "salient"), 100, #replace = TRUE)
-#)
+# Load required libraries
+library(dplyr)
 
-#head(toy.data)
+# Read the CSV file
+data <- read.csv("../data/222k_filtered_counted.csv")
+
+# Read the labels from text files
+labels_1 <- readLines("../data/annotations/opensubs_agreed_1.txt")
+labels_2 <- readLines("../data/annotations/opensubs_agreed_2.txt")
+
+# Combine the labels into a single vector
+all_labels <- c(labels_1, labels_2)
+
+# Add the labels as a new column to the data frame
+#data <- mutate(data, Label = all_labels)
+
+# Write the updated data frame to a new CSV file
+#write.csv(data, "222k_filtered_counted_with_labels.csv", row.names = FALSE)
+
 
 ```
 
 ```{r}
 library(ggplot2)
 
-ggplot(data, aes(x = POS, fill = POS)) +
+ggplot(salad.data, aes(x = POS, fill = POS)) +
   geom_bar() +
   geom_text(stat='count', aes(label= after_stat(count)), vjust=-0.5) + 
   labs(title = "Distribution of Parts of Speech",
@@ -37,7 +55,7 @@ ggplot(data, aes(x = POS, fill = POS)) +
 ```{r}
 library(ggplot2)
 
-ggplot(data, aes(x = Label, fill = Label)) +
+ggplot(salad.data, aes(x = Label, fill = Label)) +
   geom_bar() +
   geom_text(stat='count', aes(label= after_stat(count)), vjust=-0.5) + 
   labs(title = "Distribution of Semantic Contributions",
@@ -50,8 +68,8 @@ ggplot(data, aes(x = Label, fill = Label)) +
 library(ggplot2)
 library(nnet)
 
-summary(data)
-ggplot(data, aes(x = POS, fill = Label)) +
+summary(salad.data)
+ggplot(salad.data, aes(x = POS, fill = Label)) +
   geom_bar() + 
   labs(title = "Distribution of Semantic Contributions by POS",
        x = "POS",
@@ -60,10 +78,14 @@ ggplot(data, aes(x = POS, fill = Label)) +
 
 ```
 
+```{r}
+
+```
+
 ## Model
 
 ```{r}
-model <- multinom(Label ~ POS, data = data)
+model <- multinom(Label ~ POS + Word_Length + Freq_Count, data = salad.data)
 
 summary(model)
 ```
@@ -75,6 +97,92 @@ z
 p <- (1 - pnorm(abs(z), 0, 1)) * 2
 p
 ```
+```{r}
+length.model <- multinom(Label ~ Word_Length, data = salad.data)
+
+summary(length.model)
+```
+```{r}
+# Load required libraries
+library(ggplot2)
+library(tidyr)
+
+# Generate data for prediction (word length)
+new_data <- data.frame(Word_Length = seq(min(salad.data$Word_Length), max(salad.data$Word_Length), length.out = 100))
+head(new_data)
+```
+
+```{r}
+# Predict probabilities for each category
+predictions <- predict(length.model, newdata = new_data, type = "probs")
+head(predictions)
+```
+
+```{r}
+# Convert predictions to a data frame
+predictions_df <- data.frame(new_data, predictions)
+
+# Reshape predictions for plotting
+predictions_df <- gather(predictions_df, Label, Probability, -Word_Length)
+
+# Plot predicted probabilities
+ggplot(predictions_df, aes(x = Word_Length, y = Probability, color = Label)) +
+  geom_line() +
+  labs(title = "Likelihood of Semantic Contribution Label by Word Length",
+       x = "Word Length",
+       y = "Predicted Probability",
+       color = "Semantic Contribution Label") +
+  theme_minimal()
+```
+```{r}
+freq.model <- multinom(Label ~ Freq_Count, data = salad.data)
+
+summary(freq.model)
+```
+```{r}
+# Load required libraries
+library(ggplot2)
+library(tidyr)
+
+# Generate data for prediction (word length)
+new_data <- data.frame(Freq_Count = seq(min(salad.data$Freq_Count), max(salad.data$Freq_Count), length.out = 100))
+head(new_data)
+```
+
+```{r}
+# Predict probabilities for each category
+predictions <- predict(freq.model, newdata = new_data, type = "probs")
+
+head(predictions)
+```
+
+```{r}
+# Load required libraries
+library(ggplot2)
+library(tidyr)
+
+# Generate data for prediction (word length)
+new_data <- data.frame(Freq_Count = seq(min(salad.data$Freq_Count), max(salad.data$Freq_Count), length.out = 100))
+
+# Predict probabilities for each category
+predictions <- predict(freq.model, newdata = new_data, type = "probs")
+
+# Convert predictions to a data frame
+predictions_df <- data.frame(new_data, predictions)
+
+# Reshape predictions for plotting
+predictions_df <- gather(predictions_df, Label, Probability, -Freq_Count)
+
+# Plot predicted probabilities
+ggplot(predictions_df, aes(x = Freq_Count, y = Probability, color = Label)) +
+  geom_line() +
+  labs(title = "Likelihood of Semantic Contribution Label by Frequency",
+       x = "Frequency",
+       y = "Predicted Probability",
+       color = "Semantic Contribution Label") +
+  theme_minimal()
+```
+
 
 ```{r}
 head(pp <- fitted(model), n=20)

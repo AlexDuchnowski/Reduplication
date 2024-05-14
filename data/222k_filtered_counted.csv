@@ -1,4 +1,4 @@
-...1,Word,Context,Spacy POS,Length,count
+...1,Word,Context,POS,Length,count
 0,easy,easy easy...,JJ,4,125548527
 1,meng,general meng meng jie?,NN,4,689565
 2,anything,i haven' t done anything anything like this... happened...,NN,8,75985266

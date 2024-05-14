@@ -1,4 +1,4 @@
-Word,Label,POS,Length,count
+Word,Label,POS,Word_Length,Freq_Count
 adam,S,NN,4,21694386
 aggressive,P,JJ,10,7345918
 aggressive,P,JJ,10,7345918
