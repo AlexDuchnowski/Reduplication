@@ -9,53 +9,65 @@ editor: visual
 ```{r}
 salad.data <- read.csv("../data/salad_consolidated_refined_counted.csv")
 
-head(salad.data)
 ```
 ```{r}
-opensubs.data <- read.csv("../data/222k_filtered_counted.csv")
+opensubs.data <- read.csv("../data/en_v1_222k/full_222k_counted.csv")
 
-head(opensubs.data)
+```
+```{r}
+opensubs.filtered <- subset(opensubs.data, Label %in% c("P", "E", "S"))
+opensubs.selected <- opensubs.filtered[, names(opensubs.filtered) %in% names(salad.data)]
+combined.data <- rbind(salad.data, opensubs.selected)
+
+write.csv(combined.data, "../data/combined_opensubs_salad_data.csv", row.names = FALSE)
 ```
 
 ```{r}
-# Load required libraries
+combined.data$Log_Freq_Count <- log(combined.data$Freq_Count)
+
+head(combined.data)
+
+```
+
+```{r}
 library(dplyr)
+library(ggplot2)
 
-# Read the CSV file
-data <- read.csv("../data/222k_filtered_counted.csv")
+labels.1 <- readLines("../data/annotations/opensubs_agreed_1.txt")
+labels.2 <- readLines("../data/annotations/opensubs_agreed_2.txt")
 
-# Read the labels from text files
-labels_1 <- readLines("../data/annotations/opensubs_agreed_1.txt")
-labels_2 <- readLines("../data/annotations/opensubs_agreed_2.txt")
+all.labels <- c(labels.1, labels.2)
 
-# Combine the labels into a single vector
-all_labels <- c(labels_1, labels_2)
+label.freq <- table(all.labels)
+label.df <- data.frame(Label = names(label.freq), Frequency = as.numeric(label.freq))
 
-# Add the labels as a new column to the data frame
-#data <- mutate(data, Label = all_labels)
+label.df$Percentage <- label.df$Frequency / sum(label.df$Frequency) * 100
 
-# Write the updated data frame to a new CSV file
-#write.csv(data, "222k_filtered_counted_with_labels.csv", row.names = FALSE)
-
-
+ggplot(label.df, aes(x = "", y = Frequency, fill = Label)) +
+  geom_bar(stat = "identity", width = 1) +
+  coord_polar("y", start = 0) +
+  labs(title = "Distribution of Semantic Contribution Labels in OpenSubs Dataset",
+       fill = "Label") +
+  theme_void() +
+  scale_fill_discrete(labels = paste(label.df$Label, sprintf("(%0.1f%%)", label.df$Percentage))) +
+  theme(legend.position = "bottom")
 ```
 
 ```{r}
 library(ggplot2)
 
-ggplot(salad.data, aes(x = POS, fill = POS)) +
+ggplot(combined.data, aes(x = POS, fill = POS)) +
   geom_bar() +
   geom_text(stat='count', aes(label= after_stat(count)), vjust=-0.5) + 
   labs(title = "Distribution of Parts of Speech",
        x = "Part of Speech",
        y = "Count")
-
 ```
 
 ```{r}
 library(ggplot2)
 
-ggplot(salad.data, aes(x = Label, fill = Label)) +
+ggplot(combined.data, aes(x = Label, fill = Label)) +
   geom_bar() +
   geom_text(stat='count', aes(label= after_stat(count)), vjust=-0.5) + 
   labs(title = "Distribution of Semantic Contributions",
@@ -68,24 +80,54 @@ ggplot(salad.data, aes(x = Label, fill = Label)) +
 library(ggplot2)
 library(nnet)
 
-summary(salad.data)
-ggplot(salad.data, aes(x = POS, fill = Label)) +
+summary(combined.data)
+ggplot(combined.data, aes(x = POS, fill = Label)) +
   geom_bar() + 
   labs(title = "Distribution of Semantic Contributions by POS",
        x = "POS",
        y = "Count")
 
+```
+
+## Raw probabilities of P/S/E given POS
+```{r}
+library(dplyr)
+library(ggplot2)
+library(knitr)
+
+label.counts <- combined.data %>% 
+  group_by(POS, Label) %>% 
+  summarize(count = n())
+
+pos.totals <- combined.data %>% 
+  group_by(POS) %>% 
+  summarize(total.count = n())
+
+label.percentages <- label.counts %>% 
+  left_join(pos.totals, by = "POS") %>%
+  mutate(percentage = (count / total.count) *100)
+
+label.percentages.df <- as.data.frame(label.percentages)
+
+kable(label.percentages.df, caption = "Percentage of Semantic Contributions by POS")
+
 
 ```
 
-```{r}
 
-```
 
-## Model
+## Model (with POS, word length, and frequency as predictors)
 
 ```{r}
-model <- multinom(Label ~ POS + Word_Length + Freq_Count, data = salad.data)
+combined.data$POS <- factor(combined.data$POS, levels = c("NN", "JJ", "RB", "VB"))
+
+combined.data$Label <- factor(combined.data$Label, levels = c("P", "S", "E"))
+
+combined.data$POS <- relevel(combined.data$POS, ref = "NN")
+
+combined.data$Label <- relevel(combined.data$Label, ref = "P")
+
+model <- multinom(Label ~ POS + Word_Length + Log_Freq_Count, data = combined.data)
 
 summary(model)
 ```
@@ -97,36 +139,26 @@ z
 p <- (1 - pnorm(abs(z), 0, 1)) * 2
 p
 ```
+## Word Length only Model
+
 ```{r}
-length.model <- multinom(Label ~ Word_Length, data = salad.data)
+length.model <- multinom(Label ~ Word_Length, data = combined.data)
 
 summary(length.model)
 ```
 ```{r}
-# Load required libraries
 library(ggplot2)
 library(tidyr)
 
-# Generate data for prediction (word length)
-new_data <- data.frame(Word_Length = seq(min(salad.data$Word_Length), max(salad.data$Word_Length), length.out = 100))
-head(new_data)
-```
+new.data <- data.frame(Word_Length = seq(min(combined.data$Word_Length), max(combined.data$Word_Length), length.out = 100))
 
-```{r}
-# Predict probabilities for each category
-predictions <- predict(length.model, newdata = new_data, type = "probs")
-head(predictions)
-```
+length.predictions <- predict(length.model, newdata = new.data, type = "probs")
 
-```{r}
-# Convert predictions to a data frame
-predictions_df <- data.frame(new_data, predictions)
+length.predictions.df <- data.frame(new.data, length.predictions)
 
-# Reshape predictions for plotting
-predictions_df <- gather(predictions_df, Label, Probability, -Word_Length)
+length.predictions.df <- gather(length.predictions.df, Label, Probability, -Word_Length)
 
-# Plot predicted probabilities
-ggplot(predictions_df, aes(x = Word_Length, y = Probability, color = Label)) +
+ggplot(length.predictions.df, aes(x = Word_Length, y = Probability, color = Label)) +
   geom_line() +
   labs(title = "Likelihood of Semantic Contribution Label by Word Length",
        x = "Word Length",
@@ -134,74 +166,46 @@ ggplot(predictions_df, aes(x = Word_Length, y = Probability, color = Label)) +
        color = "Semantic Contribution Label") +
   theme_minimal()
 ```
+
+## Frequency only Model
+
 ```{r}
-freq.model <- multinom(Label ~ Freq_Count, data = salad.data)
+freq.model <- multinom(Label ~ Log_Freq_Count, data = combined.data)
 
 summary(freq.model)
 ```
 ```{r}
-# Load required libraries
 library(ggplot2)
 library(tidyr)
 
-# Generate data for prediction (word length)
-new_data <- data.frame(Freq_Count = seq(min(salad.data$Freq_Count), max(salad.data$Freq_Count), length.out = 100))
-head(new_data)
-```
+new_data <- data.frame(Log_Freq_Count = seq(min(combined.data$Log_Freq_Count), max(combined.data$Log_Freq_Count), length.out = 100))
 
-```{r}
-# Predict probabilities for each category
-predictions <- predict(freq.model, newdata = new_data, type = "probs")
+freq.predictions <- predict(freq.model, newdata = new_data, type = "probs")
 
-head(predictions)
-```
+freq.predictions.df <- data.frame(new_data, freq.predictions)
 
-```{r}
-# Load required libraries
-library(ggplot2)
-library(tidyr)
+freq.predictions.df <- gather(freq.predictions.df, Label, Probability, -Log_Freq_Count)
 
-# Generate data for prediction (word length)
-new_data <- data.frame(Freq_Count = seq(min(salad.data$Freq_Count), max(salad.data$Freq_Count), length.out = 100))
-
-# Predict probabilities for each category
-predictions <- predict(freq.model, newdata = new_data, type = "probs")
-
-# Convert predictions to a data frame
-predictions_df <- data.frame(new_data, predictions)
-
-# Reshape predictions for plotting
-predictions_df <- gather(predictions_df, Label, Probability, -Freq_Count)
-
-# Plot predicted probabilities
-ggplot(predictions_df, aes(x = Freq_Count, y = Probability, color = Label)) +
+ggplot(freq.predictions.df, aes(x = Log_Freq_Count, y = Probability, color = Label)) +
   geom_line() +
   labs(title = "Likelihood of Semantic Contribution Label by Frequency",
-       x = "Frequency",
+       x = "Log Normalized Frequency",
        y = "Predicted Probability",
        color = "Semantic Contribution Label") +
   theme_minimal()
 ```
 
-
 ```{r}
-head(pp <- fitted(model), n=20)
+library(dplyr)
+library(knitr)
+
+avg.stats <- combined.data %>%
+  group_by(POS) %>%
+  summarize(avg.word.length = mean(Word_Length),
+            median.word.length = median(Word_Length),
+            avg.log.frequency = mean(Log_Freq_Count),
+            median.log.frequency = median(Log_Freq_Count))
+
+kable(avg.stats, format = "markdown")
 
 ```
-Values repeat by POS, so extracting one example of each will give us the probability of having a certain semantic contribution given POS.
-
-Example 1: NN, Example 2: JJ, Example 6: RB, Example 15: VB
-
-```{r}
-library(tibble)
-
-(my_tibble <- tibble(
-  Part.of.Speech = c("NN", "JJ", "RB", "VB"),
-  E = c(0.07946939, 0.42028842, 0.19230901, 0.14705943),
-  P = c(0.7019874, 0.5072467, 0.3461578, 0.6176449),
-  S = c(0.21854326, 0.07246485, 0.46153322, 0.23529567)
-))
-
-```
-
-
