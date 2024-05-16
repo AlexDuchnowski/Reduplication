@@ -57,16 +57,16 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </style>
 
 
-<script src="ReduplicationProjectWriteup_files/libs/clipboard/clipboard.min.js"></script>
-<script src="ReduplicationProjectWriteup_files/libs/quarto-html/quarto.js"></script>
-<script src="ReduplicationProjectWriteup_files/libs/quarto-html/popper.min.js"></script>
-<script src="ReduplicationProjectWriteup_files/libs/quarto-html/tippy.umd.min.js"></script>
-<script src="ReduplicationProjectWriteup_files/libs/quarto-html/anchor.min.js"></script>
-<link href="ReduplicationProjectWriteup_files/libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="ReduplicationProjectWriteup_files/libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="ReduplicationProjectWriteup_files/libs/bootstrap/bootstrap.min.js"></script>
-<link href="ReduplicationProjectWriteup_files/libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="ReduplicationProjectWriteup_files/libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script src="index_files/libs/clipboard/clipboard.min.js"></script>
+<script src="index_files/libs/quarto-html/quarto.js"></script>
+<script src="index_files/libs/quarto-html/popper.min.js"></script>
+<script src="index_files/libs/quarto-html/tippy.umd.min.js"></script>
+<script src="index_files/libs/quarto-html/anchor.min.js"></script>
+<link href="index_files/libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="index_files/libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="index_files/libs/bootstrap/bootstrap.min.js"></script>
+<link href="index_files/libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="index_files/libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
 
 
 </head>
@@ -316,7 +316,7 @@ final line found on '../data/annotations/opensubs_agreed_2.txt'</code></pre>
 <span id="cb14-14"><a href="#cb14-14" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_fill_discrete</span>(<span class="at">labels =</span> <span class="fu">paste</span>(label.df<span class="sc">$</span>Label, <span class="fu">sprintf</span>(<span class="st">"(%0.1f%%)"</span>, label.df<span class="sc">$</span>Percentage))) <span class="sc">+</span></span>
 <span id="cb14-15"><a href="#cb14-15" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">legend.position =</span> <span class="st">"bottom"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
-<p><img src="ReduplicationProjectWriteup_files/figure-html/unnamed-chunk-2-1.png" class="img-fluid" width="672"></p>
+<p><img src="index_files/figure-html/unnamed-chunk-2-1.png" class="img-fluid" width="672"></p>
 </div>
 </div>
 <p>Thus, we decided to select only the positive CR examples from the OpenSubtitles dataset and append these annotated examples to the Salad-Salad dataset and perform statistical analysis on this combined dataset. First, we looked at the distributions of both POS and Semantic Contribution Labels to get a sense of the makeup of our dataset, as seen in the following bar graphs. Nouns were by far the most common POS to be contrastively reduplicated, and the most common semantic contribution assigned across the board was the prototypical label.</p>
@@ -328,7 +328,7 @@ final line found on '../data/annotations/opensubs_agreed_2.txt'</code></pre>
 <span id="cb15-5"><a href="#cb15-5" aria-hidden="true" tabindex="-1"></a>       <span class="at">x =</span> <span class="st">"Part of Speech"</span>,</span>
 <span id="cb15-6"><a href="#cb15-6" aria-hidden="true" tabindex="-1"></a>       <span class="at">y =</span> <span class="st">"Count"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
-<p><img src="ReduplicationProjectWriteup_files/figure-html/unnamed-chunk-3-1.png" class="img-fluid" width="672"></p>
+<p><img src="index_files/figure-html/unnamed-chunk-3-1.png" class="img-fluid" width="672"></p>
 </div>
 </div>
 <div class="cell">
@@ -339,7 +339,7 @@ final line found on '../data/annotations/opensubs_agreed_2.txt'</code></pre>
 <span id="cb16-5"><a href="#cb16-5" aria-hidden="true" tabindex="-1"></a>       <span class="at">x =</span> <span class="st">"Semantic Contribution"</span>,</span>
 <span id="cb16-6"><a href="#cb16-6" aria-hidden="true" tabindex="-1"></a>       <span class="at">y =</span> <span class="st">"Count"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
-<p><img src="ReduplicationProjectWriteup_files/figure-html/unnamed-chunk-4-1.png" class="img-fluid" width="672"></p>
+<p><img src="index_files/figure-html/unnamed-chunk-4-1.png" class="img-fluid" width="672"></p>
 </div>
 </div>
 <p>Looking at the stacked graph below, we can see certain trends beginning to surface. Although prototypical labels still make up a large percentage of the examples for each POS, there is a more even split between prototypical and extreme readings for adjectives, and prototypical and salient readings for adverbs. The exact percentages of semantic contribution by POS is given in the table below the graph.</p>
@@ -369,7 +369,7 @@ final line found on '../data/annotations/opensubs_agreed_2.txt'</code></pre>
 <span id="cb19-4"><a href="#cb19-4" aria-hidden="true" tabindex="-1"></a>       <span class="at">x =</span> <span class="st">"POS"</span>,</span>
 <span id="cb19-5"><a href="#cb19-5" aria-hidden="true" tabindex="-1"></a>       <span class="at">y =</span> <span class="st">"Count"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
-<p><img src="ReduplicationProjectWriteup_files/figure-html/unnamed-chunk-5-1.png" class="img-fluid" width="672"></p>
+<p><img src="index_files/figure-html/unnamed-chunk-5-1.png" class="img-fluid" width="672"></p>
 </div>
 </div>
 <div class="cell">
@@ -624,7 +624,7 @@ AIC: 563.6409 </code></pre>
 <span id="cb35-14"><a href="#cb35-14" aria-hidden="true" tabindex="-1"></a>       <span class="at">color =</span> <span class="st">"Semantic Contribution Label"</span>) <span class="sc">+</span></span>
 <span id="cb35-15"><a href="#cb35-15" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_minimal</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
-<p><img src="ReduplicationProjectWriteup_files/figure-html/unnamed-chunk-11-1.png" class="img-fluid" width="672"></p>
+<p><img src="index_files/figure-html/unnamed-chunk-11-1.png" class="img-fluid" width="672"></p>
 </div>
 </div>
 <p>As word length increases, the probability of getting a prototypical reading decreases, while the probability of getting an extreme reading increases. There is also a slight increase in the salient category, but this is a much slighter trend than seen in the other two. Initial explanations for why these trends could have arisen are discussed in the next section. Similarly, we ran a model with log frequency as the predicting variable.</p>
@@ -672,7 +672,7 @@ AIC: 568.0303 </code></pre>
 <span id="cb40-14"><a href="#cb40-14" aria-hidden="true" tabindex="-1"></a>       <span class="at">color =</span> <span class="st">"Semantic Contribution Label"</span>) <span class="sc">+</span></span>
 <span id="cb40-15"><a href="#cb40-15" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_minimal</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
-<p><img src="ReduplicationProjectWriteup_files/figure-html/unnamed-chunk-13-1.png" class="img-fluid" width="672"></p>
+<p><img src="index_files/figure-html/unnamed-chunk-13-1.png" class="img-fluid" width="672"></p>
 </div>
 </div>
 <p>This model also revealed some general trends. Namely, prototypical readings (and to a lesser extent, salient readings) increased as frequency increased, while extreme readings decreased as frequency increased. In case the trends seen in these graphs were a result of POS being a confounding variable influencing word length or frequency (e.g., if adjectives in our dataset were longer or less frequent overall than other POS, trends seen in these models’ results could just be a result of POS and not the variable at hand), we calculated simple mean and median stats for word length and frequency by POS.</p>
