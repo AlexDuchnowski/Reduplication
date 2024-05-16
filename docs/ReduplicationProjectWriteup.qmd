@@ -22,11 +22,11 @@ The specific phenomenon that will be examined in this paper is Contrastive Focus
 
 As a result of limiting our scope in this way, our research will not be a comprehensive analysis of all semantic behavior of all types of English reduplication. This means that excluded from our analysis will be reduplicated forms such as baby talk (eg. goo-goo, ga-ga); deprecative reduplication, which is used in the depreciation or devaluation of the base form (eg. party-schmarty, vegetables-schmegetables); intensive reduplication, which is used to non-contrastively intensify the meaning of the base form (eg. triplication in “It’s all about money, money, money!”); and others as outlined in the typological work of Ghomeshi et al. (2004).
 
-Additionally, there are some forms of reduplication which may fall under the scope of CR, but whose semantic content is not variable in such a way as to be relevant to the research conducted here. Drawing upon the work of Widlitzki (2016), our investigation into CR will be limited to context-dependent reduplication, in which the meaning of the reduplicated form is somewhat dependent upon the context in which it is uttered. By this measure, we will be excluding CR which falls under the umbrella of having a _single default meaning_ or an _emerging default meaning_. The former refers to CR which has a broadly recognized meaning that is not dependent upon context, such as “really-really” or “very-very.” The latter refers to CR forms which are seemingly in the process of developing a conventionalized meaning, such as the increasingly salient romantic connotation of the phrase “like-like.”
+Additionally, there are some forms of reduplication which may fall under the scope of CR, but whose semantic content is not variable in such a way as to be relevant to the research conducted here. Drawing upon the work of Widlitzki (2016), our investigation into CR will be limited to context-dependent reduplication, in which the meaning of the reduplicated form is somewhat dependent upon the context in which it is uttered. By this measure, we will be excluding CR which falls under the umbrella of having a *single default meaning* or an *emerging default meaning*. The former refers to CR which has a broadly recognized meaning that is not dependent upon context, such as “really-really” or “very-very.” The latter refers to CR forms which are seemingly in the process of developing a conventionalized meaning, such as the increasingly salient romantic connotation of the phrase “like-like.”
 
 ## 1.2 Semantic Contribution
 
-Having established the scope of CR that we will be dealing with in this paper, we’ll now turn to elaborating on what we mean when we refer to the ‘semantic contribution’ of reduplication. Put simply, we are referring to the way in which the meaning of the reduplicated word or phrase changes for having undergone the morphological process of reduplication. The following is a three-way typology that we have developed to facilitate the distinction of the different semantic contributions of CR, based primarily on prior work by Ghomeshi et al. (2004) and Widlitzki (2016). Most relevantly, from Ghomeshi et al. (2004:343) we take the categories _Prototypical_, _Extreme_, and _Salient_ to be the three major types of meanings conveyed by CR.
+Having established the scope of CR that we will be dealing with in this paper, we’ll now turn to elaborating on what we mean when we refer to the ‘semantic contribution’ of reduplication. Put simply, we are referring to the way in which the meaning of the reduplicated word or phrase changes for having undergone the morphological process of reduplication. The following is a three-way typology that we have developed to facilitate the distinction of the different semantic contributions of CR, based primarily on prior work by Ghomeshi et al. (2004) and Widlitzki (2016). Most relevantly, from Ghomeshi et al. (2004:343) we take the categories *Prototypical*, *Extreme*, and *Salient* to be the three major types of meanings conveyed by CR.
 
 ### Prototypical
 
@@ -41,8 +41,7 @@ In (1), the salad being described as the “salad-salad” is most likely a leaf
 
 CR which is extreme is used to indicate an intensified meaning, most straightforwardly comparable to saying that something is “very/extremely/super X.” Examples of Extreme CR (ECR) would be the following:
 
-> (3) A \[to B, who is about to give a recital\]: Are you nervous?
-<br/>B: Yeah, but, you know, not NERVOUS-nervous.\
+> (3) A \[to B, who is about to give a recital\]: Are you nervous? <br/>B: Yeah, but, you know, not NERVOUS-nervous.\
 > (4) First of all, I'm not like a CELEBRITY-celebrity; I don't get recognized when I'm walking down the street.
 
 In (3), Speaker B is contrasting their level of nervousness on a gradable scale, wherein they are asserting that they are just nervous (i.e., a ‘little’ nervous) as opposed to “nervous-nervous” (i.e., ‘very’ nervous), thus demonstrating a use of ECR. In (4), the speaker is drawing a contrast between different levels of celebrity, arguing that they are only a celebrity to a certain degree, as opposed to celebrities who are of a higher caliber. In this way (4) is an example of ECR by way of the speaker’s assertion that they are not an extreme version of their occupation.
@@ -51,9 +50,7 @@ In (3), Speaker B is contrasting their level of nervousness on a gradable scale,
 
 CR which is salient is used to indicate that there is a contextually salient or accessible sense or reference for the meaning of the reduplicated form. This is different from the above two types of CR, which are both contextually-dependent in their own way, by being inclusive of grammatical categories such as proper nouns, and word types such as indexicals, whose referents change at the level of the utterance rather than the sentence. Examples of Salient CR (SCR) would be the following:
 
-> (5) A: Did you check out the leak in the bathroom?
-<br/>B: What leak?
-<br/>A: The LEAK-leak. \[drags her into the bathroom\]\
+> (5) A: Did you check out the leak in the bathroom? <br/>B: What leak? <br/>A: The LEAK-leak. \[drags her into the bathroom\]\
 > (6) We have a wonderful bed. I think you'll enjoy it. Not ENJOY-enjoy. Sleep. Enjoyable sleep.
 > (7) They just call him psycho-Marcus because they're trying to distinguish between him and MARCUS-Marcus and normal-Marcus.
 
@@ -115,12 +112,12 @@ Our list of 613 samples, while filtered for examples that fit a pattern of redup
 
 Using the `krippendorff` python package (Castro, 2017), we calculated Krippendorff’s Alpha values to see how well we agreed on these labels for each set (we used a few N/U annotations for Non-RC/Unclear for the Salad-Salad dataset, but we treat such labels as missing annotations for the purposes of calculating Krippendorff’s Alpha). The results are as follows:
 
-- Salad-Salad:
-    - Examples 1-100: 0.2132
-    - Examples 101-286: 0.5204
-- OpenSubtitles:
-    - Examples 1-200: 0.6873
-    - Examples 201-613: 0.5542
+-   Salad-Salad:
+    -   Examples 1-100: 0.2132
+    -   Examples 101-286: 0.5204
+-   OpenSubtitles:
+    -   Examples 1-200: 0.6873
+    -   Examples 201-613: 0.5542
 
 Overall, this agreement was relatively week, as social scientists typically discard data with an alpha value below 0.667. However, we were able to come to a consensus on the majority of our annotations, and the disagreements we had were typically over edge cases or examples that were difficult to classify. Thus, while we acknowledge that our agreement was not perfect, we believe that our annotations are still valid and can be used for tentative analysis.
 
@@ -387,7 +384,7 @@ Based on our dataset, a few statistically significant trends between POS and sem
 
 # Citations
 
-Castro, S. (2017). _[Fast Krippendorff: Fast computation of Krippendorff's alpha agreement measure](https://pypi.org/project/krippendorff/#description)_.
+Castro, S. (2017). [*Fast Krippendorff: Fast computation of Krippendorff's alpha agreement measure*](https://pypi.org/project/krippendorff/#description).
 
 P. Lison and J. Tiedemann, 2016, [OpenSubtitles2016: Extracting Large Parallel Corpora from Movie and TV Subtitles](http://www.lrec-conf.org/proceedings/lrec2016/pdf/947_Paper.pdf). In Proceedings of the 10th International Conference on Language Resources and Evaluation (LREC 2016)
 
