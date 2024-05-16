@@ -146,8 +146,6 @@ write_csv(full_222k_counts, "full_222k_counted.csv")                # Writing th
 
 Our calculations for word frequency are based on a [dataset](https://www.kaggle.com/datasets/rtatman/english-word-frequency) of the top 333,333 most frequent English words as they appear in the Google Web Trillion Word Corpus, . To normalize the values the log of the frequency was taken.
 
-CODEHERE (normalization of freq’s)
-
 # 4.0 Analysis & Discussion
 
 ## 4.1 Findings
