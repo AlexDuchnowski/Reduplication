@@ -119,13 +119,30 @@ Overall, this agreement was relatively week, as social scientists typically disc
 
 ## 3.3 Word Length & Frequency
 
-In addition to the above processing, we will include in our analysis in the next section some discussion of word length and word frequency as potentially influential factors in our results. This is partially derived from the acknowledgement that POS may not exclusively have a part to play in the semantic contribution of reduplication (eg. a word’s frequency may impact whether or not it can be understood with a prototypical versus salient interpretation), and are interested in substantiating more strongly the specific link between POS and semantic contribution, should there be one.
+In addition to the above processing, we will include in our analysis in the next section some discussion of word length and word frequency as potentially influential factors in our results. This is partially derived from the acknowledgement that POS may not exclusively have a part to play in the semantic contribution of reduplication (eg. a word’s frequency may impact whether or not it can be understood with a prototypical versus salient interpretation), and are interested in substantiating more strongly the specific link between POS and semantic contribution, should there be one. Word length could be calculated straightforwardly in R.
 
-CODEHERE (word length code for salad-salad & 222k)
+```{r}
 
-Word length could be calculated straightforwardly in R.
+salad <- read_csv("salad_consolidated_refined.csv")      # Reading the File
+salad$Length <- nchar(salad$Word)      # Creating a Length Column
+freq_list <- read_csv("unigram_freq.csv")     # Reading the Frequency Counter File
+freq_list$Word <- freq_list$word              # Making it so that both tables have a "Word" column
+freq_list <- freq_list[, -1]                  # Preventing the "word" column from sticking around
 
-CODEHERE (word length code for salad-salad & 222k)
+salad_counts <- inner_join(salad, freq_list, by="Word")               # Adding the frequency list to the main tibble
+write_csv(salad_counts, "salad_consolidated_refined_counted.csv")     # Writing the Salad-Salad File
+
+```
+
+```{r}
+
+full_222k <- read_delim("en_v1_222k_full.csv", delim="\t")          # Reading the File, adjusting for it being .csv
+full_222k$Length <- nchar(full_222k$Word)                           # Doing the Character Counts
+full_222k_counts <- inner_join(full_222k, freq_list, by="Word")     # Doing Freqs
+
+write_csv(full_222k_counts, "full_222k_counted.csv")                # Writing the File
+
+```
 
 Our calculations for word frequency are based on a [dataset](https://www.kaggle.com/datasets/rtatman/english-word-frequency) of the top 333,333 most frequent English words as they appear in the Google Web Trillion Word Corpus, . To normalize the values the log of the frequency was taken.
 
