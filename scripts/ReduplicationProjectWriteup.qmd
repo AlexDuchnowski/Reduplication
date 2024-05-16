@@ -2,7 +2,10 @@
 title: "Reduplication Project Writeup"
 format: html
 editor: visual
-author: Alex Duchnowski, Arushi Kalpande, Ford Rowe
+authors:
+- Alex Duchnowski
+- Arushi Kalpande
+- Ford Rowe
 ---
 
 # 1 Background and Context
@@ -75,25 +78,44 @@ The OpenSubtitles Corpus that we selected is constrained to English-language sub
 
 ## 3.1 Preprocessing
 
-CODEHERE (filtering Salad-Salad)
-
 When processing both corpora, we limited our focus to the four parts of speech which most often undergo reduplication in English: Nouns, Verbs, Adjectives, and Adverbs (Widlitzki, 2016). The Salad-Salad Corpus required minimal filtering beyond this, as these entries were already confirmed to be CR by Ghomeshi et al (2004) and were already annotated for their POS in the corpus’s index. Apart from filtering for the four POS’s of interest, we also removed instances of reduplicated like, as this has an emerging default meaning (as noted in section 1.1).
 
-Our pre-processing work on the OpenSubtitles corpus was significantly more intensive, as we needed to filter for repetition of words while retaining relevant context for each example and filtering out repetition which was unlikely to be CR. We started by transforming the initial corpus so that every line contained copies of the lines surrounding it for context. The initial filtering of this content was then achieved with the following Linux script:
+Our pre-processing work on the OpenSubtitles corpus was significantly more intensive, as we needed to filter for repetition of words while retaining relevant context for each example and filtering out repetition which was unlikely to be CR. We started by transforming the initial corpus so that every line contained copies of the lines surrounding it for context. The initial filtering of this content was then achieved with the following Linux script (for full context, see [this file](https://github.com/AlexDuchnowski/Reduplication/blob/main/scripts/extract_contextualized_redups.sh)):
 
-CODEHERE (filtering code)
+```{{bash}}
+cat data/$name/contextualized_$name.txt                 |
+grep -vP '^[^\t]*\b([a-z]{3,})[ ,-]+\1[ ,-]+\1\b'       |   # remove rows with triples in the first column
+sed -re 's/^([^\t]*)([[\(].*[]\)])(.*)\2/\1\3/g'        |   # remove bracketed content in the first column
+sed -re 's/^([^\t]*)/\L\1/'                             |   # convert text in the first column to lowercase
+egrep "^[^$tab]*\b([a-z]{3,})[ ,-]\1\b"                 |   # filter for reduplications in the first column
+sed -re 's/^[^\t]*\b([a-z]{3,})[ ,-]\1\b[^\t]*\t/\1\t/g'   `# extract reduplicated words in the first column` \
+> data/$name/${name}_redups.txt
+```
 
-As can be seen in the code above, we removed bracketed content since this was typically used to denote scene descriptions, sound effects, or other non-dialogue information. We also converted the column of interest to lowercase to facilitate searching for reduplication without case-sensitivity. Additionally, we removed instances of repetition where a word or morpheme was used more than twice in a row, as this was often singing or laughter, rather than actually reduplication. After these filters were applied, we searched for and extracted examples where a single word at least three letters in length was repeated (with a space, comma, or hyphen separating the two copies). The length requirement was to filter for more contentful words and to preemptively remove words in other POS categories such as prepositions and pronouns. Part of speech was labeled using the POS tokenizer of the spaCy Python package, and these POS annotations were then used to filter for the four most commonly reduplicated parts of speech, in keeping with the filtering described for our Salad-Salad Corpus data. Applying this filter to about 222,000 lines of subtitles resulted in 613 candidate examples of CR.
+As can be seen in the code above, we removed bracketed content since this was typically used to denote scene descriptions, sound effects, or other non-dialogue information. We also converted the column of interest to lowercase to facilitate searching for reduplication without case-sensitivity. Additionally, we removed instances of repetition where a word or morpheme was used more than twice in a row, as this was often singing or laughter, rather than actually reduplication. After these filters were applied, we searched for and extracted examples where a single word at least three letters in length was repeated (with a space, comma, or hyphen separating the two copies). The length requirement was to filter for more contentful words and to preemptively remove words in other POS categories such as prepositions and pronouns. Part of speech was labeled using the POS tokenizer of the `spaCy` Python package, and these POS annotations were then used to filter for the four most commonly reduplicated parts of speech, in keeping with the filtering described for our Salad-Salad Corpus data. Applying this filter to about 222,000 lines of subtitles resulted in 613 candidate examples of CR.
 
 ## 3.2 Manual Annotation
 
 ### Salad-Salad
 
-Our resulting list was 286 entries long, down from the original 334, and was not entirely free of non-CR tokens. For example, an entry in which Jay Leno makes a joke about going to prison within a prison — “prison-prison” — was notated by the original authors as CR, but we agreed that this did not seem to be an accurate notation. Other post-processing filtering also included the removal of annotations from Ghomeshi et al. which included reduplication, such as the title “Cow-Cow.” In addition to verifying the presence of reduplication, we manually annotated whether or not the semantic contribution of the reduplication was Prototypical, Extreme, or Salient. We divided our annotation into two sessions, starting with the first 100, then meeting to convene on our answers and discuss any discrepancies before proceeding to annotate the rest. Afterwards, we completed our list in the same manner, annotating individually and then agreeing as a group. We annotated separately, annotated P/E/S, and then talked about the entries that we disagreed on and established a unified ground truth Our total number of verified reduplications in the Salad-Salad corpus was 280.
+Our resulting list was 286 entries long, down from the original 334, and was not entirely free of non-CR tokens. For example, an entry in which Jay Leno makes a joke about going to prison within a prison — “prison-prison” — was notated by the original authors as CR, but we agreed that this did not seem to be an accurate notation. Other post-processing filtering also included the removal of annotations from Ghomeshi et al. which included reduplication, such as the title “Cow-Cow.” In addition to verifying the presence of reduplication, we manually annotated whether or not the semantic contribution of the reduplication was Prototypical, Extreme, or Salient. We divided our annotation into two sessions, starting with the first 100 examples, then meeting to convene on our answers and discuss any discrepancies before proceeding to annotate the rest. Afterwards, we completed our list in the same manner, annotating individually and then agreeing as a group. We annotated separately, labeling each example as one of P/E/S, and then talked about the entries we disagreed on and established a unified ground truth. Our total number of verified reduplications in the Salad-Salad corpus was 280.
 
 ### OpenSubtitles
 
-**Our list of 613 samples, though supposedly reduplicated in all cases, was in practice not entirely free of superfluous, non-reduplicated data. An example of this is repetition that was not reduplicated, such as the use of the phrase “now I’m a black widow widow” in A Bug’s Life. To address this, we took a sample of 200 entries and each individually performed a manual reading of the repeated word and its context, and determined if there was indeed reduplication occurring in the utterance. The same agreement system was used as our Salad-Salad annotation In addition to verifying the presence of reduplication, we would manually annotate whether or not the semantic contribution of the reduplication was Prototypical, Extreme, or Salient. Description of IAA Process Calculated Reliability metrics to see how often we agreed on these labels Krippendorff’s Alpha Values Salad-Salad First 100: 0.213 Next 186: 0.473 Threshold normally needs to be 0.667 to be more reliable than a coin flip, but since we established a ground truth our annotations still should hold for the purpose of our analysis**
+Our list of 613 samples, while filtered for examples that fit a pattern of reduplication, contained a significant amoun of non-CR data. An example of this is repetition that was not reduplication, such as the use of the phrase “now I’m a black widow widow” in *A Bug’s Life* (the first "widow" is part of "black widow", the type of spider, and the second is the normal usage of "widow"). To address this, we added the label N to our annotations to indicate that an example was not an instance of CR. We split the samples into the first 200 entries and the remaining 413 and each individually performed a manual reading of the repeated word and its context, and determined if there was indeed reduplication occurring in the utterance. As before, we met after annotating each set to clarify any disagreements.
+
+### Agreement
+
+Using the `krippendorff` python package (Castro, 2017), we calculated Krippendorff’s Alpha values to see how well we agreed on these labels for each set (we used a few N/U annotations for Non-RC/Unclear for the Salad-Salad dataset, but we treat such labels as missing annotations for the purposes of calculating Krippendorff’s Alpha). The results are as follows:
+
+-   Salad-Salad:
+    -   1-100: 0.21319844946582212
+    -   101-286: 0.5204070491123098
+-   OpenSubs:
+    -   1-200: 0.6873462083364403
+    -   201-613: 0.5542389525368248
+
+Overall, this agreement was relatively week, as social scientists typically discard data with an alpha value below 0.667. However, we were able to come to a consensus on the majority of our annotations, and the disagreements we had were typically over edge cases or examples that were difficult to classify. Thus, while we acknowledge that our agreement was not perfect, we believe that our annotations are still valid and can be used for tentative analysis.
 
 ## 3.3 Word Length & Frequency
 
@@ -366,6 +388,8 @@ We would also like to acknowledge that the typology that we constructed at the o
 Based on our dataset, a few statistically significant trends between POS and semantic contribution of reduplication have been identified. Additionally, some trends between word length/frequency and semantic contribution have also been observed, but more research into the strength of these trends is needed. Supplemental data from a larger corpus can provide more evidence to confirm or challenge these trends, and potentially bring to light new trends.
 
 # Citations
+
+Castro, S. (2017). _Fast Krippendorff: Fast computation of Krippendorff's alpha agreement measure_.
 
 P. Lison and J. Tiedemann, 2016, [OpenSubtitles2016: Extracting Large Parallel Corpora from Movie and TV Subtitles](http://www.lrec-conf.org/proceedings/lrec2016/pdf/947_Paper.pdf). In Proceedings of the 10th International Conference on Language Resources and Evaluation (LREC 2016)
 

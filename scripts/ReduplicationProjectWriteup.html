@@ -6,7 +6,6 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="author" content="Alex Duchnowski, Arushi Kalpande, Ford Rowe">
 
 <title>Reduplication Project Writeup</title>
 <style>
@@ -88,9 +87,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div class="quarto-title-meta">
 
     <div>
-    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-heading">Authors</div>
     <div class="quarto-title-meta-contents">
-             <p>Alex Duchnowski, Arushi Kalpande, Ford Rowe </p>
+             <p>Alex Duchnowski </p>
+             <p>Arushi Kalpande </p>
+             <p>Ford Rowe </p>
           </div>
   </div>
     
@@ -177,21 +178,45 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <h1>3 Methodology</h1>
 <section id="preprocessing" class="level2">
 <h2 class="anchored" data-anchor-id="preprocessing">3.1 Preprocessing</h2>
-<p>CODEHERE (filtering Salad-Salad)</p>
 <p>When processing both corpora, we limited our focus to the four parts of speech which most often undergo reduplication in English: Nouns, Verbs, Adjectives, and Adverbs (Widlitzki, 2016). The Salad-Salad Corpus required minimal filtering beyond this, as these entries were already confirmed to be CR by Ghomeshi et al (2004) and were already annotated for their POS in the corpus’s index. Apart from filtering for the four POS’s of interest, we also removed instances of reduplicated like, as this has an emerging default meaning (as noted in section 1.1).</p>
-<p>Our pre-processing work on the OpenSubtitles corpus was significantly more intensive, as we needed to filter for repetition of words while retaining relevant context for each example and filtering out repetition which was unlikely to be CR. We started by transforming the initial corpus so that every line contained copies of the lines surrounding it for context. The initial filtering of this content was then achieved with the following Linux script:</p>
-<p>CODEHERE (filtering code)</p>
-<p>As can be seen in the code above, we removed bracketed content since this was typically used to denote scene descriptions, sound effects, or other non-dialogue information. We also converted the column of interest to lowercase to facilitate searching for reduplication without case-sensitivity. Additionally, we removed instances of repetition where a word or morpheme was used more than twice in a row, as this was often singing or laughter, rather than actually reduplication. After these filters were applied, we searched for and extracted examples where a single word at least three letters in length was repeated (with a space, comma, or hyphen separating the two copies). The length requirement was to filter for more contentful words and to preemptively remove words in other POS categories such as prepositions and pronouns. Part of speech was labeled using the POS tokenizer of the spaCy Python package, and these POS annotations were then used to filter for the four most commonly reduplicated parts of speech, in keeping with the filtering described for our Salad-Salad Corpus data. Applying this filter to about 222,000 lines of subtitles resulted in 613 candidate examples of CR.</p>
+<p>Our pre-processing work on the OpenSubtitles corpus was significantly more intensive, as we needed to filter for repetition of words while retaining relevant context for each example and filtering out repetition which was unlikely to be CR. We started by transforming the initial corpus so that every line contained copies of the lines surrounding it for context. The initial filtering of this content was then achieved with the following Linux script (for full context, see <a href="https://github.com/AlexDuchnowski/Reduplication/blob/main/scripts/extract_contextualized_redups.sh">this file</a>):</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="in">```{bash}</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">cat</span> data/<span class="va">$name</span>/contextualized_<span class="va">$name</span>.txt                 <span class="kw">|</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="fu">grep</span> <span class="at">-vP</span> <span class="st">'^[^\t]*\b([a-z]{3,})[ ,-]+\1[ ,-]+\1\b'</span>       <span class="kw">|</span>   <span class="co"># remove rows with triples in the first column</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="fu">sed</span> <span class="at">-re</span> <span class="st">'s/^([^\t]*)([[\(].*[]\)])(.*)\2/\1\3/g'</span>        <span class="kw">|</span>   <span class="co"># remove bracketed content in the first column</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="fu">sed</span> <span class="at">-re</span> <span class="st">'s/^([^\t]*)/\L\1/'</span>                             <span class="kw">|</span>   <span class="co"># convert text in the first column to lowercase</span></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="fu">egrep</span> <span class="st">"^[^</span><span class="va">$tab</span><span class="st">]*\b([a-z]{3,})[ ,-]\1\b"</span>                 <span class="kw">|</span>   <span class="co"># filter for reduplications in the first column</span></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="fu">sed</span> <span class="at">-re</span> <span class="st">'s/^[^\t]*\b([a-z]{3,})[ ,-]\1\b[^\t]*\t/\1\t/g'</span>   <span class="kw">`</span><span class="co"># extract reduplicated words in the first column</span><span class="kw">`</span> <span class="dt">\</span></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;</span> data/<span class="va">$name</span>/<span class="va">${name}</span>_redups.txt</span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>As can be seen in the code above, we removed bracketed content since this was typically used to denote scene descriptions, sound effects, or other non-dialogue information. We also converted the column of interest to lowercase to facilitate searching for reduplication without case-sensitivity. Additionally, we removed instances of repetition where a word or morpheme was used more than twice in a row, as this was often singing or laughter, rather than actually reduplication. After these filters were applied, we searched for and extracted examples where a single word at least three letters in length was repeated (with a space, comma, or hyphen separating the two copies). The length requirement was to filter for more contentful words and to preemptively remove words in other POS categories such as prepositions and pronouns. Part of speech was labeled using the POS tokenizer of the <code>spaCy</code> Python package, and these POS annotations were then used to filter for the four most commonly reduplicated parts of speech, in keeping with the filtering described for our Salad-Salad Corpus data. Applying this filter to about 222,000 lines of subtitles resulted in 613 candidate examples of CR.</p>
 </section>
 <section id="manual-annotation" class="level2">
 <h2 class="anchored" data-anchor-id="manual-annotation">3.2 Manual Annotation</h2>
 <section id="salad-salad" class="level3">
 <h3 class="anchored" data-anchor-id="salad-salad">Salad-Salad</h3>
-<p>Our resulting list was 286 entries long, down from the original 334, and was not entirely free of non-CR tokens. For example, an entry in which Jay Leno makes a joke about going to prison within a prison — “prison-prison” — was notated by the original authors as CR, but we agreed that this did not seem to be an accurate notation. Other post-processing filtering also included the removal of annotations from Ghomeshi et al.&nbsp;which included reduplication, such as the title “Cow-Cow.” In addition to verifying the presence of reduplication, we manually annotated whether or not the semantic contribution of the reduplication was Prototypical, Extreme, or Salient. We divided our annotation into two sessions, starting with the first 100, then meeting to convene on our answers and discuss any discrepancies before proceeding to annotate the rest. Afterwards, we completed our list in the same manner, annotating individually and then agreeing as a group. We annotated separately, annotated P/E/S, and then talked about the entries that we disagreed on and established a unified ground truth Our total number of verified reduplications in the Salad-Salad corpus was 280.</p>
+<p>Our resulting list was 286 entries long, down from the original 334, and was not entirely free of non-CR tokens. For example, an entry in which Jay Leno makes a joke about going to prison within a prison — “prison-prison” — was notated by the original authors as CR, but we agreed that this did not seem to be an accurate notation. Other post-processing filtering also included the removal of annotations from Ghomeshi et al.&nbsp;which included reduplication, such as the title “Cow-Cow.” In addition to verifying the presence of reduplication, we manually annotated whether or not the semantic contribution of the reduplication was Prototypical, Extreme, or Salient. We divided our annotation into two sessions, starting with the first 100 examples, then meeting to convene on our answers and discuss any discrepancies before proceeding to annotate the rest. Afterwards, we completed our list in the same manner, annotating individually and then agreeing as a group. We annotated separately, labeling each example as one of P/E/S, and then talked about the entries we disagreed on and established a unified ground truth. Our total number of verified reduplications in the Salad-Salad corpus was 280.</p>
 </section>
 <section id="opensubtitles" class="level3">
 <h3 class="anchored" data-anchor-id="opensubtitles">OpenSubtitles</h3>
-<p><strong>Our list of 613 samples, though supposedly reduplicated in all cases, was in practice not entirely free of superfluous, non-reduplicated data. An example of this is repetition that was not reduplicated, such as the use of the phrase “now I’m a black widow widow” in A Bug’s Life. To address this, we took a sample of 200 entries and each individually performed a manual reading of the repeated word and its context, and determined if there was indeed reduplication occurring in the utterance. The same agreement system was used as our Salad-Salad annotation In addition to verifying the presence of reduplication, we would manually annotate whether or not the semantic contribution of the reduplication was Prototypical, Extreme, or Salient. Description of IAA Process Calculated Reliability metrics to see how often we agreed on these labels Krippendorff’s Alpha Values Salad-Salad First 100: 0.213 Next 186: 0.473 Threshold normally needs to be 0.667 to be more reliable than a coin flip, but since we established a ground truth our annotations still should hold for the purpose of our analysis</strong></p>
+<p>Our list of 613 samples, while filtered for examples that fit a pattern of reduplication, contained a significant amoun of non-CR data. An example of this is repetition that was not reduplication, such as the use of the phrase “now I’m a black widow widow” in <em>A Bug’s Life</em> (the first “widow” is part of “black widow”, the type of spider, and the second is the normal usage of “widow”). To address this, we added the label N to our annotations to indicate that an example was not an instance of CR. We split the samples into the first 200 entries and the remaining 413 and each individually performed a manual reading of the repeated word and its context, and determined if there was indeed reduplication occurring in the utterance. As before, we met after annotating each set to clarify any disagreements.</p>
+</section>
+<section id="agreement" class="level3">
+<h3 class="anchored" data-anchor-id="agreement">Agreement</h3>
+<p>Using the <code>krippendorff</code> python package (Castro, 2017), we calculated Krippendorff’s Alpha values to see how well we agreed on these labels for each set (we used a few N/U annotations for Non-RC/Unclear for the Salad-Salad dataset, but we treat such labels as missing annotations for the purposes of calculating Krippendorff’s Alpha). The results are as follows:</p>
+<ul>
+<li>Salad-Salad:
+<ul>
+<li>1-100: 0.21319844946582212</li>
+<li>101-286: 0.5204070491123098</li>
+</ul></li>
+<li>OpenSubs:
+<ul>
+<li>1-200: 0.6873462083364403</li>
+<li>201-613: 0.5542389525368248</li>
+</ul></li>
+</ul>
+<p>Overall, this agreement was relatively week, as social scientists typically discard data with an alpha value below 0.667. However, we were able to come to a consensus on the majority of our annotations, and the disagreements we had were typically over edge cases or examples that were difficult to classify. Thus, while we acknowledge that our agreement was not perfect, we believe that our annotations are still valid and can be used for tentative analysis.</p>
 </section>
 </section>
 <section id="word-length-frequency" class="level2">
@@ -210,19 +235,19 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <h2 class="anchored" data-anchor-id="findings">4.1 Findings</h2>
 <p>As mentioned in the previous section, we annotated both the Salad-Salad and Opensubs datasets. Although Salad-Salad’s contents were all determined to be CR, as became apparent during the annotating phase, the vast majority of the examples in our Opensubs subset were still not true CR even after several rounds of filtering. The following pie chart illustrates the percentages of different labels, with ‘N’ representing ‘not CR.’</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>salad.data <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="st">"../data/salad_consolidated_refined_counted.csv"</span>)</span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>opensubs.data <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="st">"../data/en_v1_222k/full_222k_counted.csv"</span>)</span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>opensubs.filtered <span class="ot">&lt;-</span> <span class="fu">subset</span>(opensubs.data, Label <span class="sc">%in%</span> <span class="fu">c</span>(<span class="st">"P"</span>, <span class="st">"E"</span>, <span class="st">"S"</span>))</span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>opensubs.selected <span class="ot">&lt;-</span> opensubs.filtered[, <span class="fu">names</span>(opensubs.filtered) <span class="sc">%in%</span> <span class="fu">names</span>(salad.data)]</span>
-<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>combined.data <span class="ot">&lt;-</span> <span class="fu">rbind</span>(salad.data, opensubs.selected)</span>
-<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a><span class="fu">write.csv</span>(combined.data, <span class="st">"../data/combined_opensubs_salad_data.csv"</span>, <span class="at">row.names =</span> <span class="cn">FALSE</span>)</span>
-<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>combined.data<span class="sc">$</span>Log_Freq_Count <span class="ot">&lt;-</span> <span class="fu">log</span>(combined.data<span class="sc">$</span>Freq_Count)</span>
-<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(combined.data)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>salad.data <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="st">"../data/salad_consolidated_refined_counted.csv"</span>)</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>opensubs.data <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="st">"../data/en_v1_222k/full_222k_counted.csv"</span>)</span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>opensubs.filtered <span class="ot">&lt;-</span> <span class="fu">subset</span>(opensubs.data, Label <span class="sc">%in%</span> <span class="fu">c</span>(<span class="st">"P"</span>, <span class="st">"E"</span>, <span class="st">"S"</span>))</span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>opensubs.selected <span class="ot">&lt;-</span> opensubs.filtered[, <span class="fu">names</span>(opensubs.filtered) <span class="sc">%in%</span> <span class="fu">names</span>(salad.data)]</span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>combined.data <span class="ot">&lt;-</span> <span class="fu">rbind</span>(salad.data, opensubs.selected)</span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a><span class="fu">write.csv</span>(combined.data, <span class="st">"../data/combined_opensubs_salad_data.csv"</span>, <span class="at">row.names =</span> <span class="cn">FALSE</span>)</span>
+<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a>combined.data<span class="sc">$</span>Log_Freq_Count <span class="ot">&lt;-</span> <span class="fu">log</span>(combined.data<span class="sc">$</span>Freq_Count)</span>
+<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(combined.data)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>        Word Label POS Word_Length Freq_Count Log_Freq_Count
 1       adam     S  NN           4   21694386       16.89256
@@ -234,7 +259,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 </div>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(dplyr)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(dplyr)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stderr">
 <pre><code>
 Attaching package: 'dplyr'</code></pre>
@@ -249,70 +274,70 @@ Attaching package: 'dplyr'</code></pre>
 
     intersect, setdiff, setequal, union</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
-<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>labels<span class="fl">.1</span> <span class="ot">&lt;-</span> <span class="fu">readLines</span>(<span class="st">"../data/annotations/opensubs_agreed_1.txt"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a>labels<span class="fl">.1</span> <span class="ot">&lt;-</span> <span class="fu">readLines</span>(<span class="st">"../data/annotations/opensubs_agreed_1.txt"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stderr">
 <pre><code>Warning in readLines("../data/annotations/opensubs_agreed_1.txt"): incomplete
 final line found on '../data/annotations/opensubs_agreed_1.txt'</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>labels<span class="fl">.2</span> <span class="ot">&lt;-</span> <span class="fu">readLines</span>(<span class="st">"../data/annotations/opensubs_agreed_2.txt"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>labels<span class="fl">.2</span> <span class="ot">&lt;-</span> <span class="fu">readLines</span>(<span class="st">"../data/annotations/opensubs_agreed_2.txt"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stderr">
 <pre><code>Warning in readLines("../data/annotations/opensubs_agreed_2.txt"): incomplete
 final line found on '../data/annotations/opensubs_agreed_2.txt'</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>all.labels <span class="ot">&lt;-</span> <span class="fu">c</span>(labels<span class="fl">.1</span>, labels<span class="fl">.2</span>)</span>
-<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a>label.freq <span class="ot">&lt;-</span> <span class="fu">table</span>(all.labels)</span>
-<span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a>label.df <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(<span class="at">Label =</span> <span class="fu">names</span>(label.freq), <span class="at">Frequency =</span> <span class="fu">as.numeric</span>(label.freq))</span>
-<span id="cb11-5"><a href="#cb11-5" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb11-6"><a href="#cb11-6" aria-hidden="true" tabindex="-1"></a>label.df<span class="sc">$</span>Percentage <span class="ot">&lt;-</span> label.df<span class="sc">$</span>Frequency <span class="sc">/</span> <span class="fu">sum</span>(label.df<span class="sc">$</span>Frequency) <span class="sc">*</span> <span class="dv">100</span></span>
-<span id="cb11-7"><a href="#cb11-7" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb11-8"><a href="#cb11-8" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(label.df, <span class="fu">aes</span>(<span class="at">x =</span> <span class="st">""</span>, <span class="at">y =</span> Frequency, <span class="at">fill =</span> Label)) <span class="sc">+</span></span>
-<span id="cb11-9"><a href="#cb11-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_bar</span>(<span class="at">stat =</span> <span class="st">"identity"</span>, <span class="at">width =</span> <span class="dv">1</span>) <span class="sc">+</span></span>
-<span id="cb11-10"><a href="#cb11-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">coord_polar</span>(<span class="st">"y"</span>, <span class="at">start =</span> <span class="dv">0</span>) <span class="sc">+</span></span>
-<span id="cb11-11"><a href="#cb11-11" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">"Distribution of Semantic Contribution Labels in OpenSubs Dataset"</span>,</span>
-<span id="cb11-12"><a href="#cb11-12" aria-hidden="true" tabindex="-1"></a>       <span class="at">fill =</span> <span class="st">"Label"</span>) <span class="sc">+</span></span>
-<span id="cb11-13"><a href="#cb11-13" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_void</span>() <span class="sc">+</span></span>
-<span id="cb11-14"><a href="#cb11-14" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_fill_discrete</span>(<span class="at">labels =</span> <span class="fu">paste</span>(label.df<span class="sc">$</span>Label, <span class="fu">sprintf</span>(<span class="st">"(%0.1f%%)"</span>, label.df<span class="sc">$</span>Percentage))) <span class="sc">+</span></span>
-<span id="cb11-15"><a href="#cb11-15" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">legend.position =</span> <span class="st">"bottom"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a>all.labels <span class="ot">&lt;-</span> <span class="fu">c</span>(labels<span class="fl">.1</span>, labels<span class="fl">.2</span>)</span>
+<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a>label.freq <span class="ot">&lt;-</span> <span class="fu">table</span>(all.labels)</span>
+<span id="cb12-4"><a href="#cb12-4" aria-hidden="true" tabindex="-1"></a>label.df <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(<span class="at">Label =</span> <span class="fu">names</span>(label.freq), <span class="at">Frequency =</span> <span class="fu">as.numeric</span>(label.freq))</span>
+<span id="cb12-5"><a href="#cb12-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-6"><a href="#cb12-6" aria-hidden="true" tabindex="-1"></a>label.df<span class="sc">$</span>Percentage <span class="ot">&lt;-</span> label.df<span class="sc">$</span>Frequency <span class="sc">/</span> <span class="fu">sum</span>(label.df<span class="sc">$</span>Frequency) <span class="sc">*</span> <span class="dv">100</span></span>
+<span id="cb12-7"><a href="#cb12-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-8"><a href="#cb12-8" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(label.df, <span class="fu">aes</span>(<span class="at">x =</span> <span class="st">""</span>, <span class="at">y =</span> Frequency, <span class="at">fill =</span> Label)) <span class="sc">+</span></span>
+<span id="cb12-9"><a href="#cb12-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_bar</span>(<span class="at">stat =</span> <span class="st">"identity"</span>, <span class="at">width =</span> <span class="dv">1</span>) <span class="sc">+</span></span>
+<span id="cb12-10"><a href="#cb12-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">coord_polar</span>(<span class="st">"y"</span>, <span class="at">start =</span> <span class="dv">0</span>) <span class="sc">+</span></span>
+<span id="cb12-11"><a href="#cb12-11" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">"Distribution of Semantic Contribution Labels in OpenSubs Dataset"</span>,</span>
+<span id="cb12-12"><a href="#cb12-12" aria-hidden="true" tabindex="-1"></a>       <span class="at">fill =</span> <span class="st">"Label"</span>) <span class="sc">+</span></span>
+<span id="cb12-13"><a href="#cb12-13" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_void</span>() <span class="sc">+</span></span>
+<span id="cb12-14"><a href="#cb12-14" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_fill_discrete</span>(<span class="at">labels =</span> <span class="fu">paste</span>(label.df<span class="sc">$</span>Label, <span class="fu">sprintf</span>(<span class="st">"(%0.1f%%)"</span>, label.df<span class="sc">$</span>Percentage))) <span class="sc">+</span></span>
+<span id="cb12-15"><a href="#cb12-15" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">legend.position =</span> <span class="st">"bottom"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <p><img src="ReduplicationProjectWriteup_files/figure-html/unnamed-chunk-2-1.png" class="img-fluid" width="672"></p>
 </div>
 </div>
 <p>Thus, we decided to select only the positive CR examples from the Opensubs dataset and append these annotated examples to the Salad-Salad dataset and perform statistical analysis on this combined dataset. First, we looked at the distributions of both POS and Semantic Contribution Labels to get a sense of the makeup of our dataset, as seen in the following bar graphs. Nouns were by far the most common POS to be contrastively reduplicated, and the most common semantic contribution assigned across the board was the prototypical label.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
-<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(combined.data, <span class="fu">aes</span>(<span class="at">x =</span> POS, <span class="at">fill =</span> POS)) <span class="sc">+</span></span>
-<span id="cb12-4"><a href="#cb12-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_bar</span>() <span class="sc">+</span></span>
-<span id="cb12-5"><a href="#cb12-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_text</span>(<span class="at">stat=</span><span class="st">'count'</span>, <span class="fu">aes</span>(<span class="at">label=</span> <span class="fu">after_stat</span>(count)), <span class="at">vjust=</span><span class="sc">-</span><span class="fl">0.5</span>) <span class="sc">+</span> </span>
-<span id="cb12-6"><a href="#cb12-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">"Distribution of Parts of Speech"</span>,</span>
-<span id="cb12-7"><a href="#cb12-7" aria-hidden="true" tabindex="-1"></a>       <span class="at">x =</span> <span class="st">"Part of Speech"</span>,</span>
-<span id="cb12-8"><a href="#cb12-8" aria-hidden="true" tabindex="-1"></a>       <span class="at">y =</span> <span class="st">"Count"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
+<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(combined.data, <span class="fu">aes</span>(<span class="at">x =</span> POS, <span class="at">fill =</span> POS)) <span class="sc">+</span></span>
+<span id="cb13-4"><a href="#cb13-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_bar</span>() <span class="sc">+</span></span>
+<span id="cb13-5"><a href="#cb13-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_text</span>(<span class="at">stat=</span><span class="st">'count'</span>, <span class="fu">aes</span>(<span class="at">label=</span> <span class="fu">after_stat</span>(count)), <span class="at">vjust=</span><span class="sc">-</span><span class="fl">0.5</span>) <span class="sc">+</span> </span>
+<span id="cb13-6"><a href="#cb13-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">"Distribution of Parts of Speech"</span>,</span>
+<span id="cb13-7"><a href="#cb13-7" aria-hidden="true" tabindex="-1"></a>       <span class="at">x =</span> <span class="st">"Part of Speech"</span>,</span>
+<span id="cb13-8"><a href="#cb13-8" aria-hidden="true" tabindex="-1"></a>       <span class="at">y =</span> <span class="st">"Count"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <p><img src="ReduplicationProjectWriteup_files/figure-html/unnamed-chunk-3-1.png" class="img-fluid" width="672"></p>
 </div>
 </div>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
-<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(combined.data, <span class="fu">aes</span>(<span class="at">x =</span> Label, <span class="at">fill =</span> Label)) <span class="sc">+</span></span>
-<span id="cb13-4"><a href="#cb13-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_bar</span>() <span class="sc">+</span></span>
-<span id="cb13-5"><a href="#cb13-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_text</span>(<span class="at">stat=</span><span class="st">'count'</span>, <span class="fu">aes</span>(<span class="at">label=</span> <span class="fu">after_stat</span>(count)), <span class="at">vjust=</span><span class="sc">-</span><span class="fl">0.5</span>) <span class="sc">+</span> </span>
-<span id="cb13-6"><a href="#cb13-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">"Distribution of Semantic Contributions"</span>,</span>
-<span id="cb13-7"><a href="#cb13-7" aria-hidden="true" tabindex="-1"></a>       <span class="at">x =</span> <span class="st">"Semantic Contribution"</span>,</span>
-<span id="cb13-8"><a href="#cb13-8" aria-hidden="true" tabindex="-1"></a>       <span class="at">y =</span> <span class="st">"Count"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
+<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(combined.data, <span class="fu">aes</span>(<span class="at">x =</span> Label, <span class="at">fill =</span> Label)) <span class="sc">+</span></span>
+<span id="cb14-4"><a href="#cb14-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_bar</span>() <span class="sc">+</span></span>
+<span id="cb14-5"><a href="#cb14-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_text</span>(<span class="at">stat=</span><span class="st">'count'</span>, <span class="fu">aes</span>(<span class="at">label=</span> <span class="fu">after_stat</span>(count)), <span class="at">vjust=</span><span class="sc">-</span><span class="fl">0.5</span>) <span class="sc">+</span> </span>
+<span id="cb14-6"><a href="#cb14-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">"Distribution of Semantic Contributions"</span>,</span>
+<span id="cb14-7"><a href="#cb14-7" aria-hidden="true" tabindex="-1"></a>       <span class="at">x =</span> <span class="st">"Semantic Contribution"</span>,</span>
+<span id="cb14-8"><a href="#cb14-8" aria-hidden="true" tabindex="-1"></a>       <span class="at">y =</span> <span class="st">"Count"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <p><img src="ReduplicationProjectWriteup_files/figure-html/unnamed-chunk-4-1.png" class="img-fluid" width="672"></p>
 </div>
 </div>
 <p>Looking at the stacked graph, we can see certain trends beginning to surface. Although prototypical labels still make up a large percentage of the examples for each POS, there is a more even split between prototypical and extreme readings for adjectives, and prototypical and salient readings for adverbs. The exact percentages of semantic contribution by POS is given in the table below the graph.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
-<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(nnet)</span>
-<span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb14-4"><a href="#cb14-4" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(combined.data)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
+<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(nnet)</span>
+<span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-4"><a href="#cb15-4" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(combined.data)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>     Word              Label               POS             Word_Length    
  Length:294         Length:294         Length:294         Min.   : 2.000  
@@ -329,38 +354,38 @@ final line found on '../data/annotations/opensubs_agreed_2.txt'</code></pre>
  3rd Qu.:1.447e+08   3rd Qu.:18.79  
  Max.   :2.399e+09   Max.   :21.60  </code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb16"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(combined.data, <span class="fu">aes</span>(<span class="at">x =</span> POS, <span class="at">fill =</span> Label)) <span class="sc">+</span></span>
-<span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_bar</span>() <span class="sc">+</span> </span>
-<span id="cb16-3"><a href="#cb16-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">"Distribution of Semantic Contributions by POS"</span>,</span>
-<span id="cb16-4"><a href="#cb16-4" aria-hidden="true" tabindex="-1"></a>       <span class="at">x =</span> <span class="st">"POS"</span>,</span>
-<span id="cb16-5"><a href="#cb16-5" aria-hidden="true" tabindex="-1"></a>       <span class="at">y =</span> <span class="st">"Count"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb17"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(combined.data, <span class="fu">aes</span>(<span class="at">x =</span> POS, <span class="at">fill =</span> Label)) <span class="sc">+</span></span>
+<span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_bar</span>() <span class="sc">+</span> </span>
+<span id="cb17-3"><a href="#cb17-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">"Distribution of Semantic Contributions by POS"</span>,</span>
+<span id="cb17-4"><a href="#cb17-4" aria-hidden="true" tabindex="-1"></a>       <span class="at">x =</span> <span class="st">"POS"</span>,</span>
+<span id="cb17-5"><a href="#cb17-5" aria-hidden="true" tabindex="-1"></a>       <span class="at">y =</span> <span class="st">"Count"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <p><img src="ReduplicationProjectWriteup_files/figure-html/unnamed-chunk-5-1.png" class="img-fluid" width="672"></p>
 </div>
 </div>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb17"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(dplyr)</span>
-<span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
-<span id="cb17-3"><a href="#cb17-3" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(knitr)</span>
-<span id="cb17-4"><a href="#cb17-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb17-5"><a href="#cb17-5" aria-hidden="true" tabindex="-1"></a>label.counts <span class="ot">&lt;-</span> combined.data <span class="sc">%&gt;%</span> </span>
-<span id="cb17-6"><a href="#cb17-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(POS, Label) <span class="sc">%&gt;%</span> </span>
-<span id="cb17-7"><a href="#cb17-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarize</span>(<span class="at">count =</span> <span class="fu">n</span>())</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb18"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(dplyr)</span>
+<span id="cb18-2"><a href="#cb18-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
+<span id="cb18-3"><a href="#cb18-3" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(knitr)</span>
+<span id="cb18-4"><a href="#cb18-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-5"><a href="#cb18-5" aria-hidden="true" tabindex="-1"></a>label.counts <span class="ot">&lt;-</span> combined.data <span class="sc">%&gt;%</span> </span>
+<span id="cb18-6"><a href="#cb18-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(POS, Label) <span class="sc">%&gt;%</span> </span>
+<span id="cb18-7"><a href="#cb18-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarize</span>(<span class="at">count =</span> <span class="fu">n</span>())</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stderr">
 <pre><code>`summarise()` has grouped output by 'POS'. You can override using the `.groups`
 argument.</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb19"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a>pos.totals <span class="ot">&lt;-</span> combined.data <span class="sc">%&gt;%</span> </span>
-<span id="cb19-2"><a href="#cb19-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(POS) <span class="sc">%&gt;%</span> </span>
-<span id="cb19-3"><a href="#cb19-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarize</span>(<span class="at">total.count =</span> <span class="fu">n</span>())</span>
-<span id="cb19-4"><a href="#cb19-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb19-5"><a href="#cb19-5" aria-hidden="true" tabindex="-1"></a>label.percentages <span class="ot">&lt;-</span> label.counts <span class="sc">%&gt;%</span> </span>
-<span id="cb19-6"><a href="#cb19-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">left_join</span>(pos.totals, <span class="at">by =</span> <span class="st">"POS"</span>) <span class="sc">%&gt;%</span></span>
-<span id="cb19-7"><a href="#cb19-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">percentage =</span> (count <span class="sc">/</span> total.count) <span class="sc">*</span><span class="dv">100</span>)</span>
-<span id="cb19-8"><a href="#cb19-8" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb19-9"><a href="#cb19-9" aria-hidden="true" tabindex="-1"></a>label.percentages.df <span class="ot">&lt;-</span> <span class="fu">as.data.frame</span>(label.percentages)</span>
-<span id="cb19-10"><a href="#cb19-10" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb19-11"><a href="#cb19-11" aria-hidden="true" tabindex="-1"></a><span class="fu">kable</span>(label.percentages.df, <span class="at">caption =</span> <span class="st">"Percentage of Semantic Contributions by POS"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb20"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a>pos.totals <span class="ot">&lt;-</span> combined.data <span class="sc">%&gt;%</span> </span>
+<span id="cb20-2"><a href="#cb20-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(POS) <span class="sc">%&gt;%</span> </span>
+<span id="cb20-3"><a href="#cb20-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarize</span>(<span class="at">total.count =</span> <span class="fu">n</span>())</span>
+<span id="cb20-4"><a href="#cb20-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb20-5"><a href="#cb20-5" aria-hidden="true" tabindex="-1"></a>label.percentages <span class="ot">&lt;-</span> label.counts <span class="sc">%&gt;%</span> </span>
+<span id="cb20-6"><a href="#cb20-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">left_join</span>(pos.totals, <span class="at">by =</span> <span class="st">"POS"</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb20-7"><a href="#cb20-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">percentage =</span> (count <span class="sc">/</span> total.count) <span class="sc">*</span><span class="dv">100</span>)</span>
+<span id="cb20-8"><a href="#cb20-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb20-9"><a href="#cb20-9" aria-hidden="true" tabindex="-1"></a>label.percentages.df <span class="ot">&lt;-</span> <span class="fu">as.data.frame</span>(label.percentages)</span>
+<span id="cb20-10"><a href="#cb20-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb20-11"><a href="#cb20-11" aria-hidden="true" tabindex="-1"></a><span class="fu">kable</span>(label.percentages.df, <span class="at">caption =</span> <span class="st">"Percentage of Semantic Contributions by POS"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <table class="table table-sm table-striped small">
 <caption>Percentage of Semantic Contributions by POS</caption>
@@ -468,15 +493,15 @@ argument.</code></pre>
 <h2 class="anchored" data-anchor-id="analysis">4.2 Analysis</h2>
 <p>We ran a multinomial logistic regression model on our dataset, as our output variable (semantic contribution) was categorical. We ran a total of three models, each looking at a different set of predictor variables. The first model takes POS, word length, and log word frequency into account. The summary results of this model are shown below.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb20"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a>combined.data<span class="sc">$</span>POS <span class="ot">&lt;-</span> <span class="fu">factor</span>(combined.data<span class="sc">$</span>POS, <span class="at">levels =</span> <span class="fu">c</span>(<span class="st">"NN"</span>, <span class="st">"JJ"</span>, <span class="st">"RB"</span>, <span class="st">"VB"</span>))</span>
-<span id="cb20-2"><a href="#cb20-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb20-3"><a href="#cb20-3" aria-hidden="true" tabindex="-1"></a>combined.data<span class="sc">$</span>Label <span class="ot">&lt;-</span> <span class="fu">factor</span>(combined.data<span class="sc">$</span>Label, <span class="at">levels =</span> <span class="fu">c</span>(<span class="st">"P"</span>, <span class="st">"S"</span>, <span class="st">"E"</span>))</span>
-<span id="cb20-4"><a href="#cb20-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb20-5"><a href="#cb20-5" aria-hidden="true" tabindex="-1"></a>combined.data<span class="sc">$</span>POS <span class="ot">&lt;-</span> <span class="fu">relevel</span>(combined.data<span class="sc">$</span>POS, <span class="at">ref =</span> <span class="st">"NN"</span>)</span>
-<span id="cb20-6"><a href="#cb20-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb20-7"><a href="#cb20-7" aria-hidden="true" tabindex="-1"></a>combined.data<span class="sc">$</span>Label <span class="ot">&lt;-</span> <span class="fu">relevel</span>(combined.data<span class="sc">$</span>Label, <span class="at">ref =</span> <span class="st">"P"</span>)</span>
-<span id="cb20-8"><a href="#cb20-8" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb20-9"><a href="#cb20-9" aria-hidden="true" tabindex="-1"></a>model <span class="ot">&lt;-</span> <span class="fu">multinom</span>(Label <span class="sc">~</span> POS <span class="sc">+</span> Word_Length <span class="sc">+</span> Log_Freq_Count, <span class="at">data =</span> combined.data)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb21"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a>combined.data<span class="sc">$</span>POS <span class="ot">&lt;-</span> <span class="fu">factor</span>(combined.data<span class="sc">$</span>POS, <span class="at">levels =</span> <span class="fu">c</span>(<span class="st">"NN"</span>, <span class="st">"JJ"</span>, <span class="st">"RB"</span>, <span class="st">"VB"</span>))</span>
+<span id="cb21-2"><a href="#cb21-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb21-3"><a href="#cb21-3" aria-hidden="true" tabindex="-1"></a>combined.data<span class="sc">$</span>Label <span class="ot">&lt;-</span> <span class="fu">factor</span>(combined.data<span class="sc">$</span>Label, <span class="at">levels =</span> <span class="fu">c</span>(<span class="st">"P"</span>, <span class="st">"S"</span>, <span class="st">"E"</span>))</span>
+<span id="cb21-4"><a href="#cb21-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb21-5"><a href="#cb21-5" aria-hidden="true" tabindex="-1"></a>combined.data<span class="sc">$</span>POS <span class="ot">&lt;-</span> <span class="fu">relevel</span>(combined.data<span class="sc">$</span>POS, <span class="at">ref =</span> <span class="st">"NN"</span>)</span>
+<span id="cb21-6"><a href="#cb21-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb21-7"><a href="#cb21-7" aria-hidden="true" tabindex="-1"></a>combined.data<span class="sc">$</span>Label <span class="ot">&lt;-</span> <span class="fu">relevel</span>(combined.data<span class="sc">$</span>Label, <span class="at">ref =</span> <span class="st">"P"</span>)</span>
+<span id="cb21-8"><a href="#cb21-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb21-9"><a href="#cb21-9" aria-hidden="true" tabindex="-1"></a>model <span class="ot">&lt;-</span> <span class="fu">multinom</span>(Label <span class="sc">~</span> POS <span class="sc">+</span> Word_Length <span class="sc">+</span> Log_Freq_Count, <span class="at">data =</span> combined.data)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># weights:  21 (12 variable)
 initial  value 322.992013 
@@ -487,7 +512,7 @@ iter  20 value 252.191105
 final  value 252.191105 
 converged</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb22"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(model)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb23"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(model)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>Call:
 multinom(formula = Label ~ POS + Word_Length + Log_Freq_Count, 
@@ -529,8 +554,8 @@ AIC: 528.3822 </code></pre>
 </ul>
 <p>The significance of the coefficient results was determined by running a 2-tailed z test, and the resulting z and p scores are given below.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb24"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true" tabindex="-1"></a>z <span class="ot">&lt;-</span> <span class="fu">summary</span>(model)<span class="sc">$</span>coefficients<span class="sc">/</span><span class="fu">summary</span>(model)<span class="sc">$</span>standard.errors</span>
-<span id="cb24-2"><a href="#cb24-2" aria-hidden="true" tabindex="-1"></a>z</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb25"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb25-1"><a href="#cb25-1" aria-hidden="true" tabindex="-1"></a>z <span class="ot">&lt;-</span> <span class="fu">summary</span>(model)<span class="sc">$</span>coefficients<span class="sc">/</span><span class="fu">summary</span>(model)<span class="sc">$</span>standard.errors</span>
+<span id="cb25-2"><a href="#cb25-2" aria-hidden="true" tabindex="-1"></a>z</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>  (Intercept)     POSJJ    POSRB     POSVB Word_Length Log_Freq_Count
 S  0.06164851 -1.547434 2.849142 0.6546104    0.944361     -0.9193509
@@ -538,8 +563,8 @@ E -0.12347188  5.185728 3.012900 1.5273242    1.563639     -1.2351447</code></pr
 </div>
 </div>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb26"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb26-1"><a href="#cb26-1" aria-hidden="true" tabindex="-1"></a>p <span class="ot">&lt;-</span> (<span class="dv">1</span> <span class="sc">-</span> <span class="fu">pnorm</span>(<span class="fu">abs</span>(z), <span class="dv">0</span>, <span class="dv">1</span>)) <span class="sc">*</span> <span class="dv">2</span></span>
-<span id="cb26-2"><a href="#cb26-2" aria-hidden="true" tabindex="-1"></a>p</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb27"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb27-1"><a href="#cb27-1" aria-hidden="true" tabindex="-1"></a>p <span class="ot">&lt;-</span> (<span class="dv">1</span> <span class="sc">-</span> <span class="fu">pnorm</span>(<span class="fu">abs</span>(z), <span class="dv">0</span>, <span class="dv">1</span>)) <span class="sc">*</span> <span class="dv">2</span></span>
+<span id="cb27-2"><a href="#cb27-2" aria-hidden="true" tabindex="-1"></a>p</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>  (Intercept)        POSJJ       POSRB     POSVB Word_Length Log_Freq_Count
 S   0.9508427 1.217586e-01 0.004383735 0.5127186   0.3449852      0.3579121
@@ -548,7 +573,7 @@ E   0.9017334 2.151730e-07 0.002587638 0.1266804   0.1179023      0.2167767</cod
 </div>
 <p>Using a 0.05 threshold, we can see that the log odd differences for noun to verb, word length, and log frequency are not significant. For the case of noun to verb, this result makes sense as the original distributions also show that these two categories show a similar split between the three semantic categories. For the continuous variables, although the trends might not be significant, and a larger dataset might disprove trends observed here, we still ran models on just these variables to get a sense of the overall trends. The results of the word length model are plotted below. Based on the coefficients calculated by the model, the graph plotted the predicted likelihood of being assigned a particular semantic contribution label given word length.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb28"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb28-1"><a href="#cb28-1" aria-hidden="true" tabindex="-1"></a>length.model <span class="ot">&lt;-</span> <span class="fu">multinom</span>(Label <span class="sc">~</span> Word_Length, <span class="at">data =</span> combined.data)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb29"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb29-1"><a href="#cb29-1" aria-hidden="true" tabindex="-1"></a>length.model <span class="ot">&lt;-</span> <span class="fu">multinom</span>(Label <span class="sc">~</span> Word_Length, <span class="at">data =</span> combined.data)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># weights:  9 (4 variable)
 initial  value 322.992013 
@@ -556,7 +581,7 @@ iter  10 value 277.820475
 final  value 277.820469 
 converged</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb30"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb30-1"><a href="#cb30-1" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(length.model)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb31"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb31-1"><a href="#cb31-1" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(length.model)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>Call:
 multinom(formula = Label ~ Word_Length, data = combined.data)
@@ -576,38 +601,38 @@ AIC: 563.6409 </code></pre>
 </div>
 </div>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb32"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb32-1"><a href="#cb32-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
-<span id="cb32-2"><a href="#cb32-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyr)</span>
-<span id="cb32-3"><a href="#cb32-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb32-4"><a href="#cb32-4" aria-hidden="true" tabindex="-1"></a>new.data <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(<span class="at">Word_Length =</span> <span class="fu">seq</span>(<span class="fu">min</span>(combined.data<span class="sc">$</span>Word_Length), <span class="fu">max</span>(combined.data<span class="sc">$</span>Word_Length), <span class="at">length.out =</span> <span class="dv">100</span>))</span>
-<span id="cb32-5"><a href="#cb32-5" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb32-6"><a href="#cb32-6" aria-hidden="true" tabindex="-1"></a>length.predictions <span class="ot">&lt;-</span> <span class="fu">predict</span>(length.model, <span class="at">newdata =</span> new.data, <span class="at">type =</span> <span class="st">"probs"</span>)</span>
-<span id="cb32-7"><a href="#cb32-7" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb32-8"><a href="#cb32-8" aria-hidden="true" tabindex="-1"></a>length.predictions.df <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(new.data, length.predictions)</span>
-<span id="cb32-9"><a href="#cb32-9" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb32-10"><a href="#cb32-10" aria-hidden="true" tabindex="-1"></a>length.predictions.df <span class="ot">&lt;-</span> <span class="fu">gather</span>(length.predictions.df, Label, Probability, <span class="sc">-</span>Word_Length)</span>
-<span id="cb32-11"><a href="#cb32-11" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb32-12"><a href="#cb32-12" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(length.predictions.df, <span class="fu">aes</span>(<span class="at">x =</span> Word_Length, <span class="at">y =</span> Probability, <span class="at">color =</span> Label)) <span class="sc">+</span></span>
-<span id="cb32-13"><a href="#cb32-13" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_line</span>() <span class="sc">+</span></span>
-<span id="cb32-14"><a href="#cb32-14" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">"Likelihood of Semantic Contribution Label by Word Length"</span>,</span>
-<span id="cb32-15"><a href="#cb32-15" aria-hidden="true" tabindex="-1"></a>       <span class="at">x =</span> <span class="st">"Word Length"</span>,</span>
-<span id="cb32-16"><a href="#cb32-16" aria-hidden="true" tabindex="-1"></a>       <span class="at">y =</span> <span class="st">"Predicted Probability"</span>,</span>
-<span id="cb32-17"><a href="#cb32-17" aria-hidden="true" tabindex="-1"></a>       <span class="at">color =</span> <span class="st">"Semantic Contribution Label"</span>) <span class="sc">+</span></span>
-<span id="cb32-18"><a href="#cb32-18" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_minimal</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb33"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb33-1"><a href="#cb33-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
+<span id="cb33-2"><a href="#cb33-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyr)</span>
+<span id="cb33-3"><a href="#cb33-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb33-4"><a href="#cb33-4" aria-hidden="true" tabindex="-1"></a>new.data <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(<span class="at">Word_Length =</span> <span class="fu">seq</span>(<span class="fu">min</span>(combined.data<span class="sc">$</span>Word_Length), <span class="fu">max</span>(combined.data<span class="sc">$</span>Word_Length), <span class="at">length.out =</span> <span class="dv">100</span>))</span>
+<span id="cb33-5"><a href="#cb33-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb33-6"><a href="#cb33-6" aria-hidden="true" tabindex="-1"></a>length.predictions <span class="ot">&lt;-</span> <span class="fu">predict</span>(length.model, <span class="at">newdata =</span> new.data, <span class="at">type =</span> <span class="st">"probs"</span>)</span>
+<span id="cb33-7"><a href="#cb33-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb33-8"><a href="#cb33-8" aria-hidden="true" tabindex="-1"></a>length.predictions.df <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(new.data, length.predictions)</span>
+<span id="cb33-9"><a href="#cb33-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb33-10"><a href="#cb33-10" aria-hidden="true" tabindex="-1"></a>length.predictions.df <span class="ot">&lt;-</span> <span class="fu">gather</span>(length.predictions.df, Label, Probability, <span class="sc">-</span>Word_Length)</span>
+<span id="cb33-11"><a href="#cb33-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb33-12"><a href="#cb33-12" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(length.predictions.df, <span class="fu">aes</span>(<span class="at">x =</span> Word_Length, <span class="at">y =</span> Probability, <span class="at">color =</span> Label)) <span class="sc">+</span></span>
+<span id="cb33-13"><a href="#cb33-13" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_line</span>() <span class="sc">+</span></span>
+<span id="cb33-14"><a href="#cb33-14" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">"Likelihood of Semantic Contribution Label by Word Length"</span>,</span>
+<span id="cb33-15"><a href="#cb33-15" aria-hidden="true" tabindex="-1"></a>       <span class="at">x =</span> <span class="st">"Word Length"</span>,</span>
+<span id="cb33-16"><a href="#cb33-16" aria-hidden="true" tabindex="-1"></a>       <span class="at">y =</span> <span class="st">"Predicted Probability"</span>,</span>
+<span id="cb33-17"><a href="#cb33-17" aria-hidden="true" tabindex="-1"></a>       <span class="at">color =</span> <span class="st">"Semantic Contribution Label"</span>) <span class="sc">+</span></span>
+<span id="cb33-18"><a href="#cb33-18" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_minimal</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <p><img src="ReduplicationProjectWriteup_files/figure-html/unnamed-chunk-11-1.png" class="img-fluid" width="672"></p>
 </div>
 </div>
 <p>As word length increases, the probability of getting a prototypical reading decreases while the probability of getting an extreme reading increases. There is also a slight increase in the salient category, but this is a much slighter trend than seen in the other two. Initial explanations for why these trends could have arisen are discussed in the next section. Similarly, we ran a model with log frequency as the predicting variable.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb33"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb33-1"><a href="#cb33-1" aria-hidden="true" tabindex="-1"></a>freq.model <span class="ot">&lt;-</span> <span class="fu">multinom</span>(Label <span class="sc">~</span> Log_Freq_Count, <span class="at">data =</span> combined.data)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb34"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb34-1"><a href="#cb34-1" aria-hidden="true" tabindex="-1"></a>freq.model <span class="ot">&lt;-</span> <span class="fu">multinom</span>(Label <span class="sc">~</span> Log_Freq_Count, <span class="at">data =</span> combined.data)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># weights:  9 (4 variable)
 initial  value 322.992013 
 final  value 280.015169 
 converged</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb35"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb35-1"><a href="#cb35-1" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(freq.model)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb36"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb36-1"><a href="#cb36-1" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(freq.model)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>Call:
 multinom(formula = Label ~ Log_Freq_Count, data = combined.data)
@@ -627,41 +652,41 @@ AIC: 568.0303 </code></pre>
 </div>
 </div>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb37"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb37-1"><a href="#cb37-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
-<span id="cb37-2"><a href="#cb37-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyr)</span>
-<span id="cb37-3"><a href="#cb37-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb37-4"><a href="#cb37-4" aria-hidden="true" tabindex="-1"></a>new_data <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(<span class="at">Log_Freq_Count =</span> <span class="fu">seq</span>(<span class="fu">min</span>(combined.data<span class="sc">$</span>Log_Freq_Count), <span class="fu">max</span>(combined.data<span class="sc">$</span>Log_Freq_Count), <span class="at">length.out =</span> <span class="dv">100</span>))</span>
-<span id="cb37-5"><a href="#cb37-5" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb37-6"><a href="#cb37-6" aria-hidden="true" tabindex="-1"></a>freq.predictions <span class="ot">&lt;-</span> <span class="fu">predict</span>(freq.model, <span class="at">newdata =</span> new_data, <span class="at">type =</span> <span class="st">"probs"</span>)</span>
-<span id="cb37-7"><a href="#cb37-7" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb37-8"><a href="#cb37-8" aria-hidden="true" tabindex="-1"></a>freq.predictions.df <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(new_data, freq.predictions)</span>
-<span id="cb37-9"><a href="#cb37-9" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb37-10"><a href="#cb37-10" aria-hidden="true" tabindex="-1"></a>freq.predictions.df <span class="ot">&lt;-</span> <span class="fu">gather</span>(freq.predictions.df, Label, Probability, <span class="sc">-</span>Log_Freq_Count)</span>
-<span id="cb37-11"><a href="#cb37-11" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb37-12"><a href="#cb37-12" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(freq.predictions.df, <span class="fu">aes</span>(<span class="at">x =</span> Log_Freq_Count, <span class="at">y =</span> Probability, <span class="at">color =</span> Label)) <span class="sc">+</span></span>
-<span id="cb37-13"><a href="#cb37-13" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_line</span>() <span class="sc">+</span></span>
-<span id="cb37-14"><a href="#cb37-14" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">"Likelihood of Semantic Contribution Label by Frequency"</span>,</span>
-<span id="cb37-15"><a href="#cb37-15" aria-hidden="true" tabindex="-1"></a>       <span class="at">x =</span> <span class="st">"Log Normalized Frequency"</span>,</span>
-<span id="cb37-16"><a href="#cb37-16" aria-hidden="true" tabindex="-1"></a>       <span class="at">y =</span> <span class="st">"Predicted Probability"</span>,</span>
-<span id="cb37-17"><a href="#cb37-17" aria-hidden="true" tabindex="-1"></a>       <span class="at">color =</span> <span class="st">"Semantic Contribution Label"</span>) <span class="sc">+</span></span>
-<span id="cb37-18"><a href="#cb37-18" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_minimal</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb38"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb38-1"><a href="#cb38-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
+<span id="cb38-2"><a href="#cb38-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyr)</span>
+<span id="cb38-3"><a href="#cb38-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb38-4"><a href="#cb38-4" aria-hidden="true" tabindex="-1"></a>new_data <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(<span class="at">Log_Freq_Count =</span> <span class="fu">seq</span>(<span class="fu">min</span>(combined.data<span class="sc">$</span>Log_Freq_Count), <span class="fu">max</span>(combined.data<span class="sc">$</span>Log_Freq_Count), <span class="at">length.out =</span> <span class="dv">100</span>))</span>
+<span id="cb38-5"><a href="#cb38-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb38-6"><a href="#cb38-6" aria-hidden="true" tabindex="-1"></a>freq.predictions <span class="ot">&lt;-</span> <span class="fu">predict</span>(freq.model, <span class="at">newdata =</span> new_data, <span class="at">type =</span> <span class="st">"probs"</span>)</span>
+<span id="cb38-7"><a href="#cb38-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb38-8"><a href="#cb38-8" aria-hidden="true" tabindex="-1"></a>freq.predictions.df <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(new_data, freq.predictions)</span>
+<span id="cb38-9"><a href="#cb38-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb38-10"><a href="#cb38-10" aria-hidden="true" tabindex="-1"></a>freq.predictions.df <span class="ot">&lt;-</span> <span class="fu">gather</span>(freq.predictions.df, Label, Probability, <span class="sc">-</span>Log_Freq_Count)</span>
+<span id="cb38-11"><a href="#cb38-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb38-12"><a href="#cb38-12" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(freq.predictions.df, <span class="fu">aes</span>(<span class="at">x =</span> Log_Freq_Count, <span class="at">y =</span> Probability, <span class="at">color =</span> Label)) <span class="sc">+</span></span>
+<span id="cb38-13"><a href="#cb38-13" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_line</span>() <span class="sc">+</span></span>
+<span id="cb38-14"><a href="#cb38-14" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">"Likelihood of Semantic Contribution Label by Frequency"</span>,</span>
+<span id="cb38-15"><a href="#cb38-15" aria-hidden="true" tabindex="-1"></a>       <span class="at">x =</span> <span class="st">"Log Normalized Frequency"</span>,</span>
+<span id="cb38-16"><a href="#cb38-16" aria-hidden="true" tabindex="-1"></a>       <span class="at">y =</span> <span class="st">"Predicted Probability"</span>,</span>
+<span id="cb38-17"><a href="#cb38-17" aria-hidden="true" tabindex="-1"></a>       <span class="at">color =</span> <span class="st">"Semantic Contribution Label"</span>) <span class="sc">+</span></span>
+<span id="cb38-18"><a href="#cb38-18" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_minimal</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <p><img src="ReduplicationProjectWriteup_files/figure-html/unnamed-chunk-13-1.png" class="img-fluid" width="672"></p>
 </div>
 </div>
 <p>This model also revealed some general trends. Namely, prototypical readings (and to a lesser extent, salient readings) increased as frequency increased, while extreme readings decreased as frequency increased. In case the trends seen in these graphs were a result of POS being a confounding variable influencing word length or frequency (e.g., if adjectives in our dataset were longer or less frequent overall than other POS, trends seen in these models’ results could just be a result of POS and not the variable at hand), we calculated simple mean and median stats for word length and frequency by POS.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb38"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb38-1"><a href="#cb38-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(dplyr)</span>
-<span id="cb38-2"><a href="#cb38-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(knitr)</span>
-<span id="cb38-3"><a href="#cb38-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb38-4"><a href="#cb38-4" aria-hidden="true" tabindex="-1"></a>avg.stats <span class="ot">&lt;-</span> combined.data <span class="sc">%&gt;%</span></span>
-<span id="cb38-5"><a href="#cb38-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(POS) <span class="sc">%&gt;%</span></span>
-<span id="cb38-6"><a href="#cb38-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarize</span>(<span class="at">avg.word.length =</span> <span class="fu">mean</span>(Word_Length),</span>
-<span id="cb38-7"><a href="#cb38-7" aria-hidden="true" tabindex="-1"></a>            <span class="at">median.word.length =</span> <span class="fu">median</span>(Word_Length),</span>
-<span id="cb38-8"><a href="#cb38-8" aria-hidden="true" tabindex="-1"></a>            <span class="at">avg.log.frequency =</span> <span class="fu">mean</span>(Log_Freq_Count),</span>
-<span id="cb38-9"><a href="#cb38-9" aria-hidden="true" tabindex="-1"></a>            <span class="at">median.log.frequency =</span> <span class="fu">median</span>(Log_Freq_Count))</span>
-<span id="cb38-10"><a href="#cb38-10" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb38-11"><a href="#cb38-11" aria-hidden="true" tabindex="-1"></a><span class="fu">kable</span>(avg.stats, <span class="at">format =</span> <span class="st">"markdown"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb39"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb39-1"><a href="#cb39-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(dplyr)</span>
+<span id="cb39-2"><a href="#cb39-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(knitr)</span>
+<span id="cb39-3"><a href="#cb39-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb39-4"><a href="#cb39-4" aria-hidden="true" tabindex="-1"></a>avg.stats <span class="ot">&lt;-</span> combined.data <span class="sc">%&gt;%</span></span>
+<span id="cb39-5"><a href="#cb39-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(POS) <span class="sc">%&gt;%</span></span>
+<span id="cb39-6"><a href="#cb39-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarize</span>(<span class="at">avg.word.length =</span> <span class="fu">mean</span>(Word_Length),</span>
+<span id="cb39-7"><a href="#cb39-7" aria-hidden="true" tabindex="-1"></a>            <span class="at">median.word.length =</span> <span class="fu">median</span>(Word_Length),</span>
+<span id="cb39-8"><a href="#cb39-8" aria-hidden="true" tabindex="-1"></a>            <span class="at">avg.log.frequency =</span> <span class="fu">mean</span>(Log_Freq_Count),</span>
+<span id="cb39-9"><a href="#cb39-9" aria-hidden="true" tabindex="-1"></a>            <span class="at">median.log.frequency =</span> <span class="fu">median</span>(Log_Freq_Count))</span>
+<span id="cb39-10"><a href="#cb39-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb39-11"><a href="#cb39-11" aria-hidden="true" tabindex="-1"></a><span class="fu">kable</span>(avg.stats, <span class="at">format =</span> <span class="st">"markdown"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <table class="table table-sm table-striped small">
 <colgroup>
@@ -734,6 +759,7 @@ AIC: 568.0303 </code></pre>
 </section>
 <section id="citations" class="level1">
 <h1>Citations</h1>
+<p>Castro, S. (2017). <em>Fast Krippendorff: Fast computation of Krippendorff’s alpha agreement measure</em>.</p>
 <p>P. Lison and J. Tiedemann, 2016, <a href="http://www.lrec-conf.org/proceedings/lrec2016/pdf/947_Paper.pdf">OpenSubtitles2016: Extracting Large Parallel Corpora from Movie and TV Subtitles</a>. In Proceedings of the 10th International Conference on Language Resources and Evaluation (LREC 2016)</p>
 <p>Ghomeshi, Jila &amp; Jackendoff, Ray &amp; Rosen, Nicole &amp; Russell, Kevin. (2004). <em>Contrastive Focus Reduplication in English (The Salad-Salad Paper)</em>. Natural Language and Linguistic Theory. 22. 307-357. 10.1023/B:NALA.0000015789.98638.f9.</p>
 <p>Bianca, Widlitzki. (2016). <em>Talk talk, not just small talk. Exploring English contrastive focus reduplication with the help of corpora</em>. ICAME Journal. 40. 10.1515/icame-2016-0008.</p>
