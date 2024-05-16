@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Reduplication Project Writeup</title>
+<title>Part of Speech and the Semantic Contribution of Reduplication</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -73,35 +73,38 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <body class="fullcontent">
 
-<div id="quarto-content" class="page-columns page-rows-contents page-layout-article">
-
-<main class="content" id="quarto-document-content">
-
-<header id="title-block-header" class="quarto-title-block default">
-<div class="quarto-title">
-<h1 class="title">Reduplication Project Writeup</h1>
-</div>
-
-
-
-<div class="quarto-title-meta">
-
-    <div>
-    <div class="quarto-title-meta-heading">Authors</div>
-    <div class="quarto-title-meta-contents">
-             <p>Alex Duchnowski </p>
-             <p>Arushi Kalpande </p>
-             <p>Ford Rowe </p>
-          </div>
+<header id="title-block-header" class="quarto-title-block default page-columns page-full">
+  <div class="quarto-title-banner page-columns page-full">
+    <div class="quarto-title column-body">
+      <h1 class="title">Part of Speech and the Semantic Contribution of Reduplication</h1>
+                      </div>
   </div>
     
   
+  <div class="quarto-title-meta">
+
+      <div>
+      <div class="quarto-title-meta-heading">Authors</div>
+      <div class="quarto-title-meta-contents">
+               <p>Alex Duchnowski </p>
+               <p>Arushi Kalpande </p>
+               <p>Ford Rowe </p>
+            </div>
+    </div>
+      
     
-  </div>
+      
+    </div>
+    
   
+  </header><div id="quarto-content" class="page-columns page-rows-contents page-layout-article">
 
-</header>
+<main class="content quarto-banner-title-block" id="quarto-document-content">
 
+
+
+
+<p>For the full code and data used in this paper, please visit our <a href="https://github.com/AlexDuchnowski/Reduplication">GitHub repository</a>.</p>
 <section id="background-and-context" class="level1">
 <h1>1 Background and Context</h1>
 <p>The repetition of a morpheme, word, or phrase, also known as reduplication, has a variety of uses in the world’s languages. When looking at the behavior of English reduplication, we see that its scope is fairly limited in terms of its semantic effects, lacking a productivity that is found in partial or total reduplication found in other languages (Harada 2007). This does not mean that analyzing English reduplication is not worthwhile, and as will be discussed later in this paper, there are still unanswered questions relating to the mechanical properties of reduplication. In fact, the impetus for the research seen here was derived from a casual in-the-wild observation made by this paper’s authors, in which they observed that while both of the following tokens involve the apparently identical morphological process of reduplication, the semantic behavior of “run run” (as opposed to telling someone just to “run”) and “<a href="https://www.youtube.com/watch?v=m2L-Sa_6MU0&amp;t=65s">blackmail blackmail</a>” (as opposed to emotional blackmail) contained a subtle difference. In the former, the reduplication seemed to be contributing some form of emphasis or intensity, while in the latter the reduplication seemed to be pointing towards the blackmail being real or normal, as opposed to a more specific or non-standard type of blackmail. This paper, in addition to the goals outlined in Section 1.3, seeks to identify whether or not the differing part-of-speech of the base forms is predictive of the differing semantic behavior of their reduplicated forms.</p>
@@ -193,11 +196,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <h2 class="anchored" data-anchor-id="manual-annotation">3.2 Manual Annotation</h2>
 <section id="salad-salad" class="level3">
 <h3 class="anchored" data-anchor-id="salad-salad">Salad-Salad</h3>
-<p>Our resulting list was 286 entries long, down from the original 334, and was not entirely free of non-CR tokens. For example, an entry in which Jay Leno makes a joke about going to prison within a prison — “prison-prison” — was notated by the original authors as CR, but we agreed that this did not seem to be an accurate notation. In addition to verifying the presence of reduplication, we manually annotated whether or not the semantic contribution of the reduplication was Prototypical, Extreme, or Salient. We divided our annotation into two sessions, starting with the first 100 examples, then meeting to go over our answers and discuss any discrepancies before proceeding to annotate the rest. Afterwards, we completed our list in the same manner, annotating individually and then agreeing as a group. We annotated separately, labeling each example as one of P/E/S, and then talked about the entries we disagreed on and established a unified ground truth. Our total number of verified reduplications in the Salad-Salad corpus was 280.</p>
+<p>Our resulting list was 286 entries long, down from the original 334, and was not entirely free of non-CR tokens. For example, an entry in which Jay Leno makes a joke about going to prison within a prison — “prison-prison” — was notated by the original authors as CR, but we agreed that this did not seem to be an accurate notation. In addition to verifying the presence of reduplication, we manually annotated whether or not the semantic contribution of the reduplication was Prototypical, Extreme, or Salient. We divided our annotation into two sessions, starting with the first 100 examples, then meeting to go over our answers and discuss any discrepancies before proceeding to annotate the rest. When we disagreed on an example, we would discuss the reasoning behind our annotations and then revise our judgements to produce a single label for each example. This was done both to improve our understanding of the typology and to ensure we had a large enough set of labeled examples to perform an informative analysis. Subsequently, we annotated the rest in the same manner, annotating individually and then agreeing on a unified ground truth as a group afterwards. Our total number of verified reduplications in the Salad-Salad corpus was 280.</p>
 </section>
 <section id="opensubtitles" class="level3">
 <h3 class="anchored" data-anchor-id="opensubtitles">OpenSubtitles</h3>
-<p>Our list of 613 samples, while filtered for examples that fit a pattern of reduplication, contained a significant amoun of non-CR data. An example of this is repetition that was not reduplication, such as the use of the phrase “now I’m a black widow widow” in <em>A Bug’s Life</em> (the first “widow” is part of “black widow”, the type of spider, and the second is the normal usage of “widow”). To address this, we added the label N to our annotations to indicate that an example was not an instance of CR. We split the samples into the first 200 entries and the remaining 413 and each individually performed a manual reading of the repeated word and its context, and determined if there was indeed reduplication occurring in the utterance. As before, we met after annotating each set to clarify any disagreements.</p>
+<p>Our list of 613 samples, while filtered for examples that fit a pattern of reduplication, contained a significant amoun of non-CR data. An example of this is repetition that was not reduplication, such as the use of the phrase “now I’m a black widow widow” in <em>A Bug’s Life</em> (the first “widow” is part of “black widow”, the type of spider, and the second is the normal usage of “widow”). To address this, we added the label N to our annotations to indicate that an example was not an instance of CR. By including the surrounding context of each example, we were able to more easily judge whether a repetition was meaningful CR or not. We split the samples into the first 200 entries and the remaining 413 and annotated the sets as was done with the Salad-Salad corpus, with meetings after annotating each set to resolve any disagreements.</p>
 </section>
 <section id="agreement" class="level3">
 <h3 class="anchored" data-anchor-id="agreement">Agreement</h3>
@@ -205,13 +208,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <ul>
 <li>Salad-Salad:
 <ul>
-<li>1-100: 0.21319844946582212</li>
-<li>101-286: 0.5204070491123098</li>
+<li>Examples 1-100: 0.2132</li>
+<li>Examples 101-286: 0.5204</li>
 </ul></li>
-<li>OpenSubs:
+<li>OpenSubtitles:
 <ul>
-<li>1-200: 0.6873462083364403</li>
-<li>201-613: 0.5542389525368248</li>
+<li>Examples 1-200: 0.6873</li>
+<li>Examples 201-613: 0.5542</li>
 </ul></li>
 </ul>
 <p>Overall, this agreement was relatively week, as social scientists typically discard data with an alpha value below 0.667. However, we were able to come to a consensus on the majority of our annotations, and the disagreements we had were typically over edge cases or examples that were difficult to classify. Thus, while we acknowledge that our agreement was not perfect, we believe that our annotations are still valid and can be used for tentative analysis.</p>
@@ -219,7 +222,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </section>
 <section id="word-length-frequency" class="level2">
 <h2 class="anchored" data-anchor-id="word-length-frequency">3.3 Word Length &amp; Frequency</h2>
-<p>In addition to the above processing, we will include in our analysis in the next section some discussion of word length and word frequency as potentially influential factors in our results. This is partially derived from the acknowledgement that POS may not exclusively have a part to play in the semantic contribution of reduplication (eg. a word’s frequency may impact whether or not it can be understood with a prototypical versus salient interpretation), and are interested in substantiating more strongly the specific link between POS and semantic contribution, should there be one. Word length could be calculated straightforwardly in R.</p>
+<p>In addition to the above processing, we will include in our analysis in the next section some discussion of word length and word frequency as potentially influential factors in our results. This is partially derived from the acknowledgement that POS may not exclusively have a part to play in the semantic contribution of reduplication (for instance, a word’s frequency may impact whether or not it can be understood with a prototypical versus salient interpretation), and are interested in substantiating more strongly the specific link between POS and semantic contribution, should there be one. Word length could be calculated straightforwardly in R.</p>
 <div class="sourceCode" id="cb2"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>salad <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">"../data/salad_consolidated_refined.csv"</span>)      <span class="co"># Reading the File</span></span>
 <span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>salad<span class="sc">$</span>Length <span class="ot">&lt;-</span> <span class="fu">nchar</span>(salad<span class="sc">$</span>Word)      <span class="co"># Creating a Length Column</span></span>
@@ -236,14 +239,14 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a><span class="fu">write_csv</span>(full_222k_counts, <span class="st">"../data/en_v1_222k/full_222k_counted.csv"</span>)                <span class="co"># Writing the File</span></span>
 <span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>Our calculations for word frequency are based on a <a href="https://www.kaggle.com/datasets/rtatman/english-word-frequency">dataset</a> of the top 333,333 most frequent English words as they appear in the Google Web Trillion Word Corpus, . To normalize the values the log of the frequency was taken.</p>
+<p>Our calculations for word frequency are based on a <a href="https://www.kaggle.com/datasets/rtatman/english-word-frequency">dataset</a> of the top 333,333 most frequent English words as they appear in the Google Web Trillion Word Corpus. To normalize the values, the log of the frequency was taken.</p>
 </section>
 </section>
 <section id="analysis-discussion" class="level1">
 <h1>4.0 Analysis &amp; Discussion</h1>
 <section id="findings" class="level2">
 <h2 class="anchored" data-anchor-id="findings">4.1 Findings</h2>
-<p>As mentioned in the previous section, we annotated both the Salad-Salad and Opensubs datasets. Although Salad-Salad’s contents were all determined to be CR, as became apparent during the annotating phase, the vast majority of the examples in our Opensubs subset were still not true CR even after several rounds of filtering. The following pie chart illustrates the percentages of different labels, with ‘N’ representing ‘not CR.’</p>
+<p>As mentioned in the previous section, we annotated both the Salad-Salad and OpenSubtitles datasets. Although Salad-Salad’s contents were all determined to be CR, as became apparent during the annotating phase, the vast majority of the examples in our OpenSubtitles subset were still not true CR even after several rounds of filtering. The following pie chart illustrates the percentages of different labels, with ‘N’ representing ‘not CR.’</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyr)</span>
 <span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(dplyr)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -316,10 +319,10 @@ final line found on '../data/annotations/opensubs_agreed_2.txt'</code></pre>
 <p><img src="ReduplicationProjectWriteup_files/figure-html/unnamed-chunk-2-1.png" class="img-fluid" width="672"></p>
 </div>
 </div>
-<p>Thus, we decided to select only the positive CR examples from the Opensubs dataset and append these annotated examples to the Salad-Salad dataset and perform statistical analysis on this combined dataset. First, we looked at the distributions of both POS and Semantic Contribution Labels to get a sense of the makeup of our dataset, as seen in the following bar graphs. Nouns were by far the most common POS to be contrastively reduplicated, and the most common semantic contribution assigned across the board was the prototypical label.</p>
+<p>Thus, we decided to select only the positive CR examples from the OpenSubtitles dataset and append these annotated examples to the Salad-Salad dataset and perform statistical analysis on this combined dataset. First, we looked at the distributions of both POS and Semantic Contribution Labels to get a sense of the makeup of our dataset, as seen in the following bar graphs. Nouns were by far the most common POS to be contrastively reduplicated, and the most common semantic contribution assigned across the board was the prototypical label.</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb15"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(combined.data, <span class="fu">aes</span>(<span class="at">x =</span> POS, <span class="at">fill =</span> POS)) <span class="sc">+</span></span>
-<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_bar</span>() <span class="sc">+</span></span>
+<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_bar</span>(<span class="at">show.legend =</span> <span class="cn">FALSE</span>) <span class="sc">+</span></span>
 <span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_text</span>(<span class="at">stat=</span><span class="st">'count'</span>, <span class="fu">aes</span>(<span class="at">label=</span> <span class="fu">after_stat</span>(count)), <span class="at">vjust=</span><span class="sc">-</span><span class="fl">0.5</span>) <span class="sc">+</span> </span>
 <span id="cb15-4"><a href="#cb15-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">"Distribution of Parts of Speech"</span>,</span>
 <span id="cb15-5"><a href="#cb15-5" aria-hidden="true" tabindex="-1"></a>       <span class="at">x =</span> <span class="st">"Part of Speech"</span>,</span>
@@ -330,7 +333,7 @@ final line found on '../data/annotations/opensubs_agreed_2.txt'</code></pre>
 </div>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb16"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(combined.data, <span class="fu">aes</span>(<span class="at">x =</span> Label, <span class="at">fill =</span> Label)) <span class="sc">+</span></span>
-<span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_bar</span>() <span class="sc">+</span></span>
+<span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_bar</span>(<span class="at">show.legend =</span> <span class="cn">FALSE</span>) <span class="sc">+</span></span>
 <span id="cb16-3"><a href="#cb16-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_text</span>(<span class="at">stat=</span><span class="st">'count'</span>, <span class="fu">aes</span>(<span class="at">label=</span> <span class="fu">after_stat</span>(count)), <span class="at">vjust=</span><span class="sc">-</span><span class="fl">0.5</span>) <span class="sc">+</span> </span>
 <span id="cb16-4"><a href="#cb16-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">"Distribution of Semantic Contributions"</span>,</span>
 <span id="cb16-5"><a href="#cb16-5" aria-hidden="true" tabindex="-1"></a>       <span class="at">x =</span> <span class="st">"Semantic Contribution"</span>,</span>
@@ -624,7 +627,7 @@ AIC: 563.6409 </code></pre>
 <p><img src="ReduplicationProjectWriteup_files/figure-html/unnamed-chunk-11-1.png" class="img-fluid" width="672"></p>
 </div>
 </div>
-<p>As word length increases, the probability of getting a prototypical reading decreases while the probability of getting an extreme reading increases. There is also a slight increase in the salient category, but this is a much slighter trend than seen in the other two. Initial explanations for why these trends could have arisen are discussed in the next section. Similarly, we ran a model with log frequency as the predicting variable.</p>
+<p>As word length increases, the probability of getting a prototypical reading decreases, while the probability of getting an extreme reading increases. There is also a slight increase in the salient category, but this is a much slighter trend than seen in the other two. Initial explanations for why these trends could have arisen are discussed in the next section. Similarly, we ran a model with log frequency as the predicting variable.</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb36"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb36-1"><a href="#cb36-1" aria-hidden="true" tabindex="-1"></a>freq.model <span class="ot">&lt;-</span> <span class="fu">multinom</span>(Label <span class="sc">~</span> Log_Freq_Count, <span class="at">data =</span> combined.data)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
@@ -733,24 +736,24 @@ AIC: 568.0303 </code></pre>
 </table>
 </div>
 </div>
-<p>These stats show that across the different parts of speech, the word length and frequency were roughly the same (the only notable divergence is verbs being slightly more frequent on average), and so we can conclude that the trends observed in the word length and frequency models are a result of those variables directly and not an underlying POS effect.</p>
+<p>These stats show that across the different parts of speech, the word length and frequency were roughly the same (the only notable divergence is adverbs being slightly more frequent on average), and so we can conclude that the trends observed in the word length and frequency models are a result of those variables directly and not an underlying POS effect.</p>
 </section>
 <section id="discussion" class="level2">
 <h2 class="anchored" data-anchor-id="discussion">4.3 Discussion</h2>
 <p>Thus, based on the models and the various trends and results, we can conclude that POS does have a statistically significant impact on the semantic contribution of contrastive reduplication. Meanwhile, word length and frequency also seem to correlate to certain trends in semantic contribution of CR, but based on our data, these trends are not statistically significant.</p>
-<p>There were many trends relating to parts of speech. First, nouns are most likely out of the parts of speech to get prototypical readings. Verbs are similar to nouns in their overall distribution of semantic contributions, with the highest portion of them having prototypical readings. Adjectives, on the other hand, are more likely to get extreme readings than other parts of speech. Finally, adverbs are most likely out of the parts of speech to get salient readings, and get them more often than other readings. These trends have several potential explanations. For instance, as supported by our annotating experiences as well, it was much easier to conceptualize a prototypical definition for nouns and verbs than it was for modifiers. For example, it is difficult to describe a prototypical definition for the adjective “favorite,” and indeed, both examples of this word got an extreme reading. Building off of this, as adjectives can have a scalar nature, they lend themselves well to extreme CR readings. Finally, in our dataset, indexicals such as “here” were classed as adverbs, and as indexicals require context to resolve their meanings, we believe this is a reason why adverbs got the salient reading most often.</p>
-<p>The trends in the word length and frequency results were described in the previous section, and they also have preliminary explanations. The decrease in prototypical readings as word length increases makes sense, as longer words are likely less frequent and thus have less readily accessible prototypical versions. This is confirmed by the frequency model’s results, as prototypical readings increase as frequency increases. Extreme readings on the other hand increase with word length, and this corresponds to its decrease as frequency increases. Why exactly longer or less frequent words tend to get extreme readings is not immediately clear. As mentioned above, since there is no influence of POS on the average length or frequency of any given word, we cannot assume this trend in the extreme readings is correlated with adjectives and their length/frequency. Since adjectives have this tendency for getting extreme readings, we had predicted that this could be a factor in the trend for extreme readings, but since this might not be the case, an explanation for this trend is left for future research. Finally, though there is a slight slope in the lines for salient readings, it is overall much more stable than the other factors. This could be because given a rich enough discourse context, any word can take on a salient CR meaning, and thus the likelihood of getting this reading is not influenced by word length or frequency. However, it is worth noting that as mentioned above, the word length and frequency results were not statistically significant according to our dataset. Thus, further research on a larger dataset might confirm or deny the significance of these trends.</p>
+<p>There were many trends relating to parts of speech. First, nouns are most likely out of the parts of speech to get prototypical readings, as we expected. Verbs are similar to nouns in their overall distribution of semantic contributions, with the highest portion of them having prototypical readings. Adjectives, on the other hand, are more likely to get extreme readings than other parts of speech (a trend which we had also anticipated). Finally, adverbs are most likely out of the parts of speech to get salient readings, and get them more often than other readings. These trends have several potential explanations. For instance, as supported by our annotating experiences as well, it was much easier to conceptualize a prototypical definition for nouns and verbs than it was for modifiers. For example, it is difficult to describe a prototypical definition for the adjective “favorite,” and indeed, both examples of this word got an extreme reading. Building off of this, as adjectives can have a scalar nature, they lend themselves well to extreme CR readings. Finally, in our dataset, indexicals such as “here” were classed as adverbs, and as indexicals require context to resolve their meanings, we believe this is a reason why adverbs got the salient reading most often.</p>
+<p>The trends in the word length and frequency results were described in the previous section, and they also have preliminary explanations. The decrease in prototypical readings as word length increases makes sense, as longer words are likely less frequent and thus have less readily accessible prototypical versions. This is confirmed by the frequency model’s results, as prototypical readings increase as frequency increases. Extreme readings, on the other hand, increase with word length, and this corresponds to its decrease as frequency increases. Why exactly longer or less frequent words tend to get extreme readings is not immediately clear. As mentioned above, since there is no influence of POS on the average length or frequency of any given word, we cannot assume this trend in the extreme readings is correlated with adjectives and their length/frequency. Since adjectives have this tendency for getting extreme readings, we had predicted that this could be a factor in the trend for extreme readings, but since this might not be the case, an explanation for this trend is left for future research. Finally, though there is a slight slope in the lines for salient readings, it is overall much more stable than the other factors. This could be because given a rich enough discourse context, any word can take on a salient CR meaning, and thus the likelihood of getting this reading is not influenced by word length or frequency. However, it is worth noting that as mentioned above, the word length and frequency results were not statistically significant according to our dataset. Thus, further research on a larger dataset might confirm or deny the significance of these trends.</p>
 </section>
 <section id="limitations" class="level2">
 <h2 class="anchored" data-anchor-id="limitations">4.4 Limitations</h2>
-<p>There are, of course, aspects of the research we have described here which could be improved upon through further investigation or a reworking of our methodological process. A particular factor that limits the extent of our findings is that some of the entries in the Salad-Salad Corpus are drawn from written sources, and as acknowledged in Widlitzki (2016) the informal register of reduplication as a whole can be a biasing influence on what is written versus spoken when it comes to this linguistic phenomenon. Our data is not exclusively spoken language, and thus may be portraying distinct results from a study whose corpus is entirely based on transcribed utterances.</p>
+<p>There are, of course, aspects of the research we have described here which could be improved through further investigation or a reworking of our methodological process. A particular factor that limits the extent of our findings is that some of the entries in the Salad-Salad Corpus are drawn from written sources, and as acknowledged in Widlitzki (2016), the informal register of reduplication as a whole can be a biasing influence on what is written versus spoken when it comes to this linguistic phenomenon. Our data is not exclusively spoken language, and thus may be somewhat skewed relative to a data that is entirely based on transcribed utterances.</p>
 <p>A major caveat to our findings is that our typology was fleshed out both using examples from our dataset, and overall was designed by the three of us in anticipation of annotating the rest of our data, resulting in us having some theory as to how our annotations ‘should’ align with our data when we did sit down and begin sorting. For example, it is possible that our classification of many adjectives as Extreme may have been to some degree influenced by our expectation that this would be the case upon aggregating our annotated data. There is certainly some bias in our research as a result of us acting as both annotators and analysts.</p>
-<p>We would also like to acknowledge that the typology that we constructed at the outset, though deliberated and agreed upon between the three of us, could be fundamentally flawed on a theoretical level; there could be categories missing whose presence would create a better model for the trends that we observe, for instance. There are also other typologies of CR not based on a P/E/S paradigm of semantic contribution, such as the scale of conventionalization of meaning discussed in Section 1 that was proposed in Widlitzki (2016), that may be more illuminating with regards to the reason for variation within CR.</p>
+<p>We would also like to acknowledge that the typology that we constructed at the outset, though deliberated and agreed upon between the three of us, could be fundamentally flawed on a theoretical level; there could be categories missing whose presence would create a better model for the trends that we observe, for instance. Moreover, our low agreement levels suggest that this typology may not be very well-defined, and so we might wish to refine these categories before performing any follow-up research. There are also other typologies of CR not based on a P/E/S paradigm of semantic contribution, such as the scale of conventionalization of meaning discussed in Section 1 that was proposed in Widlitzki (2016), that may be more illuminating with regards to the reason for variation within CR.</p>
 </section>
 </section>
 <section id="conclusion" class="level1">
 <h1>5.0 Conclusion</h1>
-<p>Based on our dataset, a few statistically significant trends between POS and semantic contribution of reduplication have been identified. Additionally, some trends between word length/frequency and semantic contribution have also been observed, but more research into the strength of these trends is needed. Supplemental data from a larger corpus can provide more evidence to confirm or challenge these trends, and potentially bring to light new trends.</p>
+<p>Based on our dataset, a few statistically significant trends between POS and semantic contribution of reduplication have been identified. Additionally, some trends between word length/frequency and semantic contribution have also been observed, but more research into the strength of these trends is needed. Supplemental data from a larger corpus can provide more evidence to confirm or challenge these trends, and potentially bring to light new insights regarding the nature of contrastive reduplication.</p>
 </section>
 <section id="citations" class="level1">
 <h1>Citations</h1>
