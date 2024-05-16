@@ -121,27 +121,22 @@ Overall, this agreement was relatively week, as social scientists typically disc
 
 In addition to the above processing, we will include in our analysis in the next section some discussion of word length and word frequency as potentially influential factors in our results. This is partially derived from the acknowledgement that POS may not exclusively have a part to play in the semantic contribution of reduplication (eg. a word’s frequency may impact whether or not it can be understood with a prototypical versus salient interpretation), and are interested in substantiating more strongly the specific link between POS and semantic contribution, should there be one. Word length could be calculated straightforwardly in R.
 
-```{r}
-
-salad <- read_csv("salad_consolidated_refined.csv")      # Reading the File
+```{{r}}
+salad <- read_csv("../data/salad_consolidated_refined.csv")      # Reading the File
 salad$Length <- nchar(salad$Word)      # Creating a Length Column
-freq_list <- read_csv("unigram_freq.csv")     # Reading the Frequency Counter File
+freq_list <- read_csv("../data/unigram_freq.csv")     # Reading the Frequency Counter File
 freq_list$Word <- freq_list$word              # Making it so that both tables have a "Word" column
 freq_list <- freq_list[, -1]                  # Preventing the "word" column from sticking around
 
 salad_counts <- inner_join(salad, freq_list, by="Word")               # Adding the frequency list to the main tibble
-write_csv(salad_counts, "salad_consolidated_refined_counted.csv")     # Writing the Salad-Salad File
-
 ```
 
-```{r}
-
-full_222k <- read_delim("en_v1_222k_full.csv", delim="\t")          # Reading the File, adjusting for it being .csv
+```{{r}}
+full_222k <- read_delim("../data/en_v1_222k/en_v1_222k_full.csv", delim="\t")          # Reading the File, adjusting for it being .csv
 full_222k$Length <- nchar(full_222k$Word)                           # Doing the Character Counts
 full_222k_counts <- inner_join(full_222k, freq_list, by="Word")     # Doing Freqs
 
-write_csv(full_222k_counts, "full_222k_counted.csv")                # Writing the File
-
+write_csv(full_222k_counts, "../data/en_v1_222k/full_222k_counted.csv")                # Writing the File
 ```
 
 Our calculations for word frequency are based on a [dataset](https://www.kaggle.com/datasets/rtatman/english-word-frequency) of the top 333,333 most frequent English words as they appear in the Google Web Trillion Word Corpus, . To normalize the values the log of the frequency was taken.
@@ -153,6 +148,10 @@ Our calculations for word frequency are based on a [dataset](https://www.kaggle.
 As mentioned in the previous section, we annotated both the Salad-Salad and Opensubs datasets. Although Salad-Salad’s contents were all determined to be CR, as became apparent during the annotating phase, the vast majority of the examples in our Opensubs subset were still not true CR even after several rounds of filtering. The following pie chart illustrates the percentages of different labels, with ‘N’ representing ‘not CR.’
 
 ```{r}
+library(tidyverse)
+library(tidyr)
+library(dplyr)
+
 salad.data <- read.csv("../data/salad_consolidated_refined_counted.csv")
 opensubs.data <- read.csv("../data/en_v1_222k/full_222k_counted.csv")
 
@@ -169,7 +168,6 @@ head(combined.data)
 ```
 
 ```{r}
-library(dplyr)
 library(ggplot2)
 
 labels.1 <- readLines("../data/annotations/opensubs_agreed_1.txt")
@@ -195,8 +193,6 @@ ggplot(label.df, aes(x = "", y = Frequency, fill = Label)) +
 Thus, we decided to select only the positive CR examples from the Opensubs dataset and append these annotated examples to the Salad-Salad dataset and perform statistical analysis on this combined dataset. First, we looked at the distributions of both POS and Semantic Contribution Labels to get a sense of the makeup of our dataset, as seen in the following bar graphs. Nouns were by far the most common POS to be contrastively reduplicated, and the most common semantic contribution assigned across the board was the prototypical label.
 
 ```{r}
-library(ggplot2)
-
 ggplot(combined.data, aes(x = POS, fill = POS)) +
   geom_bar() +
   geom_text(stat='count', aes(label= after_stat(count)), vjust=-0.5) + 
@@ -206,21 +202,17 @@ ggplot(combined.data, aes(x = POS, fill = POS)) +
 ```
 
 ```{r}
-library(ggplot2)
-
 ggplot(combined.data, aes(x = Label, fill = Label)) +
   geom_bar() +
   geom_text(stat='count', aes(label= after_stat(count)), vjust=-0.5) + 
   labs(title = "Distribution of Semantic Contributions",
        x = "Semantic Contribution",
        y = "Count")
-
 ```
 
 Looking at the stacked graph, we can see certain trends beginning to surface. Although prototypical labels still make up a large percentage of the examples for each POS, there is a more even split between prototypical and extreme readings for adjectives, and prototypical and salient readings for adverbs. The exact percentages of semantic contribution by POS is given in the table below the graph.
 
 ```{r}
-library(ggplot2)
 library(nnet)
 
 summary(combined.data)
@@ -229,12 +221,9 @@ ggplot(combined.data, aes(x = POS, fill = Label)) +
   labs(title = "Distribution of Semantic Contributions by POS",
        x = "POS",
        y = "Count")
-
 ```
 
 ```{r}
-library(dplyr)
-library(ggplot2)
 library(knitr)
 
 label.counts <- combined.data %>% 
@@ -252,8 +241,6 @@ label.percentages <- label.counts %>%
 label.percentages.df <- as.data.frame(label.percentages)
 
 kable(label.percentages.df, caption = "Percentage of Semantic Contributions by POS")
-
-
 ```
 
 The regression model we ran on the dataset formalized these trends, as discussed in the next section.
@@ -314,9 +301,6 @@ summary(length.model)
 ```
 
 ```{r}
-library(ggplot2)
-library(tidyr)
-
 new.data <- data.frame(Word_Length = seq(min(combined.data$Word_Length), max(combined.data$Word_Length), length.out = 100))
 
 length.predictions <- predict(length.model, newdata = new.data, type = "probs")
@@ -343,9 +327,6 @@ summary(freq.model)
 ```
 
 ```{r}
-library(ggplot2)
-library(tidyr)
-
 new_data <- data.frame(Log_Freq_Count = seq(min(combined.data$Log_Freq_Count), max(combined.data$Log_Freq_Count), length.out = 100))
 
 freq.predictions <- predict(freq.model, newdata = new_data, type = "probs")
@@ -366,9 +347,6 @@ ggplot(freq.predictions.df, aes(x = Log_Freq_Count, y = Probability, color = Lab
 This model also revealed some general trends. Namely, prototypical readings (and to a lesser extent, salient readings) increased as frequency increased, while extreme readings decreased as frequency increased. In case the trends seen in these graphs were a result of POS being a confounding variable influencing word length or frequency (e.g., if adjectives in our dataset were longer or less frequent overall than other POS, trends seen in these models’ results could just be a result of POS and not the variable at hand), we calculated simple mean and median stats for word length and frequency by POS.
 
 ```{r}
-library(dplyr)
-library(knitr)
-
 avg.stats <- combined.data %>%
   group_by(POS) %>%
   summarize(avg.word.length = mean(Word_Length),
@@ -377,7 +355,6 @@ avg.stats <- combined.data %>%
             median.log.frequency = median(Log_Freq_Count))
 
 kable(avg.stats, format = "markdown")
-
 ```
 
 These stats show that across the different parts of speech, the word length and frequency were roughly the same (the only notable divergence is verbs being slightly more frequent on average), and so we can conclude that the trends observed in the word length and frequency models are a result of those variables directly and not an underlying POS effect.
@@ -404,7 +381,7 @@ Based on our dataset, a few statistically significant trends between POS and sem
 
 # Citations
 
-Castro, S. (2017). _Fast Krippendorff: Fast computation of Krippendorff's alpha agreement measure_.
+Castro, S. (2017). _[Fast Krippendorff: Fast computation of Krippendorff's alpha agreement measure](https://pypi.org/project/krippendorff/#description)_.
 
 P. Lison and J. Tiedemann, 2016, [OpenSubtitles2016: Extracting Large Parallel Corpora from Movie and TV Subtitles](http://www.lrec-conf.org/proceedings/lrec2016/pdf/947_Paper.pdf). In Proceedings of the 10th International Conference on Language Resources and Evaluation (LREC 2016)
 
